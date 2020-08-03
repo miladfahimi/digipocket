@@ -1,0 +1,631 @@
+<?php /* Template Name: Home */
+ get_header(); ?>
+<!-- full slider parallax section -->
+<section id="full_slider" class="full_slider_inner padding_0">
+    <div class="main_slider">
+        <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line"
+            data-ride="carousel" data-pause="hover" data-interval="5000">
+            <!-- Wrapper For Slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- first Slide -->
+                <?php 
+                $active = 'active';
+                        $args = array(
+                            'post_type' => 'slide',
+                            'posts_per_page' => -1
+                        );
+                        $q = new WP_Query($args);
+                        if ( $q->have_posts() ) {
+                            while ( $q->have_posts() ) {
+                                $q->the_post(); 
+                        ?>
+                <div class="item <?php echo $active; $active = '';?>">
+                    <!-- Slide Background -->
+                    <div class="bs-slider-overlay">
+                    </div>
+                    <img src="<?php echo get_field('back_ground')?>" alt="Bootstrap Touch Slider" class="slide-image" />
+                    <div class="container">
+                        <div class="row">
+                            <!-- Slide Text Layer -->
+                            <div class="slide-text slide_style_left white_fonts">
+                                <h2 data-animation="animated"><span
+                                        style="color: #e9d16f;"><?php echo get_field('header_1')?></span><br><?php echo get_field('header_2')?><br><?php echo get_field('header_3')?>
+                                </h2>
+                                <?php if (get_field('button_title_1')) {?>
+                                <a href="<?php echo get_field('button_1')?>"
+                                    class="btn btn-default active"><?php echo get_field('button_title_1')?></a>
+
+                                <?php } if (get_field('button_title_2')) {?>
+                                <a href="<?php echo get_field('button_2')?>"
+                                    class="btn btn-default"><?php echo get_field('button_title_2')?></a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of Slide -->
+                <?php } }?>
+            </div>
+            <!-- End of Wrapper For Slides -->
+            <!-- Left Control -->
+            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Right Control -->
+            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- End  bootstrap-touch-slider Slider -->
+    </div>
+</section>
+<!-- end full slider parallax section -->
+<!-- section -->
+<?php get_template_part( 'template-part/content', 'index' ); ?>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding">
+    <div class="container">
+        <div class="row">
+            <?php 
+                        $args = array(
+                            'post_type' => '',
+                            'posts_per_page' => 4
+                        );
+                        $q = new WP_Query($args);
+                        if ( $q->have_posts() ) {
+                            while ( $q->have_posts() ) {
+                                $q->the_post(); 
+                        ?>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="home_posts_box">
+                    <div>
+                        <img class="" src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
+                    </div>
+                    <div class="home_posts_text_cont">
+                        <div class="home_posts_box-title">
+                            <h4><?php  echo wp_trim_words( get_the_title(), 8 ); ?></h4>
+                        </div>
+                        <div>
+                            <p><?php echo wp_trim_words( get_the_content(), 20 ); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php }} ?>
+        </div>
+
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding light_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Crypto Live Exchange Rates</span></h2>
+                        <p>Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25%<br>on every token purchase
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="rate_box">
+                        <div class="inner_rate_box">
+                            <div class="coin__sort_name_rates">ETH</div>
+                            <div class="coin_name_rates">Ethereum</div>
+                            <div class="vcw_full_lenth">
+                                <div class="vcw_price">
+                                    <div class="curry_pr">USD</div>
+                                    <div class="value_pr">1.135</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">EUR</div>
+                                    <div class="value_pr">2.316</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">GBP</div>
+                                    <div class="value_pr">2.036</div>
+                                </div>
+                            </div>
+                            <div class="vcw_full_lenth final_pric">
+                                <div class="vcw_price">
+                                    <div class="curry_pr pert">2.2%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">1.20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="rate_box">
+                        <div class="inner_rate_box">
+                            <div class="coin__sort_name_rates">LTC</div>
+                            <div class="coin_name_rates">Litecoin</div>
+                            <div class="vcw_full_lenth">
+                                <div class="vcw_price">
+                                    <div class="curry_pr">USD</div>
+                                    <div class="value_pr">1.135</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">EUR</div>
+                                    <div class="value_pr">2.316</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">GBP</div>
+                                    <div class="value_pr">2.036</div>
+                                </div>
+                            </div>
+                            <div class="vcw_full_lenth final_pric">
+                                <div class="vcw_price">
+                                    <div class="curry_pr pert">2.2%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">1.20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="rate_box">
+                        <div class="inner_rate_box">
+                            <div class="coin__sort_name_rates">BTC</div>
+                            <div class="coin_name_rates">Bitcoin</div>
+                            <div class="vcw_full_lenth">
+                                <div class="vcw_price">
+                                    <div class="curry_pr">USD</div>
+                                    <div class="value_pr">1.135</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">EUR</div>
+                                    <div class="value_pr">2.316</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">GBP</div>
+                                    <div class="value_pr">2.036</div>
+                                </div>
+                            </div>
+                            <div class="vcw_full_lenth final_pric">
+                                <div class="vcw_price">
+                                    <div class="curry_pr pert">2.2%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">1.20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="rate_box">
+                        <div class="inner_rate_box">
+                            <div class="coin__sort_name_rates">XRP</div>
+                            <div class="coin_name_rates">Ripple</div>
+                            <div class="vcw_full_lenth">
+                                <div class="vcw_price">
+                                    <div class="curry_pr">USD</div>
+                                    <div class="value_pr">1.135</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">EUR</div>
+                                    <div class="value_pr">2.316</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">GBP</div>
+                                    <div class="value_pr">2.036</div>
+                                </div>
+                            </div>
+                            <div class="vcw_full_lenth final_pric">
+                                <div class="vcw_price">
+                                    <div class="curry_pr pert">2.2%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
+                                </div>
+                                <div class="vcw_price">
+                                    <div class="curry_pr">1.20%</div>
+                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding dark_bg white_fonts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Why Choose Bit-Exchange?</span></h2>
+                        <p>Investments and employment of the Blockchain Technologies. Optimize your business<br>case
+                            with blockchain technology and Smart Contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="full">
+                    <div class="cryto_feature">
+                        <ul>
+                            <li>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f2.png')?>"
+                                        alt="#" /></div>
+                                <div>
+                                    <h3>Fast Transaction</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f3.png')?>"
+                                        alt="#" /></div>
+                                <div>
+                                    <h3>Secure and Stable</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f4.png')?>"
+                                        alt="#" /></div>
+                                <div>
+                                    <h3>Coin Exchange</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="full digital_earth">
+                    <img src="<?php echo get_theme_file_uri('images/bg3_new.png')?>" alt="#" />
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="full">
+                    <div class="cryto_feature right_text">
+                        <ul>
+                            <li>
+                                <div>
+                                    <h3>Mobile Apps</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f5.png')?>"
+                                        alt="#" /></div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>24/7 Trading</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f6.png')?>"
+                                        alt="#" /></div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Free Consulting</h3>
+                                    <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                </div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f1.png')?>"
+                                        alt="#" /></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Our Pricing Plan</span></h2>
+                        <p>Exchange Transactions of your referred users Bitcoin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="coin_selling_bt">
+                        <ul>
+                            <li><a class="active" href="#">Buy Bitcoin</a></li>
+                            <li><a href="#">Sell Bitcoin</a></li>
+                        </ul>
+                        <div class="coin_price_table">
+                            <h3>GET 0.0512 BTC</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                            <p class="price_table">$ 100.00</p>
+                            <div class="center">
+                                <a class="pay_btn" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full focus_sell">
+                    <div class="coin_selling_bt">
+                        <ul>
+                            <li><a class="active" href="#">Btc</a></li>
+                            <li><a href="#">Eth</a></li>
+                        </ul>
+                        <div class="coin_price_table">
+                            <h3>GET 0.0512 BTC</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                            <p class="price_table">$ 100.00</p>
+                            <div class="center">
+                                <a class="pay_btn" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="coin_selling_bt">
+                        <ul>
+                            <li><a class="active" href="#">Usd</a></li>
+                            <li><a href="#">Eur</a></li>
+                        </ul>
+                        <div class="coin_price_table">
+                            <h3>GET 0.0512 BTC</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                            <p class="price_table">$ 100.00</p>
+                            <div class="center">
+                                <a class="pay_btn" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="full">
+                    <div class="coin_selling_bt">
+                        <ul>
+                            <li><a class="active" href="#">Gbp</a></li>
+                            <li><a href="#">Rup</a></li>
+                        </ul>
+                        <div class="coin_price_table">
+                            <h3>GET 0.0512 BTC</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                            <p class="price_table">$ 100.00</p>
+                            <div class="center">
+                                <a class="pay_btn" href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding light_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Feedback Our Investors</span></h2>
+                        <p>Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25%<br>on every token purchase
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-sm-12 col-xs-12"></div>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+                <div class="full testmonial_slider">
+                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner text-center">
+                            <!-- Quote 1 -->
+                            <div class="item active">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="center">
+                                                <div class="client_img"><img class="img-responsive"
+                                                        src="<?php echo get_theme_file_uri('images/150x150.png')?>"
+                                                        alt="#" /></div>
+                                            </div>
+                                            <p><span class="left_testmonial_qout"><i
+                                                        class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                et dolore magna aliqua. Ut enim
+                                                ad minimveniam, quis nostrud exercitation ullamco laboris<span
+                                                    class="right_testmonial_qout"><i
+                                                        class="fa fa-quote-right"></i></span></p>
+                                            <div class="center">
+                                                <p class="client_name">Denwen Evile</p>
+                                            </div>
+                                            <div class="center">
+                                                <p class="country_name">United State</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="center">
+                                                <div class="client_img"><img class="img-responsive"
+                                                        src="<?php echo get_theme_file_uri('images/150x150.png')?>"
+                                                        alt="#" /></div>
+                                            </div>
+                                            <p><span class="left_testmonial_qout"><i
+                                                        class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                et dolore magna aliqua. Ut enim
+                                                ad minimveniam, quis nostrud exercitation ullamco laboris<span
+                                                    class="right_testmonial_qout"><i
+                                                        class="fa fa-quote-right"></i></span></p>
+                                            <div class="center">
+                                                <p class="client_name">Denwen Evile</p>
+                                            </div>
+                                            <div class="center">
+                                                <p class="country_name">United State</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="center">
+                                                <div class="client_img"><img class="img-responsive"
+                                                        src="<?php echo get_theme_file_uri('images/150x150.png')?>"
+                                                        alt="#" /></div>
+                                            </div>
+                                            <p><span class="left_testmonial_qout"><i
+                                                        class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                et dolore magna aliqua. Ut enim
+                                                ad minimveniam, quis nostrud exercitation ullamco laboris<span
+                                                    class="right_testmonial_qout"><i
+                                                        class="fa fa-quote-right"></i></span></p>
+                                            <div class="center">
+                                                <p class="client_name">Denwen Evile</p>
+                                            </div>
+                                            <div class="center">
+                                                <p class="country_name">United State</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- Bottom Carousel Indicators -->
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i
+                                class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i
+                                class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12"></div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding dark_bg time_section"
+    style="background-image: url('<?php echo get_theme_file_uri('images/degital_img.png')?>');background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Time Until Ico Close</span></h2>
+                        <p>Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25%<br>on every token purchase
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="countdown"></div>
+        </div>
+        <div class="row">
+            <div class="token_infor_section">
+                <p>TOTAL TOKENS BOUGHT</p>
+                <h3>71, 145, 100</h3>
+                <div class="center">
+                    <a class="btn" href="#">Buy Coin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <div class="heading_main">
+                        <h2><span>Our Brands</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt
+                            ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="full">
+                    <ul class="brand-list">
+                        <li><img src="<?php echo get_theme_file_uri('images/brand1.png')?>" alt="#"></li>
+                        <li><img src="<?php echo get_theme_file_uri('images/brand2.png')?>" alt="#"></li>
+                        <li><img src="<?php echo get_theme_file_uri('images/brand3.png')?>" alt="#"></li>
+                        <li><img src="<?php echo get_theme_file_uri('images/brand4.png')?>" alt="#"></li>
+                        <li><img src="<?php echo get_theme_file_uri('images/brand5.png')?>" alt="#"></li>
+                        <li><img src="<?php echo get_theme_file_uri('images/brand6.png')?>" alt="#"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<?php get_footer(); ?>
