@@ -6,37 +6,8 @@ get_header();
 
 <!-- section -->
 
-<section class="padding_0 info_coins">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="full">
-                    <h2 style="display:none;">heading</h2>
-                    <div class="coin_formation">
-                        <ul>
-                            <li>
-                                <span class="curr_name">Bitcoin Price</span>
-                                <span class="curr_price">2395.00 USD</span>
-                            </li>
-                            <li>
-                                <span class="curr_name">Bitcoin Price</span>
-                                <span class="curr_price">2321.68 EUR</span>
-                            </li>
-                            <li>
-                                <span class="curr_name">24H Volume</span>
-                                <span class="curr_price">1,957.25 BTC</span>
-                            </li>
-                            <li>
-                                <span class="curr_name">Active Traders</span>
-                                <span class="curr_price">1,169,857 EUR</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part( 'template-part/content', 'index' ); ?>
+
 <!-- section -->
 <section class="layout_padding">
     <div class="container">

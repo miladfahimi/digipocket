@@ -3767,6 +3767,6 @@ input[type="text"]::placeholder {
     text-align: center !important;
 }
 
-.active-page-menu {
+.active-page-menu a {
     color: #e9d16f !important;
 }
