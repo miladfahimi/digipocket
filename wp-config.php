@@ -34,11 +34,11 @@ if (strstr($_SERVER['SERVER_NAME'], 'toomoney.local')) {
     define( 'DB_NAME', 'digipock_db' );
 
     /** MySQL database username */
-    define( 'DB_USER', 'digipocket_root' );
+    define( 'DB_USER', 'digipocket' );
     
     /** MySQL database password */
-    define( 'DB_PASSWORD', '@DigiPocket@2020' );
-    // define( 'DB_PASSWORD', '7nkcrte17yky' );
+    // define( 'DB_PASSWORD', '@DigiPocket@2020' );
+    define( 'DB_PASSWORD', '7nkcrte17yky' );
     
     /** MySQL hostname */
     define( 'DB_HOST', 'localhost' );
