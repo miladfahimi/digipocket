@@ -10,7 +10,7 @@
 <body id="default_theme" class="inner_page">
     <!--loader -->
     <div class="bg_load">
-        <img class="loader_animation" src="<?php echo get_theme_file_uri('images/loaders/Loader.gif')?>" alt="#" />
+        <img class="loader_animation" src="<?php echo get_theme_file_uri('images/loaders/loader.gif')?>" alt="#" />
     </div>
     <!-- end loader -->
     <header class="header">
