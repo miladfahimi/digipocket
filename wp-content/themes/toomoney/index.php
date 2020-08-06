@@ -108,8 +108,8 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="heading_main">
-                        <h2><span>Crypto Live Exchange Rates</span></h2>
-                        <p>Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25%<br>on every token purchase
+                        <h2><span>بهترینهای امروز</span></h2>
+                        <p>خلاصه ای از مثبت ترینها و منفی ترینهای امروز<br>یاهو فایننس
                         </p>
                     </div>
                 </div>
@@ -120,36 +120,7 @@
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div class="coin__sort_name_rates">ETH</div>
-                            <div class="coin_name_rates">Ethereum</div>
-                            <div class="vcw_full_lenth">
-                                <div class="vcw_price">
-                                    <div class="curry_pr">USD</div>
-                                    <div class="value_pr">1.135</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">EUR</div>
-                                    <div class="value_pr">2.316</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">GBP</div>
-                                    <div class="value_pr">2.036</div>
-                                </div>
-                            </div>
-                            <div class="vcw_full_lenth final_pric">
-                                <div class="vcw_price">
-                                    <div class="curry_pr pert">2.2%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">1.20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
-                                </div>
-                            </div>
+                            <div id="chart1-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
                         </div>
                     </div>
                 </div>
@@ -158,36 +129,8 @@
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div class="coin__sort_name_rates">LTC</div>
-                            <div class="coin_name_rates">Litecoin</div>
-                            <div class="vcw_full_lenth">
-                                <div class="vcw_price">
-                                    <div class="curry_pr">USD</div>
-                                    <div class="value_pr">1.135</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">EUR</div>
-                                    <div class="value_pr">2.316</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">GBP</div>
-                                    <div class="value_pr">2.036</div>
-                                </div>
-                            </div>
-                            <div class="vcw_full_lenth final_pric">
-                                <div class="vcw_price">
-                                    <div class="curry_pr pert">2.2%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">1.20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
-                                </div>
-                            </div>
+                            <div id="chart2-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
+
                         </div>
                     </div>
                 </div>
@@ -196,36 +139,8 @@
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div class="coin__sort_name_rates">BTC</div>
-                            <div class="coin_name_rates">Bitcoin</div>
-                            <div class="vcw_full_lenth">
-                                <div class="vcw_price">
-                                    <div class="curry_pr">USD</div>
-                                    <div class="value_pr">1.135</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">EUR</div>
-                                    <div class="value_pr">2.316</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">GBP</div>
-                                    <div class="value_pr">2.036</div>
-                                </div>
-                            </div>
-                            <div class="vcw_full_lenth final_pric">
-                                <div class="vcw_price">
-                                    <div class="curry_pr pert">2.2%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">1.20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
-                                </div>
-                            </div>
+                            <div id="chart3-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
+
                         </div>
                     </div>
                 </div>
@@ -234,36 +149,8 @@
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div class="coin__sort_name_rates">XRP</div>
-                            <div class="coin_name_rates">Ripple</div>
-                            <div class="vcw_full_lenth">
-                                <div class="vcw_price">
-                                    <div class="curry_pr">USD</div>
-                                    <div class="value_pr">1.135</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">EUR</div>
-                                    <div class="value_pr">2.316</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">GBP</div>
-                                    <div class="value_pr">2.036</div>
-                                </div>
-                            </div>
-                            <div class="vcw_full_lenth final_pric">
-                                <div class="vcw_price">
-                                    <div class="curry_pr pert">2.2%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -2.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-up"></i> +1.36</div>
-                                </div>
-                                <div class="vcw_price">
-                                    <div class="curry_pr">1.20%</div>
-                                    <div class="value_pr"><i class="fa fa-arrow-circle-o-down"></i> -0.89</div>
-                                </div>
-                            </div>
+                            <div id="chart4-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
+
                         </div>
                     </div>
                 </div>
