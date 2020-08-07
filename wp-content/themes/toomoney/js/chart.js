@@ -17,7 +17,6 @@ Highcharts.getJSON(
         });
         chartId = "#chart4-container";
         chart(mydata, chartId, "Apple");
-        console.log(mydata);
     }
 );
 Highcharts.getJSON(
@@ -39,7 +38,6 @@ Highcharts.getJSON(
         });
         chartId = "#chart2-container";
         chart(mydata, chartId, "Google");
-        console.log(mydata);
     }
 );
 Highcharts.getJSON(
@@ -61,7 +59,6 @@ Highcharts.getJSON(
         });
         chartId = "#chart3-container";
         chart(mydata, chartId, "Amazon");
-        console.log(mydata);
     }
 );
 Highcharts.getJSON(
@@ -83,7 +80,6 @@ Highcharts.getJSON(
         });
         chartId = "#chart1-container";
         chart(mydata, chartId, "Microsoft");
-        console.log(mydata);
     }
 );
 
