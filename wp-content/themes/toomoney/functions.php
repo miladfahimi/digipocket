@@ -28,10 +28,10 @@ function add_theme_scripts() {
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/bootstrap.min.js');
     wp_enqueue_script( 'script4', get_template_directory_uri() . '/js/custom.js');
     wp_enqueue_script( 'script5', '//code.highcharts.com/highcharts.js');
-    wp_enqueue_script( 'script6', "http://code.highcharts.com/modules/exporting.js");
-    wp_enqueue_script( 'script7', "https://code.highcharts.com/stock/modules/export-data.js");
-    wp_enqueue_script( 'script8', "https://code.highcharts.com/stock/modules/drag-panes.js");
-    wp_enqueue_script( 'script9', "https://code.highcharts.com/stock/modules/data.js");
+    wp_enqueue_script( 'script6', "//code.highcharts.com/modules/exporting.js");
+    wp_enqueue_script( 'script7', "//code.highcharts.com/stock/modules/export-data.js");
+    wp_enqueue_script( 'script8', "//code.highcharts.com/stock/modules/drag-panes.js");
+    wp_enqueue_script( 'script9', "//code.highcharts.com/stock/modules/data.js");
     wp_enqueue_script( 'script10', get_template_directory_uri() . '/js/chart.js');
 
     

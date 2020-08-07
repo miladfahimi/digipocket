@@ -10,10 +10,6 @@ Highcharts.getJSON(
                 dataObj["low"],
                 dataObj["close"],
             ]);
-            // console.log(
-            //     dataObj["high"]
-            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
-            // );
         });
         chartId = "#chart4-container";
         chart(mydata, chartId, "Apple");
@@ -31,10 +27,6 @@ Highcharts.getJSON(
                 dataObj["low"],
                 dataObj["close"],
             ]);
-            // console.log(
-            //     dataObj["high"]
-            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
-            // );
         });
         chartId = "#chart2-container";
         chart(mydata, chartId, "Google");
@@ -52,10 +44,6 @@ Highcharts.getJSON(
                 dataObj["low"],
                 dataObj["close"],
             ]);
-            // console.log(
-            //     dataObj["high"]
-            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
-            // );
         });
         chartId = "#chart3-container";
         chart(mydata, chartId, "Amazon");
@@ -73,10 +61,6 @@ Highcharts.getJSON(
                 dataObj["low"],
                 dataObj["close"],
             ]);
-            // console.log(
-            //     dataObj["high"]
-            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
-            // );
         });
         chartId = "#chart1-container";
         chart(mydata, chartId, "Microsoft");
