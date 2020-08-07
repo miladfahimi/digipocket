@@ -1,335 +1,212 @@
 Highcharts.getJSON(
-    "https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/new-intraday.json",
+    "http://api.marketstack.com/v1/tickers/aapl/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
     function (data) {
-        chart(data);
+        var mydata = [];
+        $.each(data.data.eod, function (dataIndex, dataObj) {
+            mydata.push([
+                Date.parse(dataObj["date"]),
+                dataObj["open"],
+                dataObj["high"],
+                dataObj["low"],
+                dataObj["close"],
+            ]);
+            // console.log(
+            //     dataObj["high"]
+            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
+            // );
+        });
+        chartId = "#chart4-container";
+        chart(mydata, chartId, "Apple");
+        console.log(mydata);
     }
 );
-function chart(data) {
-    $("#chart2-container").highcharts({
-        // Create the chart
+Highcharts.getJSON(
+    "http://api.marketstack.com/v1/tickers/goog/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    function (data) {
+        var mydata = [];
+        $.each(data.data.eod, function (dataIndex, dataObj) {
+            mydata.push([
+                Date.parse(dataObj["date"]),
+                dataObj["open"],
+                dataObj["high"],
+                dataObj["low"],
+                dataObj["close"],
+            ]);
+            // console.log(
+            //     dataObj["high"]
+            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
+            // );
+        });
+        chartId = "#chart2-container";
+        chart(mydata, chartId, "Google");
+        console.log(mydata);
+    }
+);
+Highcharts.getJSON(
+    "http://api.marketstack.com/v1/tickers/amzn/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    function (data) {
+        var mydata = [];
+        $.each(data.data.eod, function (dataIndex, dataObj) {
+            mydata.push([
+                Date.parse(dataObj["date"]),
+                dataObj["open"],
+                dataObj["high"],
+                dataObj["low"],
+                dataObj["close"],
+            ]);
+            // console.log(
+            //     dataObj["high"]
+            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
+            // );
+        });
+        chartId = "#chart3-container";
+        chart(mydata, chartId, "Amazon");
+        console.log(mydata);
+    }
+);
+Highcharts.getJSON(
+    "http://api.marketstack.com/v1/tickers/MSFT/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    function (data) {
+        var mydata = [];
+        $.each(data.data.eod, function (dataIndex, dataObj) {
+            mydata.push([
+                Date.parse(dataObj["date"]),
+                dataObj["open"],
+                dataObj["high"],
+                dataObj["low"],
+                dataObj["close"],
+            ]);
+            // console.log(
+            //     dataObj["high"]
+            //     //`Ticker ${stockData["symbol"]} has a day high of ${stockData["high"]}on ${stockData["date"]}`
+            // );
+        });
+        chartId = "#chart1-container";
+        chart(mydata, chartId, "Microsoft");
+        console.log(mydata);
+    }
+);
 
-        // create the chart
+function chart(data, chartId, title) {
+    $(function () {
+        $(document).ready(function () {
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false,
+                },
+            });
+        });
+    });
+
+    // split the data set into ohlc and volume
+    var ohlc = [],
+        volume = [],
+        dataLength = data.length,
+        // set the allowed units for data grouping
+        groupingUnits = [
+            [
+                "week", // unit name
+                [1], // allowed multiples
+            ],
+            ["month", [1, 2, 3, 4, 6]],
+        ],
+        i = 0;
+
+    for (i; i < dataLength; i += 1) {
+        ohlc.push([
+            data[i][0], // the date
+            data[i][1], // open
+            data[i][2], // high
+            data[i][3], // low
+            data[i][4], // close
+        ]);
+
+        volume.push([
+            data[i][0], // the date
+            data[i][5], // the volume
+        ]);
+    }
+
+    // create the chart
+    $(chartId).highcharts({
+        rangeSelector: {
+            selected: 1,
+        },
 
         title: {
-            text: "AAPL stock price by minute",
+            text: title,
         },
 
-        subtitle: {
-            text: "",
-        },
-
-        xAxis: {
-            breaks: [
-                {
-                    // Nights
-                    from: Date.UTC(2011, 9, 6, 16),
-                    to: Date.UTC(2011, 9, 7, 8),
-                    repeat: 24 * 36e5,
-                },
-                {
-                    // Weekends
-                    from: Date.UTC(2011, 9, 7, 16),
-                    to: Date.UTC(2011, 9, 10, 8),
-                    repeat: 7 * 24 * 36e5,
-                },
-            ],
-        },
-
-        rangeSelector: {
-            buttons: [
-                {
-                    type: "hour",
-                    count: 1,
-                    text: "1h",
-                },
-                {
-                    type: "day",
-                    count: 1,
-                    text: "1D",
-                },
-                {
-                    type: "all",
-                    count: 1,
-                    text: "All",
-                },
-            ],
-            selected: 0,
-            inputEnabled: false,
-        },
-
-        series: [
+        yAxis: [
             {
-                name: "AAPL",
-                type: "area",
-                data: data,
-                gapSize: 5,
-                tooltip: {
-                    valueDecimals: 2,
+                labels: {
+                    align: "left",
+                    x: 0,
                 },
-                fillColor: {
-                    linearGradient: {
-                        x1: 0,
-                        y1: 0,
-                        x2: 0,
-                        y2: 1,
-                    },
-                    stops: [
-                        [1, Highcharts.getOptions().colors[8]],
-                        [
-                            1,
-                            Highcharts.color(Highcharts.getOptions().colors[4])
-                                .setOpacity(0)
-                                .get("rgba"),
-                        ],
-                    ],
+                title: {
+                    text: "",
                 },
-                threshold: null,
+                height: "100%",
+                lineWidth: 2,
+                resize: {
+                    enabled: true,
+                },
+            },
+            {
+                labels: {
+                    align: "right",
+                    x: -8,
+                },
+                title: {
+                    text: "",
+                },
+                height: "0%",
+                offset: 0,
+                lineWidth: 2,
             },
         ],
-    });
-    $("#chart1-container").highcharts({
-        // Create the chart
-
-        // create the chart
-
-        title: {
-            text: "AAPL stock price by minute",
-        },
-
-        subtitle: {
-            text: "",
-        },
-
-        xAxis: {
-            breaks: [
-                {
-                    // Nights
-                    from: Date.UTC(2011, 9, 6, 16),
-                    to: Date.UTC(2011, 9, 7, 8),
-                    repeat: 24 * 36e5,
-                },
-                {
-                    // Weekends
-                    from: Date.UTC(2011, 9, 7, 16),
-                    to: Date.UTC(2011, 9, 10, 8),
-                    repeat: 7 * 24 * 36e5,
-                },
-            ],
-        },
-
-        rangeSelector: {
-            buttons: [
-                {
-                    type: "hour",
-                    count: 1,
-                    text: "1h",
-                },
-                {
-                    type: "day",
-                    count: 1,
-                    text: "1D",
-                },
-                {
-                    type: "all",
-                    count: 1,
-                    text: "All",
-                },
-            ],
-            selected: 0,
-            inputEnabled: false,
-        },
-
-        series: [
+        xAxis: [
             {
-                name: "AAPL",
-                type: "area",
-                data: data,
-                gapSize: 5,
-                tooltip: {
-                    valueDecimals: 2,
+                labels: {
+                    align: "left",
+                    x: 0,
                 },
-                fillColor: {
-                    linearGradient: {
-                        x1: 0,
-                        y1: 0,
-                        x2: 0,
-                        y2: 1,
-                    },
-                    stops: [
-                        [1, Highcharts.getOptions().colors[8]],
-                        [
-                            1,
-                            Highcharts.color(Highcharts.getOptions().colors[4])
-                                .setOpacity(0)
-                                .get("rgba"),
-                        ],
-                    ],
+                title: {
+                    text: "",
                 },
-                threshold: null,
+                height: "100%",
+                lineWidth: 2,
+                resize: {
+                    enabled: false,
+                },
+            },
+            {
+                labels: {
+                    align: "right",
+                    x: 0,
+                },
+                title: {
+                    text: "",
+                },
+                height: "0%",
+                offset: 0,
+                lineWidth: 2,
             },
         ],
-    });
-    $("#chart3-container").highcharts({
-        // Create the chart
 
-        // create the chart
-
-        title: {
-            text: "AAPL stock price by minute",
-        },
-
-        subtitle: {
-            text: "",
-        },
-
-        xAxis: {
-            breaks: [
-                {
-                    // Nights
-                    from: Date.UTC(2011, 9, 6, 16),
-                    to: Date.UTC(2011, 9, 7, 8),
-                    repeat: 24 * 36e5,
-                },
-                {
-                    // Weekends
-                    from: Date.UTC(2011, 9, 7, 16),
-                    to: Date.UTC(2011, 9, 10, 8),
-                    repeat: 7 * 24 * 36e5,
-                },
-            ],
-        },
-
-        rangeSelector: {
-            buttons: [
-                {
-                    type: "hour",
-                    count: 1,
-                    text: "1h",
-                },
-                {
-                    type: "day",
-                    count: 1,
-                    text: "1D",
-                },
-                {
-                    type: "all",
-                    count: 1,
-                    text: "All",
-                },
-            ],
-            selected: 0,
-            inputEnabled: false,
+        tooltip: {
+            split: false,
         },
 
         series: [
             {
-                name: "AAPL",
-                type: "area",
-                data: data,
-                gapSize: 5,
-                tooltip: {
-                    valueDecimals: 2,
+                type: "line",
+                enable: false,
+                name: "",
+                data: ohlc,
+                dataGrouping: {
+                    units: groupingUnits,
                 },
-                fillColor: {
-                    linearGradient: {
-                        x1: 0,
-                        y1: 0,
-                        x2: 0,
-                        y2: 1,
-                    },
-                    stops: [
-                        [1, Highcharts.getOptions().colors[8]],
-                        [
-                            1,
-                            Highcharts.color(Highcharts.getOptions().colors[4])
-                                .setOpacity(0)
-                                .get("rgba"),
-                        ],
-                    ],
-                },
-                threshold: null,
-            },
-        ],
-    });
-    $("#chart4-container").highcharts({
-        // Create the chart
-
-        // create the chart
-
-        title: {
-            text: "AAPL stock price by minute",
-        },
-
-        subtitle: {
-            text: "",
-        },
-
-        xAxis: {
-            breaks: [
-                {
-                    // Nights
-                    from: Date.UTC(2011, 9, 6, 16),
-                    to: Date.UTC(2011, 9, 7, 8),
-                    repeat: 24 * 36e5,
-                },
-                {
-                    // Weekends
-                    from: Date.UTC(2011, 9, 7, 16),
-                    to: Date.UTC(2011, 9, 10, 8),
-                    repeat: 7 * 24 * 36e5,
-                },
-            ],
-        },
-
-        rangeSelector: {
-            buttons: [
-                {
-                    type: "hour",
-                    count: 1,
-                    text: "1h",
-                },
-                {
-                    type: "day",
-                    count: 1,
-                    text: "1D",
-                },
-                {
-                    type: "all",
-                    count: 1,
-                    text: "All",
-                },
-            ],
-            selected: 0,
-            inputEnabled: false,
-        },
-
-        series: [
-            {
-                name: "AAPL",
-                type: "area",
-                data: data,
-                gapSize: 5,
-                tooltip: {
-                    valueDecimals: 2,
-                },
-                fillColor: {
-                    linearGradient: {
-                        x1: 0,
-                        y1: 0,
-                        x2: 0,
-                        y2: 1,
-                    },
-                    stops: [
-                        [1, Highcharts.getOptions().colors[8]],
-                        [
-                            1,
-                            Highcharts.color(Highcharts.getOptions().colors[4])
-                                .setOpacity(0)
-                                .get("rgba"),
-                        ],
-                    ],
-                },
-                threshold: null,
             },
         ],
     });
