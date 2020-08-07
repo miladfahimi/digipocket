@@ -1,5 +1,5 @@
 Highcharts.getJSON(
-    "http://api.marketstack.com/v1/tickers/aapl/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    "https://api.marketstack.com/v1/tickers/aapl/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
     function (data) {
         var mydata = [];
         $.each(data.data.eod, function (dataIndex, dataObj) {
@@ -21,7 +21,7 @@ Highcharts.getJSON(
     }
 );
 Highcharts.getJSON(
-    "http://api.marketstack.com/v1/tickers/goog/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    "https://api.marketstack.com/v1/tickers/goog/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
     function (data) {
         var mydata = [];
         $.each(data.data.eod, function (dataIndex, dataObj) {
@@ -43,7 +43,7 @@ Highcharts.getJSON(
     }
 );
 Highcharts.getJSON(
-    "http://api.marketstack.com/v1/tickers/amzn/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    "https://api.marketstack.com/v1/tickers/amzn/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
     function (data) {
         var mydata = [];
         $.each(data.data.eod, function (dataIndex, dataObj) {
@@ -65,7 +65,7 @@ Highcharts.getJSON(
     }
 );
 Highcharts.getJSON(
-    "http://api.marketstack.com/v1/tickers/MSFT/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    "https://api.marketstack.com/v1/tickers/MSFT/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
     function (data) {
         var mydata = [];
         $.each(data.data.eod, function (dataIndex, dataObj) {
