@@ -31,13 +31,14 @@ $(document).ready(function () {
 // ---------------------------------------------------------------------------------
 
 let button = document.querySelector(".like-button");
-
-button.addEventListener("click", function (e) {
-    e.preventDefault();
-    this.classList.toggle("active");
-    this.classList.add("animated");
-    generateClones(this);
-});
+if (button) {
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+        this.classList.toggle("active");
+        this.classList.add("animated");
+        generateClones(this);
+    });
+}
 
 function generateClones(button) {
     let clones = randomInt(2, 4);
