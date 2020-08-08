@@ -98,40 +98,30 @@
         <div class="login_modal-content">
             <span class="login_close">&times;</span>
             <div class="login_dialog">
-
-                <a class="boxclose"></a>
-
-                <form class="login_form" id="login_form" method="post" action="#" novalidate="novalidate"
-                    _lpchecked="1">
-                    <h2>Please Login</h2>
-                    <input type="text" class="alert_status">
-                    <label for="login_user"> Username</label>
-                    <input type="text" name="login_user" id="login_user">
-                    <label for="pass_user"> Password </label>
-                    <input type="password" name="pass_user" id="pass_user">
-                    <label for="rememberme" id="lb_rememberme">
-                        <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me</label>
-                    <input type="submit" name="login_submit" value="LOGIN" class="login_submit">
-                    <div class="social-login">
-                    </div>
+                <div id="adminAjaxUrl" style="visibility: hidden;"><?php echo admin_url('admin-ajax.php'); ?></div>
+                <form class="" style="display: flex!important;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 115px 78px;
+" id="login_form" method="post">
+                    <label for="username">Username</label>
+                    <input style="width:300px" id="username" type="text" name="user_login">
+                    <label for="password">Password</label>
+                    <input style="width:300px" id="password" type="password" name="user_pass">
+                    <label></label><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember
+                    Me</label>
+                    <button id="myLoginsubmit" class="btn btn-success">LOGIN</button>
                 </form>
-
-
-
                 <div class="pass_and_register" id="pass_and_register">
-
                     <a class="go_to_register_link" href="" style="">Register</a>
                     <span style="color: black"> </span>
                     <a class="go_to_lostpassword_link" href="">Forgot Password</a>
                     <span style="color: black"></span>
                     <a class="back_login" href="" style="display: none;">Back to Login</a>
-
                 </div>
-
-
             </div>
         </div>
-
     </div>
     <!-- end search form -->
     <script type="module" src="/wp-content/themes/toomoney/js/scripts.js"></script>

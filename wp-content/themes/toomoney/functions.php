@@ -45,6 +45,33 @@ function add_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
+
+function handle_custom_login(){
+    $param = isset($_REQUEST['param']) ? trim($_REQUEST['param']) : "";
+    if($param == "login_test"){
+        $info = array();
+        $info['user_login'] = $_POST['user_login'];
+        $info['user_password'] = $_POST['user_pass'];
+        $info['remember'] = true;
+        $user_signon = wp_signon($info,false);
+        if(is_wp_error($user_signon)){
+            echo json_encode(array("status" => 0));
+        }else{
+            echo json_encode(array("status" => 1));
+        }
+    }
+    wp_redirect(site_url('/blog'));
+    
+}
+
+add_action("wp_ajax_custom_login","handle_custom_login");
+add_action("wp_ajax_nopriv_custom_login","handle_custom_login");
+function do_anything() {
+    wp_redirect(site_url('/blog'));
+}
+add_action('wp_login', 'do_anything');
+
+
 function toomoney_title_tag(){
 
     //ADD TAG TO BROWSER TAB

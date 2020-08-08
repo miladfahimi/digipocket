@@ -3418,15 +3418,17 @@ footer p a {
 }
 
 /* The Close Button */
-.login_close {
+span.login_close {
+    position: absolute;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    z-index: 1000;
 }
 
-.login_close:hover,
-.login_close:focus {
+span.login_close:hover,
+span.login_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -3503,6 +3505,8 @@ label {
 
 a.boxclose {
     position: absolute;
+    z-index: 1000;
+    cursor: pointer;
 }
 
 #allow_pass {

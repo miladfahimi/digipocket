@@ -6,6 +6,7 @@ export default class Login {
 
         // Get the button that opens the modal
         this.btn = document.getElementById("myLoginBtn");
+        this.btnSubmit = document.getElementById("myLoginsubmit");
 
         // Get the <span> element that closes the modal
         this.span = document.getElementsByClassName("login_close")[0];
@@ -19,6 +20,9 @@ export default class Login {
     events() {
         this.span.addEventListener("click", () => {
             this.closeOverlay.bind(this)();
+        });
+        this.btnSubmit.addEventListener("click", () => {
+            this.login.bind(this)();
         });
         if (this.btn) {
             this.btn.addEventListener("click", () => {
@@ -48,10 +52,24 @@ export default class Login {
         this.scroll.style.height = "";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    // window.onclick = function(event) {
-    //   if (event.target == modal) {
-    //     modal.style.display = "none";
-    //   }
-    // }
+    login() {
+        var loginForm = $("#login_form").serialize();
+        loginForm += "&action=custom_login&param=login_test";
+        var ajax_url = $("#adminAjaxUrl").text();
+        var newValue = {
+            user_login: $("#username").val(),
+            user_password: $("#password").val(),
+        };
+        $.ajax({
+            url: ajax_url,
+            type: "POST",
+            data: loginForm,
+            success: (respose) => {
+                console.log(respose);
+            },
+            error: (respose) => {
+                console.log(respose);
+            },
+        });
+    }
 }
