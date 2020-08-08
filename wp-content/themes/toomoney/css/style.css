@@ -3407,7 +3407,6 @@ footer p a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -3415,6 +3414,7 @@ footer p a {
     max-width: 50rem;
     height: 50rem;
     z-index: 1000000000;
+    background-color: #e9d16f;
 }
 
 /* The Close Button */
@@ -3474,20 +3474,6 @@ body .login_dialog label {
 }
 
 .login_dialog {
-    position: absolute;
-    max-width: 450px;
-    min-width: 320px;
-}
-
-.login_dialog button,
-input,
-select,
-textarea,
-label {
-    font-size: 16px !important;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.66;
 }
 
 .login_dialog h2 {
