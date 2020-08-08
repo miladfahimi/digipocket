@@ -56,12 +56,15 @@ function handle_custom_login(){
         $user_signon = wp_signon($info,false);
         if(is_wp_error($user_signon)){
             echo json_encode(array("status" => 0));
+            echo "fails";
         }else{
             echo json_encode(array("status" => 1));
+            echo "success";
+
         }
     }
-    wp_redirect(site_url('/blog'));
-    
+    wp_die();
+
 }
 
 add_action("wp_ajax_custom_login","handle_custom_login");

@@ -26,7 +26,7 @@
         $loginUrl = wp_login_url();
         $current_user= wp_get_current_user();
         $items_wrap = '<ul id="%1$s" class="%2$s">';
-        $login=$items_wrap . '%3$s<li><a id="myLoginBtn"><i class="fa fa-lock"></i> ثبت نام</a></li><li><a href="'.$loginUrl.'"><i class="fa fa-sign-in"></i> ورود</a></li> </ul>';
+        $login=$items_wrap . '%3$s<li><a id="myLoginBtn"><i class="fa fa-sign-in"></i> ورود</a></li><li><a href="'.$loginUrl.'"><i class="fa fa-user-plus"></i> ثبت نام</a></li> </ul>';
         $logout=$items_wrap .'<li><a href="'.$userPanelUrl.'">'.$currentUser .' '.  $current_user->display_name .' </a></li> %3$s<li><a href="'.$mainUrl.'">خروج </a></li></ul>';
 
         wp_nav_menu(array(
