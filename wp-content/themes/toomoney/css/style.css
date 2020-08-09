@@ -3421,7 +3421,7 @@ footer p a {
 span.login_close {
     position: absolute;
     color: #aaaaaa;
-    float: right;
+    right: 28px;
     font-size: 28px;
     font-weight: bold;
     z-index: 1000;
@@ -3501,7 +3501,7 @@ a.boxclose {
 
 .pass_and_register {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
 }
 .pass_and_register div {
     display: inline;
