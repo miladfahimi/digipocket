@@ -19,7 +19,7 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-if (strstr($_SERVER['SERVER_NAME'], 'toomoney.local')) {
+if (strstr($_SERVER['SERVER_NAME'], 'toomoney.se')) {
     define( 'DB_NAME', 'local' );
 
     /** MySQL database username */
