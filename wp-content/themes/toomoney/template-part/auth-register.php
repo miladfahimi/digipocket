@@ -1,6 +1,6 @@
-<div id="loginModal" class="login_modal">
-    <div class="login_modal-content">
-        <span class="login_close">&times;</span>
+<div id="registerModal" class="register_modal">
+    <div class="register_modal-content">
+        <span class="register_close">&times;</span>
         <div class="login_dialog">
             <div class="book">
                 <div class="book__form">
@@ -11,8 +11,17 @@
                         <p class="status"></p>
                         <div class="form__group">
                             <input type="text" class="form__input" name="username" id="username"
-                                placeholder="نام کاربری یا ایمیل" />
-                            <label for="username" class="form__label">نام کاربری یا ایمیل</label>
+                                placeholder="نام کاربری" />
+                            <label for="username" class="form__label">نام کاربری</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" name="email" id="email" placeholder="ایمیل" />
+                            <label for="email" class="form__label">ایمیل</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" name="name" id="name"
+                                placeholder="نام و نام خانوادگی" />
+                            <label for="name" class="form__label">نام و نام خانوادگی</label>
                         </div>
                         <div class="form__group">
                             <input type="password" class="form__input" name="password" id="password"
@@ -20,12 +29,13 @@
                             <label for="password" class="form__label">رمز عبور</label>
                         </div>
                         <div class="form__group">
-                            <label></label><input name="rememberme" type="checkbox" id="rememberme" value="forever">
-                            به خاطرم بسپار</label>
+                            <input type="password" class="form__input" name="password" id="confirmPassword"
+                                placeholder="تکرار رمز عبور" />
+                            <label for="confirmPassword" class="form__label">تکرار رمز عبور</label>
                         </div>
                         <div class="form__group">
-                            <button name="submit" id="myLoginsubmit"
-                                class="btn btn__green u-margin-t-small">ورود</button>
+                            <button name="submit" id="myLoginsubmit" class="btn btn__green u-margin-t-small">ثبت
+                                نام</button>
                         </div>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                     </form>
@@ -33,7 +43,7 @@
             </div>
             <div class="pass_and_register" id="pass_and_register">
                 <div>
-                    <a id="redirectToRegister" class="go_to_register_link" style="">ثبت نام |</a>
+                    <a id="redirectToLogin" class="go_to_register_link" style="">ورود |</a>
                     <a class="go_to_lostpassword_link" href="<?php echo wp_lostpassword_url(); ?>">بازیابی رمز عبور</a>
                 </div>
             </div>

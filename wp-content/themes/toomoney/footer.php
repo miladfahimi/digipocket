@@ -95,6 +95,9 @@
     <!-- login form -->
     <?php get_template_part( 'template-part/auth', 'login' ); ?>
     <!-- end login form -->
+    <!-- register form -->
+    <?php get_template_part( 'template-part/auth', 'register' ); ?>
+    <!-- end register form -->
     <script type="module" src="/wp-content/themes/toomoney/js/scripts.js"></script>
     <?php wp_footer();?>
     </body>

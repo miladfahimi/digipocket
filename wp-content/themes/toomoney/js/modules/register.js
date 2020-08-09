@@ -1,19 +1,20 @@
-class Login {
+class Register {
     // 1. describe and create /  initiate our object
     constructor() {
         // Get the modal
-        this.modal = document.getElementById("loginModal");
-        this.modalRegister = document.getElementById("registerModal");
+        this.modal = document.getElementById("registerModal");
+        this.modalLogin = document.getElementById("loginModal");
 
-        //sdwitch to register
-        this.switchRegister = document.getElementById("redirectToRegister");
+        //switch to login
+        this.switchRegister = document.getElementById("redirectToLogin");
 
         // Get the button that opens the modal
-        this.btn = document.getElementById("myLoginBtn");
+        this.btn = document.getElementById("myRegisterBtn");
+
         this.btnSubmit = document.getElementById("myLoginsubmit");
 
         // Get the <span> element that closes the modal
-        this.span = document.getElementsByClassName("login_close")[0];
+        this.span = document.getElementsByClassName("register_close")[0];
 
         this.scroll = document.body;
         this.win = window;
@@ -23,7 +24,7 @@ class Login {
 
     events() {
         this.switchRegister.addEventListener("click", () => {
-            this.switchToRegister.bind(this)();
+            this.switchToLogin.bind(this)();
         });
         this.span.addEventListener("click", () => {
             this.closeOverlay.bind(this)();
@@ -59,9 +60,9 @@ class Login {
         this.scroll.style.height = "";
     }
 
-    switchToRegister() {
+    switchToLogin() {
         this.modal.style.display = "none";
-        this.modalRegister.style.display = "block";
+        this.modalLogin.style.display = "block";
         this.scroll.style.overflow = "hidden";
         this.scroll.style.height = "100vh";
     }
@@ -91,4 +92,4 @@ class Login {
         });
     }
 }
-export default Login;
+export default Register;

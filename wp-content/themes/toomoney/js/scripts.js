@@ -1,10 +1,12 @@
 import Search from "./modules/search.js";
 import Login from "./modules/login.js";
+import Register from "./modules/register.js";
 import Ads from "./modules/myAds.js";
 import Post from "./modules/myPost.js";
 import Like from "./modules/like.js";
 
 const search = new Search();
+const register = new Register();
 const login = new Login();
 const ads = new Ads();
 const post = new Post();
