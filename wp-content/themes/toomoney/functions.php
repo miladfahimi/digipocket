@@ -4,6 +4,7 @@ require get_theme_file_path('/inc/cron.php');
 require get_theme_file_path('/inc/telegram.php');
 require get_theme_file_path('/inc/telegram-message.php');
 require get_theme_file_path('/inc/scraper.php');
+require get_theme_file_path('/inc/auth.php');
 
 
 
@@ -32,10 +33,6 @@ function add_theme_scripts() {
     wp_enqueue_script( 'script7', "//code.highcharts.com/stock/modules/export-data.js");
     wp_enqueue_script( 'script8', "//code.highcharts.com/stock/modules/drag-panes.js");
     wp_enqueue_script( 'script9', "//code.highcharts.com/stock/modules/data.js");
-    wp_enqueue_script( 'script10', get_template_directory_uri() . '/js/chart.js');
-
-    
-    
     wp_enqueue_script( 'ajax_custom_script',  get_stylesheet_directory_uri() . '/js/ajax.js', array('jquery'));
     wp_localize_script( 'ajax_custom_script', 'frontendajax', array( 
         'ajaxurl' =>  get_site_url(),
@@ -46,26 +43,6 @@ function add_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
-function handle_custom_login(){
-    $param = isset($_REQUEST['param']) ? trim($_REQUEST['param']) : "";
-    if($param == "login_test"){
-        $info = array();
-        $info['user_login'] = $_POST['user_login'];
-        $info['user_password'] = $_POST['user_pass'];
-        $info['remember'] = true;
-        $user_signon = wp_signon($info,false);
-        if(is_wp_error($user_signon)){
-            echo json_encode(array("status" => 0));
-        }else{
-            echo json_encode(array("status" => 1));
-        }
-    }
-    wp_die();
-
-}
-
-add_action("wp_ajax_custom_login","handle_custom_login");
-add_action("wp_ajax_nopriv_custom_login","handle_custom_login");
 
 
 function toomoney_title_tag(){

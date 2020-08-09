@@ -92,11 +92,14 @@ ul.social li:focus a {
 }
 
 /* menu */
-
 .header .menu {
     clear: both;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+ul.menu li a img {
+    border-radius: 50px;
 }
 
 /* menu icon */

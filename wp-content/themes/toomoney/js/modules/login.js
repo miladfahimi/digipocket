@@ -1,4 +1,4 @@
-export default class Login {
+class Login {
     // 1. describe and create /  initiate our object
     constructor() {
         // Get the modal
@@ -53,23 +53,28 @@ export default class Login {
     }
 
     login() {
-        var loginForm = $("#login_form").serialize();
-        loginForm += "&action=custom_login&param=login_test";
-        var ajax_url = $("#adminAjaxUrl").text();
-        var newValue = {
-            user_login: $("#username").val(),
-            user_password: $("#password").val(),
-        };
-        $.ajax({
-            url: ajax_url,
-            type: "POST",
-            data: loginForm,
-            success: (respose) => {
-                console.log(respose);
-            },
-            error: (respose) => {
-                console.log(respose);
-            },
+        // Perform AJAX login on form submit
+        $("#login_form").on("submit", function (e) {
+            $("p.status").show().text(ajax_login_object.loadingmessage);
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: ajax_login_object.ajaxurl,
+                data: {
+                    action: "ajaxlogin", //calls wp_ajax_nopriv_ajaxlogin
+                    username: $("#username").val(),
+                    password: $("#password").val(),
+                    security: $("#security").val(),
+                },
+                success: function (data) {
+                    $("p.status").text(data.message);
+                    if (data.loggedin == true) {
+                        document.location.href = ajax_login_object.redirecturl;
+                    }
+                },
+            });
+            e.preventDefault();
         });
     }
 }
+export default Login;

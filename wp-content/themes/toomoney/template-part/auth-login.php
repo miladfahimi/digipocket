@@ -2,31 +2,27 @@
     <div class="login_modal-content">
         <span class="login_close">&times;</span>
         <div class="login_dialog">
-            <div id="adminAjaxUrl" style="visibility: hidden;"><?php echo admin_url('admin-ajax.php'); ?></div>
             <div class="book">
                 <div class="book__form">
                     <div class="login_logo">
                         <img src="<?php echo get_theme_file_uri('images/logos/logo-dark.png') ?>" alt="#" />
                     </div>
-                    <form id="login_form" action="" class="form" method="post">
+                    <form name="login_form" id="login_form" class="login_form" action="" method="post">
+                        <p class="status"></p>
                         <div class="form__group">
-                            <input type="text" class="form__input" id="username" placeholder="نام کاربری یا ایمیل"
-                                name="user_login" required>
-                            <label for="username" class="form__label">نام کاربری یا ایمیل</label>
+                            <input type="text" class="form__input" name="username" id="username"
+                                placeholder="Username" />
                         </div>
                         <div class="form__group">
-                            <input type="password" class="form__input" id="password" placeholder="رمز عبور"
-                                name="user_pass" required>
-                            <label for="password" class="form__label">رمز عبور</label>
+                            <input type="password" class="form__input" name="password" id="password"
+                                placeholder="Password" />
                         </div>
                         <div class="form__group">
-                            <label></label><input name="rememberme" type="checkbox" id="rememberme" value="forever">
-                            به خاطرم بسپار</label>
-                        </div>
-                        <div class="form__group">
-                            <button id="myLoginsubmit" type="submit"
+                            <button name="submit" id="myLoginsubmit"
                                 class="btn btn__green u-margin-t-small">ورود</button>
                         </div>
+                        <a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
+                        <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                     </form>
                 </div>
             </div>

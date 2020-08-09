@@ -22,7 +22,7 @@
         <?php
         $userPanelUrl= site_url('user-panel');
         $currentUser= get_avatar(get_current_user_id(),20);
-        $mainUrl = wp_logout_url(site_url(""));
+        $mainUrl = urldecode(wp_logout_url(site_url()));
         $loginUrl = wp_login_url();
         $current_user= wp_get_current_user();
         $items_wrap = '<ul id="%1$s" class="%2$s">';
