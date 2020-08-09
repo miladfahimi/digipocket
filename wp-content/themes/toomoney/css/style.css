@@ -3499,6 +3499,14 @@ a.boxclose {
     display: none;
 }
 
+.pass_and_register {
+    position: absolute;
+    bottom: 5px;
+}
+.pass_and_register div {
+    display: inline;
+}
+
 .pass_and_register a {
     text-decoration: none;
     font-size: 16px;

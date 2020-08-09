@@ -33,6 +33,7 @@ function add_theme_scripts() {
     wp_enqueue_script( 'script7', "//code.highcharts.com/stock/modules/export-data.js");
     wp_enqueue_script( 'script8', "//code.highcharts.com/stock/modules/drag-panes.js");
     wp_enqueue_script( 'script9', "//code.highcharts.com/stock/modules/data.js");
+    wp_enqueue_script( 'script10', get_template_directory_uri() . '/js/chart.js');
     wp_enqueue_script( 'ajax_custom_script',  get_stylesheet_directory_uri() . '/js/ajax.js', array('jquery'));
     wp_localize_script( 'ajax_custom_script', 'frontendajax', array( 
         'ajaxurl' =>  get_site_url(),

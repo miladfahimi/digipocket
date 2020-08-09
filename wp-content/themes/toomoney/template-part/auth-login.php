@@ -11,27 +11,31 @@
                         <p class="status"></p>
                         <div class="form__group">
                             <input type="text" class="form__input" name="username" id="username"
-                                placeholder="Username" />
+                                placeholder="نام کاربری یا ایمیل" />
+                            <label for="username" class="form__label">نام کاربری یا ایمیل</label>
                         </div>
                         <div class="form__group">
                             <input type="password" class="form__input" name="password" id="password"
-                                placeholder="Password" />
+                                placeholder="رمز عبور" />
+                            <label for="password" class="form__label">رمز عبور</label>
+                        </div>
+                        <div class="form__group">
+                            <label></label><input name="rememberme" type="checkbox" id="rememberme" value="forever">
+                            به خاطرم بسپار</label>
                         </div>
                         <div class="form__group">
                             <button name="submit" id="myLoginsubmit"
                                 class="btn btn__green u-margin-t-small">ورود</button>
                         </div>
-                        <a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                     </form>
                 </div>
             </div>
             <div class="pass_and_register" id="pass_and_register">
-                <a class="go_to_register_link" href="" style="">ثبت نام |</a>
-                <span style="color: black"> </span>
-                <a class="go_to_lostpassword_link" href="">بازیابی رمز عبور</a>
-                <span style="color: black"></span>
-                <a class="back_login" href="" style="display: none;">Back to Login</a>
+                <div>
+                    <a class="go_to_register_link" href="<?php echo wp_registration_url(); ?>" style="">ثبت نام |</a>
+                    <a class="go_to_lostpassword_link" href="<?php echo wp_lostpassword_url(); ?>">بازیابی رمز عبور</a>
+                </div>
             </div>
         </div>
     </div>
