@@ -11,7 +11,7 @@ class Register {
         // Get the button that opens the modal
         this.btn = document.getElementById("myRegisterBtn");
 
-        this.btnRegister = document.getElementById("myRegistersubmit");
+        this.registerForm = document.getElementById("register_form");
 
         // Get the <span> element that closes the modal
         this.span = document.getElementsByClassName("register_close")[0];
@@ -29,7 +29,7 @@ class Register {
         this.span.addEventListener("click", () => {
             this.closeOverlay.bind(this)();
         });
-        this.btnRegister.addEventListener("click", () => {
+        this.registerForm.addEventListener("submit", () => {
             this.register.bind(this)();
         });
         if (this.btn) {

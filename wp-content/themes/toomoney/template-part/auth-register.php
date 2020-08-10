@@ -11,22 +11,22 @@
                         <p class="registration_status"></p>
                         <div class="form__group">
                             <input type="text" class="form__input" name="new-username" id="new-username"
-                                placeholder="نام کاربری" />
+                                placeholder="نام کاربری" required />
                             <label for="new-username" class="form__label">نام کاربری</label>
                         </div>
                         <div class="form__group">
-                            <input type="text" class="form__input" name="new-useremail" id="new-useremail"
-                                placeholder="ایمیل" />
+                            <input type="email" class="form__input" name="new-useremail" id="new-useremail"
+                                placeholder="ایمیل" size="30" required />
                             <label for="new-useremail" class="form__label">ایمیل</label>
                         </div>
                         <div class="form__group">
                             <input type="text" class="form__input" name="new-first-name" id="new-first-name"
-                                placeholder="نام و نام خانوادگی" />
+                                placeholder="نام و نام خانوادگی" required />
                             <label for="new-first-name" class="form__label">نام و نام خانوادگی</label>
                         </div>
                         <div class="form__group">
                             <input type="password" class="form__input" name="new-userpassword" id="new-userpassword"
-                                placeholder="رمز عبور" />
+                                placeholder="رمز عبور" required />
                             <label for="new-userpassword" class="form__label">رمز عبور</label>
                         </div>
                         <div class="form__group">
@@ -35,7 +35,7 @@
                             <label for="confirmPassword" class="form__label">تکرار رمز عبور</label>
                         </div>
                         <div class="form__group">
-                            <button name="submit" id="myRegistersubmit" class="btn btn__green u-margin-t-small">ثبت
+                            <button type="submit" id="myRegistersubmit" class="btn btn__green u-margin-t-small">ثبت
                                 نام</button>
                         </div>
                         <?php wp_nonce_field( 'ajax-register-nonce', 'security1' ); ?>

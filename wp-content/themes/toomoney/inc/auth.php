@@ -68,6 +68,12 @@ $user_data = array();
     $user_id = wp_insert_user( $user_data );
     if (!is_wp_error($user_id)) {
         echo json_encode( array( 'loggedin'=>true, 'message'=>__('عملیات ورود با موفقیت انجام شد، منتظر بمانید...' )));
+        $user_info = array();
+        $user_info['user_login'] = $_POST['new_user_name'];
+        $user_info['user_password']= $_POST['new_user_password'];
+        $user_info['remember'] = true;
+
+        wp_signon($user_info, false );
     } else {
       if ( is_wp_error($user_id)) {
         echo json_encode( array( 'loggedin'=>false, 'message'=>__( 'نام یا ایمیل انتخابی در سیستم موجود می باشد!!' )));
