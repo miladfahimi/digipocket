@@ -11,7 +11,7 @@ class Register {
         // Get the button that opens the modal
         this.btn = document.getElementById("myRegisterBtn");
 
-        this.btnSubmit = document.getElementById("myLoginsubmit");
+        this.btnRegister = document.getElementById("myRegistersubmit");
 
         // Get the <span> element that closes the modal
         this.span = document.getElementsByClassName("register_close")[0];
@@ -29,8 +29,8 @@ class Register {
         this.span.addEventListener("click", () => {
             this.closeOverlay.bind(this)();
         });
-        this.btnSubmit.addEventListener("click", () => {
-            this.login.bind(this)();
+        this.btnRegister.addEventListener("click", () => {
+            this.register.bind(this)();
         });
         if (this.btn) {
             this.btn.addEventListener("click", () => {
@@ -67,28 +67,33 @@ class Register {
         this.scroll.style.height = "100vh";
     }
 
-    login() {
+    register() {
         // Perform AJAX login on form submit
-        $("#login_form").on("submit", function (e) {
-            $("p.status").show().text(ajax_login_object.loadingmessage);
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: ajax_login_object.ajaxurl,
-                data: {
-                    action: "ajaxlogin", //calls wp_ajax_nopriv_ajaxlogin
-                    username: $("#username").val(),
-                    password: $("#password").val(),
-                    security: $("#security").val(),
-                },
-                success: function (data) {
-                    $("p.status").text(data.message);
-                    if (data.loggedin == true) {
-                        document.location.href = ajax_login_object.redirecturl;
-                    }
-                },
-            });
-            e.preventDefault();
+        $("p.registration_status")
+            .show()
+            .text(ajax_register_object.loadingmessage);
+        var data = {
+            action: "ajaxregister",
+            new_user_name: $("#new-username").val(),
+            new_user_email: $("#new-useremail").val(),
+            new_user_first_name: $("#new-first-name").val(),
+            new_user_password: $("#new-userpassword").val(),
+            security: $("#security1").val(),
+        };
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: ajax_register_object.ajaxregisterurl,
+            data: data,
+            success: function (data) {
+                $("p.registration_status").text(data.message);
+                if (data.loggedin == true) {
+                    document.location.href = ajax_register_object.redirecturl;
+                }
+            },
+            error: function (data) {
+                $("p.registration_status").text(data.message);
+            },
         });
     }
 }

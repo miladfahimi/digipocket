@@ -7,26 +7,27 @@
                     <div class="login_logo">
                         <img src="<?php echo get_theme_file_uri('images/logos/logo-dark.png') ?>" alt="#" />
                     </div>
-                    <form name="login_form" id="login_form" class="login_form" action="" method="post">
-                        <p class="status"></p>
+                    <form name="register_form" id="register_form" class="login_form" action="" method="post">
+                        <p class="registration_status"></p>
                         <div class="form__group">
-                            <input type="text" class="form__input" name="username" id="username"
+                            <input type="text" class="form__input" name="new-username" id="new-username"
                                 placeholder="نام کاربری" />
-                            <label for="username" class="form__label">نام کاربری</label>
+                            <label for="new-username" class="form__label">نام کاربری</label>
                         </div>
                         <div class="form__group">
-                            <input type="text" class="form__input" name="email" id="email" placeholder="ایمیل" />
-                            <label for="email" class="form__label">ایمیل</label>
+                            <input type="text" class="form__input" name="new-useremail" id="new-useremail"
+                                placeholder="ایمیل" />
+                            <label for="new-useremail" class="form__label">ایمیل</label>
                         </div>
                         <div class="form__group">
-                            <input type="text" class="form__input" name="name" id="name"
+                            <input type="text" class="form__input" name="new-first-name" id="new-first-name"
                                 placeholder="نام و نام خانوادگی" />
-                            <label for="name" class="form__label">نام و نام خانوادگی</label>
+                            <label for="new-first-name" class="form__label">نام و نام خانوادگی</label>
                         </div>
                         <div class="form__group">
-                            <input type="password" class="form__input" name="password" id="password"
+                            <input type="password" class="form__input" name="new-userpassword" id="new-userpassword"
                                 placeholder="رمز عبور" />
-                            <label for="password" class="form__label">رمز عبور</label>
+                            <label for="new-userpassword" class="form__label">رمز عبور</label>
                         </div>
                         <div class="form__group">
                             <input type="password" class="form__input" name="password" id="confirmPassword"
@@ -34,10 +35,10 @@
                             <label for="confirmPassword" class="form__label">تکرار رمز عبور</label>
                         </div>
                         <div class="form__group">
-                            <button name="submit" id="myLoginsubmit" class="btn btn__green u-margin-t-small">ثبت
+                            <button name="submit" id="myRegistersubmit" class="btn btn__green u-margin-t-small">ثبت
                                 نام</button>
                         </div>
-                        <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                        <?php wp_nonce_field( 'ajax-register-nonce', 'security1' ); ?>
                     </form>
                 </div>
             </div>

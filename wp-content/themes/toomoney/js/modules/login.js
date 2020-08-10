@@ -70,16 +70,17 @@ class Login {
         // Perform AJAX login on form submit
         $("#login_form").on("submit", function (e) {
             $("p.status").show().text(ajax_login_object.loadingmessage);
+            var data = {
+                action: "ajaxlogin", //calls wp_ajax_nopriv_ajaxlogin
+                username: $("#username").val(),
+                password: $("#password").val(),
+                security: $("#security").val(),
+            };
             $.ajax({
                 type: "POST",
                 dataType: "json",
                 url: ajax_login_object.ajaxurl,
-                data: {
-                    action: "ajaxlogin", //calls wp_ajax_nopriv_ajaxlogin
-                    username: $("#username").val(),
-                    password: $("#password").val(),
-                    security: $("#security").val(),
-                },
+                data: data,
                 success: function (data) {
                     $("p.status").text(data.message);
                     if (data.loggedin == true) {
