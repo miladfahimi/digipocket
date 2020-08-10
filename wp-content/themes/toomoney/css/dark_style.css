@@ -2102,7 +2102,6 @@ table.table tbody tr td {
     float: left;
     list-style: none;
     width: 100%;
-    margin-top: 90px;
 }
 .cryto_feature ul li {
     float: left;
@@ -2156,7 +2155,7 @@ table.table tbody tr td {
 }
 .digital_earth img {
     position: relative;
-    left: -115px;
+    width: 100%;
 }
 .cryto_feature ul li:nth-child(2) {
     position: relative;
