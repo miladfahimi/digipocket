@@ -159,6 +159,41 @@
     </div>
 </section>
 <!-- end section -->
+<!-- section news -->
+<section class="layout_padding">
+    <div class="container">
+        <div class="row">
+            <?php 
+                        $args = array(
+                            'post_type' => 'news',
+                            'posts_per_page' => 4
+                        );
+                        $q = new WP_Query($args);
+                        if ( $q->have_posts() ) {
+                            while ( $q->have_posts() ) {
+                                $q->the_post(); 
+                        ?>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="home_posts_box">
+                    <div>
+                        <img class="" src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
+                    </div>
+                    <div class="home_posts_text_cont">
+                        <div class="home_posts_box-title">
+                            <h4><?php  echo wp_trim_words( get_the_title(), 8 ); ?></h4>
+                        </div>
+                        <div>
+                            <p><?php echo wp_trim_words( get_the_content(), 20 ); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php }} ?>
+        </div>
+    </div>
+</section>
+<!-- end section news -->
 <!-- section -->
 <section class="layout_padding dark_bg white_fonts">
     <div class="container">
@@ -247,96 +282,7 @@
     </div>
 </section>
 <!-- end section -->
-<!-- section -->
-<section class="layout_padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="full">
-                    <div class="heading_main">
-                        <h2><span>Our Pricing Plan</span></h2>
-                        <p>Exchange Transactions of your referred users Bitcoin</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="full">
-                    <div class="coin_selling_bt">
-                        <ul>
-                            <li><a class="active" href="#">Buy Bitcoin</a></li>
-                            <li><a href="#">Sell Bitcoin</a></li>
-                        </ul>
-                        <div class="coin_price_table">
-                            <h3>GET 0.0512 BTC</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                            <p class="price_table">$ 100.00</p>
-                            <div class="center">
-                                <a class="pay_btn" href="#">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="full focus_sell">
-                    <div class="coin_selling_bt">
-                        <ul>
-                            <li><a class="active" href="#">Btc</a></li>
-                            <li><a href="#">Eth</a></li>
-                        </ul>
-                        <div class="coin_price_table">
-                            <h3>GET 0.0512 BTC</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                            <p class="price_table">$ 100.00</p>
-                            <div class="center">
-                                <a class="pay_btn" href="#">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="full">
-                    <div class="coin_selling_bt">
-                        <ul>
-                            <li><a class="active" href="#">Usd</a></li>
-                            <li><a href="#">Eur</a></li>
-                        </ul>
-                        <div class="coin_price_table">
-                            <h3>GET 0.0512 BTC</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                            <p class="price_table">$ 100.00</p>
-                            <div class="center">
-                                <a class="pay_btn" href="#">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="full">
-                    <div class="coin_selling_bt">
-                        <ul>
-                            <li><a class="active" href="#">Gbp</a></li>
-                            <li><a href="#">Rup</a></li>
-                        </ul>
-                        <div class="coin_price_table">
-                            <h3>GET 0.0512 BTC</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-                            <p class="price_table">$ 100.00</p>
-                            <div class="center">
-                                <a class="pay_btn" href="#">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
+
 <!-- section -->
 <section class="layout_padding light_bg">
     <div class="container">
