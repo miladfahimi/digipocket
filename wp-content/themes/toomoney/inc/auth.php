@@ -62,7 +62,7 @@ $user_data = array();
     $user_data['user_email'] = $_POST['new_user_email'];
     $user_data['user_pass']= $_POST['new_user_password'];
     $user_data['first_name'] = $_POST['new_user_first_name'];;
-    $user_data['display_name'] = 'test54';
+    $user_data['display_name'] = 'کاربر مهمان';
     $user_data['role'] = 'subscriber';
 
     $user_id = wp_insert_user( $user_data );
