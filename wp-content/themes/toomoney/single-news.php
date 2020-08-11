@@ -7,7 +7,9 @@
 <!-- section -->
 <?php get_template_part( 'template-part/content', 'index' ); ?>
 
-<?php while(have_posts()) {
+<?php
+    global $post;
+    while(have_posts()) {
     the_post(); 
 ?>
 
@@ -41,6 +43,7 @@
 }
                              $relatedResources = get_field('related_resources');
                              if($relatedResources){
+
                              foreach($relatedResources as $item){
                             ?>
                                 <li>
@@ -50,6 +53,8 @@
                                 </li>
                                 <?php
                             }
+                            if (is_single ()) comments_template ();
+
                         ?>
                             </ul>
                         </div>
