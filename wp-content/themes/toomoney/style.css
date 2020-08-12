@@ -51,5 +51,6 @@ p {
     margin: 0;
     padding: 0;
 }
-.avatar-40 {
+.avatar-12 {
+    border-radius: 100px;
 }
