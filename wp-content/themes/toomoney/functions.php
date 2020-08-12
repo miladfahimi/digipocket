@@ -138,3 +138,18 @@ function postServerSideManipulation($data){
     return $data;
 }
 add_filter('wp_insert_post_data','postServerSideManipulation');
+
+add_filter( 'adorable_avatars.force', '__return_true' );
+
+// add_filter( 'adorable_avatars.force', function ( $force, $id_or_email ) {
+
+// 	if ( is_numeric( $id_or_email ) ) {
+// 		$id_or_email = (int) $id_or_email;
+// 	} elseif ( $id_or_email instanceof WP_Post ) {
+// 		$id_or_email = $id_or_email->ID;
+// 	} elseif ( $id_or_email instanceof WP_Comment ) {
+// 		$id_or_email = $id_or_email->user_id;
+// 	}
+
+// 	return 31 !== $id_or_email;
+// }, 10, 2 );
