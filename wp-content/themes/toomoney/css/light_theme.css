@@ -3319,6 +3319,10 @@ footer p a {
 .command_cont {
     margin-bottom: 30px;
 }
+.command_cont_color {
+    background-color: rgb(238, 238, 238);
+    margin-top: 5px;
+}
 .post_commt_form {
     float: left;
     width: 100%;

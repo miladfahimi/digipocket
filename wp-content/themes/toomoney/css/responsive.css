@@ -503,6 +503,10 @@
     .command_cont {
         margin: 20px 0;
     }
+    .command_cont_color {
+        background-color: rgb(238, 238, 238);
+        margin-top: 5px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -834,6 +838,10 @@
 
     .command_cont {
         margin: 20px 0;
+    }
+    .command_cont_color {
+        background-color: rgb(238, 238, 238);
+        margin-top: 5px;
     }
 }
 @media (max-width: 768px) {
