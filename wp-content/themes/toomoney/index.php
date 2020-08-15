@@ -101,6 +101,13 @@
     </div>
 </section>
 <!-- end section -->
+<div style="width:100%;display: flex;flex-direction:column">
+    <p>
+        resuable box shoud be create as below!
+    </p>
+    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid.png') ?>" alt="">
+    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid_1.png') ?>" alt="">
+</div>
 <!-- section -->
 <section class="layout_padding light_bg">
     <div class="container">
