@@ -3,7 +3,7 @@ function run_scraper_every_thirty_minutes() {
     // get DOM from URL or file
     // $html = file_get_html('http://www.bonbast.com/');
     // $html02 = file_get_html('https://www.tgju.org/profile/price_sek/technical');
-    // $html03 = file_get_html('https://https://www.tgju.org/');
+    $html03 = file_get_html('https://www.tgju.org/');
     $html04 = file_get_html('https://www.tgju.org/profile/price_aed/technical');
 
     $usBuy=0;;
@@ -23,9 +23,13 @@ function run_scraper_every_thirty_minutes() {
     //     $sekSale02 = $e->innertext . '<br>';
     // // find all div tags with id=gbar
     foreach($html04->find('span[data-col="info.last_trade.PDrCotVal"]') as $e)
-    $aedSale = $e->innertext . '<br>';
-    // foreach($html03->find('tr[data-market-row="price_sek"]+td') as $e)
-    //     $sekSale03 = $e->innertext . '<br>';
+    if((float)str_replace(',', '',$e->innertext)!=0){
+        $aedSale = $e->innertext;
+    }
+    foreach($html03->find('tr[data-market-row="price_aed"]') as $e)
+    if((float)str_replace(',', '',$e->getAttribute('data-price'))!=0){
+    $aedSale = $e->getAttribute('data-price');
+    }
     // Function call with your own text or variable
     $USDasAED= ((float)str_replace(',', '',$aedSale)*3.67)/10;
     $sekTousd=0.11;
