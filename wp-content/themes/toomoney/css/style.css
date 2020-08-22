@@ -3434,7 +3434,7 @@ footer p a {
 }
 .register_modal-content {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
@@ -3442,7 +3442,7 @@ footer p a {
     border: 1px solid #888;
     width: 80%;
     max-width: 50rem;
-    height: 75rem;
+    height: 62rem;
     z-index: 1000000000;
     background-color: #e9d16f;
 }

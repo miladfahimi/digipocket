@@ -30,11 +30,6 @@
                             <label for="new-userpassword" class="form__label">رمز عبور</label>
                         </div>
                         <div class="form__group">
-                            <input type="password" class="form__input" name="password" id="confirmPassword"
-                                placeholder="تکرار رمز عبور" />
-                            <label for="confirmPassword" class="form__label">تکرار رمز عبور</label>
-                        </div>
-                        <div class="form__group">
                             <button type="submit" id="myRegistersubmit" class="btn btn__green u-margin-t-small">ثبت
                                 نام</button>
                         </div>
