@@ -1,0 +1,109 @@
+.boxes {
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #eeeeee;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(230, 230, 230, 1);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(230, 230, 230, 1);
+    box-shadow: 0px 0px 9px 1px rgba(230, 230, 230, 1);
+}
+
+.box_img_cntr {
+    flex: 1 1 0;
+}
+.box_img_cntr img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.box_text_cntr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 0;
+    padding: 30px;
+}
+.box_text_cntr h4 {
+    color: #000;
+    font-weight: 700;
+    text-align: right;
+}
+.box_text_cntr p {
+    width: 100%;
+    text-align: right;
+}
+.box_text_cntr div {
+    align-self: flex-start;
+}
+.box_text_cntr .link_button {
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 100px;
+    color: #fff;
+    background-color: rgb(55, 118, 255);
+}
+.box_text_cntr .tag_button {
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 100px;
+    color: #fff;
+    background-color: rgb(0, 39, 124);
+}
+.box_info_cntr {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+}
+.box_avatar {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.box_avatar img {
+    width: 100%;
+    border-radius: 100px;
+}
+.box_info_cntr h6 {
+    color: rgb(167, 167, 167);
+    font-size: 10px;
+}
+/* BOX END */
+/* BOX01 START */
+.box01_img_cntr {
+    flex: 1 1 0;
+}
+.box01_img_cntr img {
+    width: 100%;
+    height: 300px;
+}
+.box01_text_cntr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    flex: 1 1 0;
+    padding: 30px;
+}
+.box01_text_cntr p {
+    width: 100%;
+    color: #fff;
+    text-align: right;
+}
+.box01_text_cntr .link_button {
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 100px;
+    color: #555555;
+    background-color: #e9d16f;
+}
+.box01_text_cntr .tag_button {
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 100px;
+    color: #555555;
+    background-color: #d7e96f;
+}

@@ -65,6 +65,65 @@
 <!-- section -->
 <?php get_template_part( 'template-part/content', 'index' ); ?>
 <!-- end section -->
+<!-- section boxes -->
+<section class="layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="boxes">
+                    <div class="box_img_cntr">
+                        <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
+                            alt="">
+                    </div>
+                    <div class="box_text_cntr">
+                        <div>
+                            <a class="link_button" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button" href="#">test</a>
+                        </div>
+
+                        <h4> باشد را در وردپرس اضافه کنید</h4>
+                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
+                            تواند اولین گام برای شروع کسب و کار شما باشد را در وردپرس اضافه کنید. محتوا نویسی qasوردپرس
+                            یکی از اولین </p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#">
+                                <img src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt="">
+                            </a>
+                            <h6> میلاد فهیمی 24،563 نمایش</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="boxes" style="background-image:url(<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>);background-repeat: no-repeat;
+    background-size: auto; background-position:right">
+                    <div class="box01_text_cntr">
+                        <div>
+                            <a class="link_button" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button" href="#">test</a>
+                        </div>
+                        <h3>اولین گام برای شروع</h3>
+                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
+                            تواند اولین گام</p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#"><img
+                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
+                            <h6>میلاد فهیمی</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+<div style="width:100%;display: flex;flex-direction:column">
+    <p>
+        resuable box shoud be create as below!
+    </p>
+    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid.png') ?>" alt="">
+    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid_1.png') ?>" alt="">
+</div>
 <!-- section -->
 <section class="layout_padding">
     <div class="container">
@@ -101,13 +160,6 @@
     </div>
 </section>
 <!-- end section -->
-<div style="width:100%;display: flex;flex-direction:column">
-    <p>
-        resuable box shoud be create as below!
-    </p>
-    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid.png') ?>" alt="">
-    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid_1.png') ?>" alt="">
-</div>
 <!-- section -->
 <section class="layout_padding light_bg">
     <div class="container">
