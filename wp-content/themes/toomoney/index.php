@@ -70,7 +70,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
-                <div class="boxes">
+                <div class="boxes boxes-v">
                     <div class="box_img_cntr">
                         <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
                             alt="">
