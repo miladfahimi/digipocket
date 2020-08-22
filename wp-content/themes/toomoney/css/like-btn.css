@@ -7,6 +7,9 @@
     float: left;
     width: 50px;
 }
+.like-button-cont {
+    flex: 1;
+}
 .like-button.animated {
     -webkit-animation: pop 0.9s both;
     animation: pop 0.9s both;

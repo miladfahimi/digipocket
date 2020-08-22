@@ -3025,9 +3025,13 @@ footer p a {
     margin-bottom: 35px;
     float: left;
     width: 100%;
+    background: #369eff4d;
+    padding: 30px;
+    text-align: left;
 }
 .side_bar h4 {
     margin-top: 0;
+    text-align: right;
 }
 .side_bar_blog .input-group {
     background: rgba(0, 0, 0, 0.08);
@@ -3175,13 +3179,16 @@ footer p a {
     margin: 5px 0 15px;
 }
 .post_info ul {
-    display: inline;
+    display: flex;
 }
-.post_info li {
+.post_info ul li {
     display: inline;
     margin-right: 10px;
     font-size: 14px;
-    color: #333;
+    color: rgb(66, 66, 66);
+}
+.post_info ul li i {
+    color: rgb(133, 133, 133);
 }
 .bottom_info {
     float: left;

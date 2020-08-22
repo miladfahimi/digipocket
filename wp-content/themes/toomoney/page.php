@@ -39,21 +39,20 @@ get_header();
                             <div class="post_info">
                                 <ul>
                                     <li><i class="fa fa-user" aria-hidden="true"></i> <?php the_author();?></li>
-                                    <li><i class="fa fa-comment" aria-hidden="true"></i>
-                                        <?php echo count(get_comments());?></li>
+                                    <li><i class="fa fa-comment" aria-hidden="true"></i> <?php echo comments_number();?>
+                                    </li>
                                     <li><?php the_category();?></li>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>
-                                        <?php echo get_the_date();?>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo get_the_date();?>
                                     </li>
                                 </ul>
                             </div>
                             <p><?php the_excerpt(); ?>
                             </p>
                             <div class="bottom_info">
-                                <div class="pull-left"><a class="read_more" href="<?php the_permalink(); ?>">READ MORE
-                                        <i class="fa fa-angle-right"></i></a></div>
+                                <div class="pull-left"><a class="read_more" href="<?php the_permalink(); ?>">ادامه
+                                        مطلب ...
+                                    </a></div>
                                 <div class="pull-right">
-                                    <div class="shr">Share: </div>
                                     <div class="social_icon">
                                         <ul>
                                             <li class="fb"><a href="#"><i class="fa fa-facebook"
@@ -64,7 +63,9 @@ get_header();
                                                         aria-hidden="true"></i></a></li>
                                             <li class="pint"><a href="#"><i class="fa fa-pinterest"
                                                         aria-hidden="true"></i></a></li>
+                                            <li class="read_more">اشتراک گذاری: </li>
                                         </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +97,7 @@ get_header();
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left">
                 <div class="side_bar">
                     <div class="side_bar_blog">
-                        <h4>SEARCH</h4>
+                        <h4>جستجو</h4>
                         <div class="side_bar_search">
                             <div class="input-group stylish-input-group">
                                 <input class="form-control" placeholder="" type="text">
@@ -107,7 +108,7 @@ get_header();
                         </div>
                     </div>
                     <div class="side_bar_blog">
-                        <h4>RECENT POST</h4>
+                        <h4>آخرین مطالب</h4>
                         <div class="recent_post">
                             <ul>
                                 <?php 
@@ -135,38 +136,43 @@ get_header();
                         </div>
                     </div>
                     <div class="side_bar_blog">
-                        <h4>CATEGORIES</h4>
+                        <h4>طبقه بندی ها</h4>
                         <div class="categary">
                             <ul>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> Events</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> News</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> Business</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> Trending Price</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> Post</a></li>
+                                <li><a href="#"> بلاگ </a><i class="fa fa-caret-left"></i></li>
+                                <li><a href="#"> اخبار اقتصادی </a><i class="fa fa-caret-left"></i></li>
+                                <li><a href="#"> آموزش </a><i class="fa fa-caret-left"></i></li>
+                                <li><a href="#"> بوزس بین الملل </a><i class="fa fa-caret-left"></i></li>
+                                <li><a href="#"> فورکس </a><i class="fa fa-caret-left"></i></li>
                             </ul>
                         </div>
                     </div>
                     <div class="side_bar_blog">
-                        <h4>TAG</h4>
+                        <h4> برچست ها</h4>
                         <div class="tags">
                             <ul>
-                                <li><a href="#">Bootstrap</a></li>
-                                <li><a href="#">HTML5</a></li>
-                                <li><a href="#">Wordpress</a></li>
-                                <li><a href="#">Bootstrap</a></li>
-                                <li><a href="#">HTML5</a></li>
+                                <li><a href="#">بلاگ</a></li>
+                                <li><a href="#">اخبار اقتصادی</a></li>
+                                <li><a href="#">آموزش</a></li>
+                                <li><a href="#">بوزس بین الملل</a></li>
+                                <li><a href="#">فورکس</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="side_bar_blog">
-                        <h4>CATEGORIES</h4>
+                        <h4>آرشیو</h4>
                         <div class="categary">
                             <ul>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> June (12)</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> January (12)</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> March (12)</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> November (12)</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i> December (12)</a></li>
+                                <li style="text-align:left"><a href="#"> فروردین (12) </a><i
+                                        class="fa fa-caret-left"></i></li>
+                                <li style="text-align:left"><a href="#"> اردیبهشت (12) </a><i
+                                        class="fa fa-caret-left"></i></li>
+                                <li style="text-align:left"><a href="#"> خرداد (12) </a><i class="fa fa-caret-left"></i>
+                                </li>
+                                <li style="text-align:left"><a href="#"> تیر (12) </a><i class="fa fa-caret-left"></i>
+                                </li>
+                                <li style="text-align:left"><a href="#"> مرداد (12) </a><i class="fa fa-caret-left"></i>
+                                </li>
                             </ul>
                         </div>
                     </div>

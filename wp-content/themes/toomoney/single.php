@@ -73,7 +73,7 @@
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i>
                                         <?php echo get_the_date();?>
                                     </li>
-                                    <li><span>
+                                    <li class="like-button-cont"><span>
                                             <a href="#"
                                                 class="like-button  <?php if($isLiked->found_posts){echo 'active';}?>">
                                                 <svg width="20" height="20" viewBox="0 0 500 500"

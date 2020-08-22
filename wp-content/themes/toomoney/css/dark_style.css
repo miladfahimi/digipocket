@@ -3032,9 +3032,13 @@ footer p a:focus {
     margin-bottom: 35px;
     float: left;
     width: 100%;
+    background: #369eff4d;
+    padding: 30px;
+    text-align: left;
 }
 .side_bar h4 {
     margin-top: 0;
+    text-align: right;
 }
 .side_bar_blog .input-group {
     background: rgba(255, 255, 255, 0.1);

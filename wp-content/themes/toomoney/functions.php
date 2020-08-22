@@ -153,3 +153,12 @@ add_filter( 'adorable_avatars.force', '__return_true' );
 
 // 	return 31 !== $id_or_email;
 // }, 10, 2 );
+
+
+add_filter ('comments_number', 'wpse89257_comments_number', 10, 2);
+function wpse89257_comments_number ($output, $number) {
+  if ($number == 0) $output = '';
+  elseif ($number == 1) $output = '1 نظر';
+  else $output = $number . ' نظر';
+  return $output;
+  }
