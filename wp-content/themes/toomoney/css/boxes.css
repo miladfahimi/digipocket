@@ -167,6 +167,8 @@
 }
 .box02_img_cntr img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 .box02_tag_cntr {
     position: absolute;
