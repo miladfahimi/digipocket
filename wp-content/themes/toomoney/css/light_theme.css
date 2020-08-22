@@ -3025,9 +3025,10 @@ footer p a {
     margin-bottom: 35px;
     float: left;
     width: 100%;
-    background: #369eff4d;
+    background: #c2e2ff;
     padding: 30px;
     text-align: left;
+    border-bottom: 5px solid #86c4ff;
 }
 .side_bar h4 {
     margin-top: 0;
@@ -3185,10 +3186,10 @@ footer p a {
     display: inline;
     margin-right: 10px;
     font-size: 14px;
-    color: rgb(66, 66, 66);
+    color: rgb(92, 92, 92);
 }
 .post_info ul li i {
-    color: rgb(133, 133, 133);
+    color: rgb(51, 51, 51);
 }
 .bottom_info {
     float: left;

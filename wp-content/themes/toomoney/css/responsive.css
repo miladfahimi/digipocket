@@ -732,6 +732,12 @@
     .inner_page_info h3 {
         font-size: 25px;
     }
+    /** POST INFO **/
+
+    .post_info ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     /** about us **/
 
