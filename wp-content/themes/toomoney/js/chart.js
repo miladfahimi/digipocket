@@ -66,6 +66,23 @@ Highcharts.getJSON(
         chart(mydata, chartId, "Microsoft");
     }
 );
+Highcharts.getJSON(
+    "https://api.marketstack.com/v1/tickers/GSPC.INDX/eod?access_key=fb80b6b5f08ec0da9e0b3c99672d5802",
+    function (data) {
+        var mydata = [];
+        $.each(data.data.eod, function (dataIndex, dataObj) {
+            mydata.push([
+                Date.parse(dataObj["date"]),
+                dataObj["open"],
+                dataObj["high"],
+                dataObj["low"],
+                dataObj["close"],
+            ]);
+        });
+        chartId = "#chart5-container";
+        chart(mydata, chartId, "S&P500");
+    }
+);
 
 function chart(data, chartId, title) {
     $(function () {

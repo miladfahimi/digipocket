@@ -96,17 +96,15 @@
                             <a class="box_avatar" href="#">
                                 <img src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt="">
                             </a>
-                            <h6> میلاد فهیمی 24،563 نمایش</h6>
+                            <h6> <?php the_author(); ?></h6>
                         </div>
                     </div>
-                    <?php }} ?>
+                    <?php }}  ?>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes" style="background-image:url(<?php echo get_the_post_thumbnail_url('','slider')?>);background-repeat:
-                    no-repeat;
-                    background-size: auto; background-position:right">
-                    <?php 
+                <?php 
+                    wp_reset_query(); 
                         $args = array(
                             'posts_per_page' => 1,
                             'orderby' => 'rand'
@@ -116,6 +114,9 @@
                             while ( $req->have_posts() ) {
                                 $req->the_post(); 
                         ?>
+                <div class="boxes" style="background-image:url(<?php echo get_the_post_thumbnail_url('','slider')?>);background-repeat:
+                    no-repeat;
+                    background-size: auto; background-position:right">
                     <div class="box01_text_cntr light-font">
                         <div>
                             <a class="link_button tag-main-yellow" href="#">شروع می کنیم ...</a>
@@ -125,8 +126,8 @@
                         <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
-                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
-                            <h6>میلاد فهیمی</h6>
+                                    src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt=""></a>
+                            <h6><?php the_author(); ?></h6>
                         </div>
                     </div>
                     <?php }} ?>
@@ -160,7 +161,7 @@
                     </div>
                     <div class="box_text_cntr">
                         <div>
-                            <a class="link_button tag-green" href="#">شروع می کنیم ...</a>
+                            <a class="link_button tag-green" href="#">ارز دیجیتال</a>
                             <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
 
@@ -180,20 +181,13 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes" style="background-color: #1b334d">
-                    <div class="box01_text_cntr light-font">
-                        <div>
-                            <a class="link_button tag-red" href="#">جدید ...</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                <div class="boxes" style="background-color: #1b334d;">
+                    <div class="box01_text_cntr light-font" style="padding:0">
+                        <div class="box02_tag_cntr">
+                            <a class="link_button tag-red" href="#">S&P 500</a>
+                            <div class="tag_button tag-main-blue"><i class="fa fa-chevron-left"></i></div>
                         </div>
-                        <h3>اولین گام برای شروع</h3>
-                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
-                            سایت خودتان که می
-                            تواند اولین گام</p>
-                        <div class="box_info_cntr">
-                            <a class="box_avatar" href="#"><img
-                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
-                            <h6>میلاد فهیمی</h6>
+                        <div id="chart5-container" style="width: 100%; height: 100%; margin: 0 auto">
                         </div>
                     </div>
                 </div>
@@ -203,7 +197,7 @@
                     <div class="box02_img_cntr">
                         <div class="box02_tag_cntr">
                             <a class="link_button tag-red" href="#">جدید ...</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <div class="tag_button tag-main-blue" href="#"><i class="fa fa-chevron-left"></i></div>
                         </div>
                         <img src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>" alt="">
                     </div>
@@ -224,7 +218,7 @@
                 <div class="boxes" style="background-color: #1b334d">
                     <div class="box01_text_cntr light-font">
                         <div>
-                            <a class="link_button tag-red" href="#">جدید ...</a>
+                            <a class="link_button tag-orange" href="#">فارکس</a>
                             <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
                         <h3>اولین گام برای شروع</h3>
@@ -241,42 +235,6 @@
             </div>
 
         </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- section -->
-<section class="layout_padding">
-    <div class="container">
-        <div class="row">
-            <?php 
-                        $args = array(
-                            'post_type' => '',
-                            'posts_per_page' => 4
-                        );
-                        $q = new WP_Query($args);
-                        if ( $q->have_posts() ) {
-                            while ( $q->have_posts() ) {
-                                $q->the_post(); 
-                        ?>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="home_posts_box">
-                    <div>
-                        <img class="" src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
-                    </div>
-                    <div class="home_posts_text_cont">
-                        <div class="home_posts_box-title">
-                            <h4><?php  echo wp_trim_words( get_the_title(), 8 ); ?></h4>
-                        </div>
-                        <div>
-                            <p><?php echo wp_trim_words( get_the_content(), 20 ); ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php }} ?>
-        </div>
-
     </div>
 </section>
 <!-- end section -->

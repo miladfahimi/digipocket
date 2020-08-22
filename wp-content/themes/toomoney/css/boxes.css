@@ -172,6 +172,8 @@
 }
 .box02_tag_cntr {
     position: absolute;
+    display: flex;
+    z-index: 1000;
     top: 30px;
     left: 40px;
 }
@@ -195,12 +197,15 @@
 }
 .box02_tag_cntr .link_button {
     padding: 5px 15px;
+    margin-left: 10px;
     text-align: center;
     font-size: 10px;
     border-radius: 100px;
 }
 .box02_tag_cntr .tag_button {
-    padding: 5px;
+    padding: 7px;
+    width: 25px;
+    height: 25px;
     text-align: center;
     font-size: 10px;
     border-radius: 100px;
