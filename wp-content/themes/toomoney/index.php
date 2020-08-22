@@ -71,9 +71,18 @@
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="boxes boxes-v">
+                    <?php 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                     <div class="box_img_cntr">
-                        <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
-                            alt="">
+                        <img style="margin:0 auto" src="<?php echo get_the_post_thumbnail_url('','slider')?>" alt="">
                     </div>
                     <div class="box_text_cntr">
                         <div>
@@ -81,10 +90,8 @@
                             <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
 
-                        <h4> باشد را در وردپرس اضافه کنید</h4>
-                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
-                            تواند اولین گام برای شروع کسب و کار شما باشد را در وردپرس اضافه کنید. محتوا نویسی qasوردپرس
-                            یکی از اولین </p>
+                        <h4><?php echo wp_trim_words( get_the_title(), 8 ); ?></h4>
+                        <p> <?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#">
                                 <img src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt="">
@@ -92,26 +99,37 @@
                             <h6> میلاد فهیمی 24،563 نمایش</h6>
                         </div>
                     </div>
+                    <?php }} ?>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes" style="background-image:url(<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>);background-repeat: no-repeat;
-    background-size: auto; background-position:right">
+                <div class="boxes" style="background-image:url(<?php echo get_the_post_thumbnail_url('','slider')?>);background-repeat:
+                    no-repeat;
+                    background-size: auto; background-position:right">
+                    <?php 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                     <div class="box01_text_cntr light-font">
                         <div>
                             <a class="link_button tag-main-yellow" href="#">شروع می کنیم ...</a>
                             <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
-                        <h3>اولین گام برای شروع</h3>
-                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و
-                            محتوای مربوط به سایت خودتان که می
-                            تواند اولین گام</p>
+                        <h3><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
+                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
                                     src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
                             <h6>میلاد فهیمی</h6>
                         </div>
                     </div>
+                    <?php }} ?>
                 </div>
             </div>
         </div>
@@ -226,13 +244,6 @@
     </div>
 </section>
 <!-- end section -->
-<div style="width:100%;display: flex;flex-direction:column">
-    <p>
-        resuable box shoud be create as below!
-    </p>
-    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid.png') ?>" alt="">
-    <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/index_grid_1.png') ?>" alt="">
-</div>
 <!-- section -->
 <section class="layout_padding">
     <div class="container">
