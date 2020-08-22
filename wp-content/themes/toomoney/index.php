@@ -77,8 +77,8 @@
                     </div>
                     <div class="box_text_cntr">
                         <div>
-                            <a class="link_button" href="#">شروع می کنیم ...</a>
-                            <a class="tag_button" href="#">test</a>
+                            <a class="link_button tag-red" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
 
                         <h4> باشد را در وردپرس اضافه کنید</h4>
@@ -97,10 +97,31 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="boxes" style="background-image:url(<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>);background-repeat: no-repeat;
     background-size: auto; background-position:right">
+                    <div class="box01_text_cntr light-font">
+                        <div>
+                            <a class="link_button tag-main-yellow" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
+                        </div>
+                        <h3>اولین گام برای شروع</h3>
+                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و
+                            محتوای مربوط به سایت خودتان که می
+                            تواند اولین گام</p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#"><img
+                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
+                            <h6>میلاد فهیمی</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="boxes">
                     <div class="box01_text_cntr">
                         <div>
-                            <a class="link_button" href="#">شروع می کنیم ...</a>
-                            <a class="tag_button" href="#">test</a>
+                            <a class="link_button tag-blue" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
                         </div>
                         <h3>اولین گام برای شروع</h3>
                         <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
@@ -113,6 +134,94 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="boxes boxes-v">
+                    <div class="box_img_cntr">
+                        <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
+                            alt="">
+                    </div>
+                    <div class="box_text_cntr">
+                        <div>
+                            <a class="link_button tag-green" href="#">شروع می کنیم ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
+                        </div>
+
+                        <h4> باشد را در وردپرس اضافه کنید</h4>
+                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
+                            تواند اولین گام برای شروع کسب و کار شما باشد را در وردپرس اضافه کنید. محتوا نویسی qasوردپرس
+                            یکی از اولین </p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#">
+                                <img src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt="">
+                            </a>
+                            <h6> میلاد فهیمی 24،563 نمایش</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="boxes" style="background-color: #1b334d">
+                    <div class="box01_text_cntr light-font">
+                        <div>
+                            <a class="link_button tag-red" href="#">جدید ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
+                        </div>
+                        <h3>اولین گام برای شروع</h3>
+                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
+                            سایت خودتان که می
+                            تواند اولین گام</p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#"><img
+                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
+                            <h6>میلاد فهیمی</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="boxes-vertical" style="background-color: #1b334d">
+                    <div class="box02_img_cntr">
+                        <div class="box02_tag_cntr">
+                            <a class="link_button tag-red" href="#">جدید ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
+                        </div>
+                        <img src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>" alt="">
+                    </div>
+                    <div class="box02_text_cntr">
+
+                        <h3 class="light-font">اولین گام برای شروع</h3>
+                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
+                        </p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#"><img
+                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
+                            <h6>میلاد فهیمی</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="boxes" style="background-color: #1b334d">
+                    <div class="box01_text_cntr light-font">
+                        <div>
+                            <a class="link_button tag-red" href="#">جدید ...</a>
+                            <a class="tag_button tag-main-blue" href="#">test</a>
+                        </div>
+                        <h3>اولین گام برای شروع</h3>
+                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
+                            سایت خودتان که می
+                            تواند اولین گام</p>
+                        <div class="box_info_cntr">
+                            <a class="box_avatar" href="#"><img
+                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
+                            <h6>میلاد فهیمی</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
