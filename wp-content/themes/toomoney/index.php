@@ -181,7 +181,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes" style="background-color: #1b334d;">
+                <div class="boxes">
                     <div class="box01_text_cntr light-font" style="padding:0">
                         <div class="box02_tag_cntr">
                             <a class="link_button tag-red" href="#">S&P 500</a>
@@ -296,41 +296,6 @@
     </div>
 </section>
 <!-- end section -->
-<!-- section news -->
-<section class="layout_padding">
-    <div class="container">
-        <div class="row">
-            <?php 
-                        $args = array(
-                            'post_type' => 'news',
-                            'posts_per_page' => 4
-                        );
-                        $q = new WP_Query($args);
-                        if ( $q->have_posts() ) {
-                            while ( $q->have_posts() ) {
-                                $q->the_post(); 
-                        ?>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="home_posts_box">
-                    <div>
-                        <img class="" src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
-                    </div>
-                    <div class="home_posts_text_cont">
-                        <div class="home_posts_box-title">
-                            <h4><?php  echo wp_trim_words( get_the_title(), 8 ); ?></h4>
-                        </div>
-                        <div>
-                            <p><?php echo wp_trim_words( get_the_content(), 20 ); ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php }} ?>
-        </div>
-    </div>
-</section>
-<!-- end section news -->
 <!-- section -->
 <section class="layout_padding dark_bg white_fonts">
     <div class="container">
