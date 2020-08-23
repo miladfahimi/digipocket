@@ -86,8 +86,15 @@
                     </div>
                     <div class="box_text_cntr">
                         <div>
-                            <a class="link_button tag-red" href="#">شروع می کنیم ...</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <?php
+foreach((get_the_category()) as $category) { 
+    ?>
+
+                            <a class="link_button tag-red" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <?php
+                        } 
+                        ?>
+                            <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
 
                         <h4><?php echo wp_trim_words( get_the_title(), 8 ); ?></h4>
@@ -119,8 +126,13 @@
                     background-size: auto; background-position:right">
                     <div class="box01_text_cntr light-font">
                         <div>
-                            <a class="link_button tag-main-yellow" href="#">شروع می کنیم ...</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <?php
+                            foreach((get_the_category()) as $category) { 
+                            ?>
+                            <a class="link_button tag-main-yellow"
+                                href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <?php } ?>
+                            <a class="tag_button tag-green" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
                         <h3><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
                         <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
