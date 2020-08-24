@@ -9,6 +9,7 @@
 }
 .like-button-cont {
     flex: 1;
+    z-index: 1000;
 }
 .like-button.animated {
     -webkit-animation: pop 0.9s both;
