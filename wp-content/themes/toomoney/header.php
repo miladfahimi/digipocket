@@ -20,6 +20,7 @@
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
         <?php
+        
         $userPanelUrl= site_url('user-panel');
         $currentUser= get_avatar(get_current_user_id(),20);
         $mainUrl = urldecode(wp_logout_url(site_url()));
