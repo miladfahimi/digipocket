@@ -23,25 +23,29 @@
                             ?>
                             <li>
                                 <span class="curr_name">نرخ لحظه ای کرون دانمارک</span>
-                                <span>تومان </span><span class="curr_price"><?php the_field('sek_sale')?></span>
+                                <span>تومان </span><span class="curr_price"
+                                    id="index-dkk"><?php the_field('sek_sale')?></span>
                                 <p style="font-size:8px; line-height:8px;margin:0">
                                     <?php echo get_the_date('F j, Y G:i');?></p>
                             </li>
                             <li>
                                 <span class="curr_name">نرخ لحظه ای کرون سوئد</span>
-                                <span>تومان </span><span class="curr_price"><?php the_field('sek_buy')?></span>
+                                <span>تومان </span><span class="curr_price"
+                                    id="index-sek"><?php the_field('sek_buy')?></span>
                                 <p style="font-size:8px; line-height:8px;margin:0">
                                     <?php echo get_the_date('F j, Y G:i');?></p>
                             </li>
                             <li>
                                 <span class="curr_name">نرخ لحظه ای کرون نروژ</span>
-                                <span>تومان </span><span class="curr_price"><?php the_field('usd_buy')?></span>
+                                <span>تومان </span><span class="curr_price"
+                                    id="index-nok"><?php the_field('usd_buy')?></span>
                                 <p style="font-size:8px; line-height:8px;margin:0">
                                     <?php echo get_the_date('F j, Y G:i');?></p>
                             </li>
                             <li>
                                 <span class="curr_name">نرخ لحظه ای دلار</span>
-                                <span>تومان </span><span class="curr_price"><?php the_field('usd_sale')?></span>
+                                <span>تومان </span><span class="curr_price"
+                                    id="index-us"><?php the_field('usd_sale')?></span>
                                 <p style="font-size:8px; line-height:8px;margin:0">
                                     <?php echo get_the_date('F j, Y G:i');?></p>
                             </li>

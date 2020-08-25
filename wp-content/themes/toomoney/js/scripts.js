@@ -4,6 +4,7 @@ import Register from "./modules/register.js";
 import Ads from "./modules/myAds.js";
 import Post from "./modules/myPost.js";
 import Like from "./modules/like.js";
+import Index from "./modules/index.js";
 
 const search = new Search();
 const register = new Register();
@@ -11,6 +12,7 @@ const login = new Login();
 const ads = new Ads();
 const post = new Post();
 const like = new Like();
+const index = new Index();
 
 // ---------------------------------------------------------------------------------
 // THIS IS A PART OF SCRIPT FOR STYLING USER PANEL SHOULD BE MOVED TO STYLING PART!
