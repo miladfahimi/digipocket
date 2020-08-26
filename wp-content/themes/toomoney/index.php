@@ -79,6 +79,8 @@
                         $req = new WP_Query($args);
                         if ( $req->have_posts() ) {
                             while ( $req->have_posts() ) {
+                                $do_not_duplicate = [];
+                                array_push($do_not_duplicate,$post->ID); 
                                 $req->the_post(); 
                         ?>
                     <div class="box_img_cntr">
@@ -118,8 +120,13 @@ foreach((get_the_category()) as $category) {
                         );
                         $req = new WP_Query($args);
                         if ( $req->have_posts() ) {
-                            while ( $req->have_posts() ) {
+                            while ( $req->have_posts()) {
                                 $req->the_post(); 
+                                if (in_array($post->ID, $do_not_duplicate)) {
+                                     continue;
+                                }else{
+                                    array_push($do_not_duplicate,$post->ID);
+                                }
                         ?>
                 <div class="boxes" style="background-image:url(<?php echo get_the_post_thumbnail_url('','slider')?>);background-repeat:
                     no-repeat;
@@ -148,45 +155,66 @@ foreach((get_the_category()) as $category) {
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
+                <?php 
+                    wp_reset_query(); 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                 <div class="boxes">
                     <div class="box01_text_cntr">
                         <div>
-                            <a class="link_button tag-blue" href="#">شروع می کنیم ...</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <a class="link_button tag-blue" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
-                        <h3>اولین گام برای شروع</h3>
-                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
-                            تواند اولین گام</p>
+                        <h3><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
+                        <p><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
-                                    src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
-                            <h6>میلاد فهیمی</h6>
+                                    src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt=""></a>
+                            <h6><?php the_author(); ?></h6>
                         </div>
+                        <?php }} ?>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="boxes boxes-v">
+                    <?php 
+                    wp_reset_query(); 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                     <div class="box_img_cntr">
                         <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
                             alt="">
                     </div>
                     <div class="box_text_cntr">
                         <div>
-                            <a class="link_button tag-green" href="#">ارز دیجیتال</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <a class="link_button tag-green" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
 
-                        <h4> باشد را در وردپرس اضافه کنید</h4>
-                        <p> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به سایت خودتان که می
-                            تواند اولین گام برای شروع کسب و کار شما باشد را در وردپرس اضافه کنید. محتوا نویسی qasوردپرس
-                            یکی از اولین </p>
+                        <h4><?php echo wp_trim_words( get_the_title(), 8 ); ?></h4>
+                        <p><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#">
                                 <img src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt="">
                             </a>
-                            <h6> میلاد فهیمی 24،563 نمایش</h6>
+                            <h6><?php the_author(); ?> 24،563 نمایش</h6>
                         </div>
+                        <?php }} ?>
                     </div>
                 </div>
             </div>
@@ -206,43 +234,67 @@ foreach((get_the_category()) as $category) {
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="boxes-vertical" style="background-color: #1b334d">
+                    <?php 
+                    wp_reset_query(); 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                     <div class="box02_img_cntr">
                         <div class="box02_tag_cntr">
-                            <a class="link_button tag-red" href="#">جدید ...</a>
-                            <div class="tag_button tag-main-blue" href="#"><i class="fa fa-chevron-left"></i></div>
+                            <a class="link_button tag-red"
+                                href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <div class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>"><i
+                                    class="fa fa-chevron-left"></i></div>
                         </div>
                         <img src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>" alt="">
                     </div>
                     <div class="box02_text_cntr">
 
-                        <h3 class="light-font">اولین گام برای شروع</h3>
-                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
-                        </p>
+                        <h3 class="light-font"><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
+                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
                                     src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
                             <h6>میلاد فهیمی</h6>
                         </div>
+                        <?php }} ?>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="boxes" style="background-color: #1b334d">
+                    <?php 
+                    wp_reset_query(); 
+                        $args = array(
+                            'posts_per_page' => 1,
+                            'orderby' => 'rand'
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
                     <div class="box01_text_cntr light-font">
                         <div>
-                            <a class="link_button tag-orange" href="#">فارکس</a>
-                            <a class="tag_button tag-main-blue" href="#">test</a>
+                            <a class="link_button tag-orange"
+                                href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
-                        <h3>اولین گام برای شروع</h3>
-                        <p class="light-font"> در مرحله بعد نوبت به این می رسد تا شروع به نوشتن کرده و محتوای مربوط به
-                            سایت خودتان که می
-                            تواند اولین گام</p>
+                        <h3><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
+                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
                                     src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
                             <h6>میلاد فهیمی</h6>
                         </div>
                     </div>
+                    <?php }} ?>
                 </div>
             </div>
 
