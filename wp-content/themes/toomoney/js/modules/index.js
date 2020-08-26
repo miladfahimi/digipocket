@@ -10,7 +10,6 @@ class Index {
         sek = document.getElementById("index-sek");
         nok = document.getElementById("index-nok");
         dkk = document.getElementById("index-dkk");
-        console.log(this.us);
         this.events();
     }
 
