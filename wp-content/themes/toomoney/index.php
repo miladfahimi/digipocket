@@ -257,7 +257,7 @@ foreach((get_the_category()) as $category) {
                     <div class="box02_text_cntr">
 
                         <h3 class="light-font"><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
-                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
+                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 12 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
                                     src="<?php echo get_theme_file_uri('images/ser_icon_1.png') ?>" alt=""></a>
