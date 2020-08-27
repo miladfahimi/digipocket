@@ -197,8 +197,7 @@ foreach((get_the_category()) as $category) {
                                 $req->the_post(); 
                         ?>
                     <div class="box_img_cntr">
-                        <img style="margin:0 auto" src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>"
-                            alt="">
+                        <img style="margin:0 auto" src="<?php echo get_the_post_thumbnail_url('','slider')?>" alt="">
                     </div>
                     <div class="box_text_cntr">
                         <div>
