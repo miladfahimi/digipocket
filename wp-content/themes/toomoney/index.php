@@ -87,7 +87,7 @@
                         <img style="margin:0 auto" src="<?php echo get_the_post_thumbnail_url('','slider')?>" alt="">
                     </div>
                     <div class="box_text_cntr">
-                        <div>
+                        <div class="tag_container">
                             <?php
 foreach((get_the_category()) as $category) { 
     ?>
@@ -132,7 +132,7 @@ foreach((get_the_category()) as $category) {
                     no-repeat;
                     background-size: auto; background-position:right">
                     <div class="box01_text_cntr light-font">
-                        <div>
+                        <div class="tag_container">
                             <?php
                             foreach((get_the_category()) as $category) { 
                             ?>
@@ -142,7 +142,7 @@ foreach((get_the_category()) as $category) {
                             <a class="tag_button tag-green" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
                         <h3><?php echo wp_trim_words( get_the_title(), 8 ); ?></h3>
-                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 20 ); ?></p>
+                        <p class="light-font"><?php echo wp_trim_words( get_the_content(), 12 ); ?></p>
                         <div class="box_info_cntr">
                             <a class="box_avatar" href="#"><img
                                     src="<?php echo get_theme_file_uri('images/profile-test.png') ?>" alt=""></a>
@@ -168,7 +168,7 @@ foreach((get_the_category()) as $category) {
                         ?>
                 <div class="boxes">
                     <div class="box01_text_cntr">
-                        <div>
+                        <div class="tag_container">
                             <a class="link_button tag-blue" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
                             <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
@@ -200,7 +200,7 @@ foreach((get_the_category()) as $category) {
                         <img style="margin:0 auto" src="<?php echo get_the_post_thumbnail_url('','slider')?>" alt="">
                     </div>
                     <div class="box_text_cntr">
-                        <div>
+                        <div class="tag_container">
                             <a class="link_button tag-green" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
                             <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
@@ -280,7 +280,7 @@ foreach((get_the_category()) as $category) {
                                 $req->the_post(); 
                         ?>
                     <div class="box01_text_cntr light-font">
-                        <div>
+                        <div class="tag_container">
                             <a class="link_button tag-orange"
                                 href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
                             <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
