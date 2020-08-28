@@ -165,10 +165,13 @@ function wpse89257_comments_number ($output, $number) {
   return $output;
   }
 
-//   function force_type_private($post)
-//   {
-//       if ($post['post_type'] == 'ads')
-//       $post['post_status'] = 'pending';
-//       return $post;
-//   }
-//   add_filter('wp_insert_post_data', 'force_type_private');
+function force_type_pending($post){
+    if(!current_user_can('administrator')){
+      if($post['post_type'] == 'ads'){
+          $post['post_status'] = 'pending';
+        }
+    }
+      return $post;
+}
+
+add_filter('wp_insert_post_data', 'force_type_pending');

@@ -101,6 +101,8 @@ get_header();
                 <center>
                     <form class="ans_new_form" style="width:50%;text-align:right;">
                         <div class="form-group">
+                            <input style="display:none" class="ads_new_user form-control" id="ads-user"
+                                value="<?php echo get_user_meta( get_current_user_id(), 'first_name', true ).' '.get_user_meta( get_current_user_id(), 'last_name', true ); ?>">
                             <label for="index">واحد</label>
                             <select id="index" placeholder="واحد" class="custom-select ads_new_index form-control"
                                 id="inputGroupSelect01" require>
@@ -159,7 +161,8 @@ get_header();
                         ?>
 
                                 <tr data-id="<?php the_ID();?>">
-                                    <td><input style="border:none;" readonly type="text" value="<?php the_date(); ?>">
+                                    <td><input style="border:none;" readonly type="text"
+                                            value="<?php echo get_the_date('F j, Y G:i');?>">
                                     </td>
                                     <td><input name="title" class="post_title" style="width:100%;border:none;" readonly
                                             type="text" value="<?php the_title(); ?>">

@@ -53,8 +53,8 @@ register_post_type( 'ads', $args);
 }
 
 add_filter('manage_posts_columns', 'ads_remove_unwanted_columns');
-add_filter('manage_posts_columns', 'ads_add_post_columns', 5);
-add_action('manage_posts_custom_column', 'ads_get_post_column_values', 5, 2);
+add_filter('manage_posts_columns', 'ads_add_post_columns', 6);
+add_action('manage_posts_custom_column', 'ads_get_post_column_values', 6, 3);
 
 // Remove unwanted columns
 function ads_remove_unwanted_columns($defaults){
@@ -75,6 +75,7 @@ function ads_add_post_columns($defaults){
     $defaults['buy_sale'] = __('Buy/Sale');
     $defaults['date'] = 'Status';
     $defaults['author'] = 'User';
+    $defaults['user'] = 'Full Name';
     }
     return $defaults;
 }
@@ -93,6 +94,8 @@ function ads_get_post_column_values($column_name, $postID){
             echo get_post_meta($postID,'date',TRUE);
         }elseif($column_name === 'author'){
             echo get_post_meta($postID,'author',TRUE);
+        }elseif($column_name === 'user'){
+            echo get_post_meta($postID,'user',TRUE);
         }
     }
 }

@@ -78,6 +78,7 @@ class MyAds {
                 buy_sale: $(".ads_new_buysale").val(),
                 amount: $(".ads_new_amount").val(),
                 index: $(".ads_new_index").val(),
+                user: $(".ads_new_user").val(),
             },
         };
         console.log(newValue);
