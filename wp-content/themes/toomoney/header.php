@@ -29,7 +29,7 @@
         $current_user= wp_get_current_user();
         $items_wrap = '<ul id="%1$s" class="%2$s">';
         $login=$items_wrap . '%3$s<li><a style="color:lightgreen" id="myLoginBtn"><i class="fa fa-sign-in"></i> ورود</a></li><li><a style="color:orange" id="myRegisterBtn"><i class="fa fa-user-plus"></i> ثبت نام</a></li> </ul>';
-        $logout=$items_wrap .'<li><a href="'.$userPanelUrl.'">'.$currentUser .' '.  $current_user->display_name .' </a></li> %3$s<li><a href="'.$mainUrl.'">خروج </a></li></ul>';
+        $logout=$items_wrap .'<li><a href="'.$userPanelUrl.'">'.$currentUser .' '.  $current_user->first_name .' </a></li> %3$s<li><a href="'.$mainUrl.'">خروج </a></li></ul>';
 
         wp_nav_menu(array(
         'theme_location' => 'headerMenuLocation',
