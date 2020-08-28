@@ -62,7 +62,8 @@ get_header();
                         ?>
 
                                 <tr data-id="<?php the_ID();?>">
-                                    <td><input style="border:none;" readonly type="text" value="<?php the_date(); ?>">
+                                    <td><input style="border:none;" readonly type="text"
+                                            value="<?php echo get_the_date('F j, Y G:i');?>">
                                     </td>
                                     <td><input name="buy_sale" class="ads_buysale" style="width:100%;border:none;"
                                             readonly type="text" value="<?php the_field('buy_sale'); ?>"></td>
@@ -98,7 +99,7 @@ get_header();
             <!-- NEW ADS SECTION -->
             <div class="bhoechie-tab-content">
                 <center>
-                    <form class="ans_new_form" style="display:nonjhe;margin-top:10%;width:50%;text-align:right;">
+                    <form class="ans_new_form" style="width:50%;text-align:right;">
                         <div class="form-group">
                             <label for="index">واحد</label>
                             <select id="index" placeholder="واحد" class="custom-select ads_new_index form-control"
@@ -134,6 +135,15 @@ get_header();
             <div class="bhoechie-tab-content">
                 <center>
                     <div class="full">
+                        <?php 
+                        $args = array(
+                            'post_type' => '',
+                            'posts_per_page' => -1,
+                            'author' => get_current_user_id()
+                        );
+                        $q = new WP_Query($args);
+                        if ( $q->have_posts() ) {
+                            ?>
                         <table class="table profile-table" style="color:black !important;">
                             <thead>
                                 <tr>
@@ -143,14 +153,7 @@ get_header();
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                        $args = array(
-                            'post_type' => '',
-                            'posts_per_page' => -1,
-                            'author' => get_current_user_id()
-                        );
-                        $q = new WP_Query($args);
-                        if ( $q->have_posts() ) {
+                                <?php
                             while ( $q->have_posts() ) {
                                 $q->the_post(); 
                         ?>
@@ -170,9 +173,12 @@ get_header();
                                     </td>
                                 </tr>
                                 <?php
-                        }}
+                        }}else{
                         ?>
-
+                                <p>هیچ مطلبی با نام شما در وبسایت نشر نشده است!</p>
+                                <?php
+                        }
+                        ?>
                             </tbody>
                         </table>
                     </div>
@@ -185,7 +191,8 @@ get_header();
             <!-- NEW POST SECTION -->
             <div class="bhoechie-tab-content">
                 <center>
-                    <form class="post_new_form" style="display:nonjhe;margin-top:10%;width:50%;text-align:right;">
+                    <p>دسترسی به این قسمت برای شما محدود شده است، لطفا با ادمین تماس بگیرید!</p>
+                    <!-- <form class="post_new_form" style="display:nonjhe;margin-top:10%;width:50%;text-align:right;">
                         <div class="form-group">
                             <label for="new-post-title">عنوان</label>
                             <input class="post_new_title form-control" id="new-post-title" placeholder="مقاله"></input>
@@ -197,7 +204,7 @@ get_header();
                         </div>
                         <button class="btnc btnc--red">لغو</button>
                         <a role="button" class="postNew btnc btnc--blue">ذخیره</a>
-                    </form>
+                    </form> -->
                 </center>
             </div>
         </div>

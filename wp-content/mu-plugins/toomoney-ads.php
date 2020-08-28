@@ -73,6 +73,7 @@ function ads_add_post_columns($defaults){
     $defaults['index'] = __('Index');
     $defaults['amount'] = __('Amount');
     $defaults['buy_sale'] = __('Buy/Sale');
+    $defaults['post_status'] = __('post_status');
     $defaults['date'] = 'Status';
     $defaults['author'] = 'User';
     }

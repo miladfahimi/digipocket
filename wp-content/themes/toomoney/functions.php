@@ -74,7 +74,7 @@ function widgets_init(){
     register_sidebar(array(
         'name' => __('Toomoney Sidebar', 'toomoney'),
         'id' => 'toomoney2020',
-        'before_title' => '<div id="toomoner-w">',
+        'before_title' => '<div id="toomoney-w">',
         'after_title' => '</div>'
     ));
 }
@@ -131,8 +131,10 @@ function noSubsAdminBar() {
 //ADD LIMIT FOR PUBLISHED ADS POSTS
 function postServerSideManipulation($data){
     if($data['post_type'] == 'ads'){
+        if(!current_user_can('administrator')){
     if(count_user_posts(get_current_user_id(),'ads') > 5){
         die("کاربر گرامی: سقف مجاز تعداد آگهی های شما به پایان رسیده");
+        }
         }
     }
     return $data;
@@ -162,3 +164,11 @@ function wpse89257_comments_number ($output, $number) {
   else $output = $number . ' نظر';
   return $output;
   }
+
+//   function force_type_private($post)
+//   {
+//       if ($post['post_type'] == 'ads')
+//       $post['post_status'] = 'pending';
+//       return $post;
+//   }
+//   add_filter('wp_insert_post_data', 'force_type_private');

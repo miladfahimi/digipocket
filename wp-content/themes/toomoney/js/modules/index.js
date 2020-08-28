@@ -19,10 +19,10 @@ class Index {
                 url: frontendajax.ajaxurl + "/wp-json/wp/v2/index/",
                 type: "GET",
                 success: (respose) => {
-                    us.innerHTML = respose[0].acf.usd_sale;
-                    sek.innerHTML = respose[0].acf.sek_buy;
-                    nok.innerHTML = respose[0].acf.usd_buy;
-                    dkk.innerHTML = respose[0].acf.sek_sale;
+                    if (us) us.innerHTML = respose[0].acf.usd_sale;
+                    if (sek) sek.innerHTML = respose[0].acf.sek_buy;
+                    if (nok) nok.innerHTML = respose[0].acf.usd_buy;
+                    if (dkk) dkk.innerHTML = respose[0].acf.sek_sale;
                 },
                 error: (respose) => {
                     console.log(
