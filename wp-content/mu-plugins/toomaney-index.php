@@ -70,10 +70,10 @@ function index_add_post_columns($defaults){
     $post_type = get_post_type();
     if ( $post_type == 'index' ) {
     // field vs displayed title
-    $defaults['sek_buy'] = __('SEK Buy');
-    $defaults['sek_sale'] = __('SEK Sale');
-    $defaults['usd_buy'] = __('USD Buy');
-    $defaults['usd_sale'] = __('USD Sale');
+    $defaults['sek_buy'] = __('SEK');
+    $defaults['sek_sale'] = __('DKK');
+    $defaults['usd_buy'] = __('NOK');
+    $defaults['usd_sale'] = __('USD');
     $defaults['date'] = 'Status';
     }
     return $defaults;

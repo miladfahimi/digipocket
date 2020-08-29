@@ -24,28 +24,47 @@ function run_scraper_every_thirty_minutes() {
     // // find all div tags with id=gbar
     foreach($html04->find('span[data-col="info.last_trade.PDrCotVal"]') as $e)
     if((float)str_replace(',', '',$e->innertext)>100){
-        $aedSale = $e->innertext;
+        $aed = $e->innertext;
     }
     foreach($html03->find('tr[data-market-row="price_aed"]') as $e)
     if((float)str_replace(',', '',$e->getAttribute('data-price'))>100){
-    $aedSale = $e->getAttribute('data-price');
+    $aed = $e->getAttribute('data-price');
     }
+
+    $k = 180;
+    $g = 50;
+
     // Function call with your own text or variable
-    $USDasAED= ((float)str_replace(',', '',$aedSale)*3.67)/10;
-    $sekTousd=0.11;
-    $usdTonok=0.10;
-    $usdTodkk=0.16;
-    $nokTosek=0.97;
+    $USD= ((float)str_replace(',', '',$aed)*convertIt('aed','usd'))/10;
 
     wp_insert_post(
         array(
             'post_type'         => 'index',
             'post_status'		=>	'publish',
             'meta_input' => array(
-            'sek_buy'		=>	round($USDasAED*$sekTousd/10)*10,       //SEK
-            'sek_sale'		=>	round($USDasAED*$usdTodkk/10)*10,       //DKK
-            'usd_buy'		=>	round($USDasAED*$sekTousd*0.97/10)*10,  //NOK
-            'usd_sale'		=>	round($USDasAED/10)*10                  //USD
+            'sek_buy'		=>	round($USD*convertIt('usd','sek')/10)*10-$k,       //SEK
+            'sek_sale'		=>	round($USD*convertIt('usd','dkk')/10)*10-$k,       //DKK
+            'usd_buy'		=>	round($USD*convertIt('usd','nok')/10)*10-$k,       //NOK
+            'usd_sale'		=>	round($USD/10)*10-$g                               //USD
         ))
     );
+}
+
+function convertIt($t,$f){
+    
+    //GET THE LIVE CONVERSION RATES
+    $endpoint = 'convert';
+    $access_key = 'fe4f757533db7ed9d467848cfa6a6e6f';
+
+    $from = $f;
+    $to = $t;
+    $amount = 1;
+
+    // initialize CURL:
+    $json = file_get_contents('https://api.coinlayer.com/api/'.$endpoint.'?access_key='.$access_key.'&from='.$from.'&to='.$to.'&amount='.$amount.'');
+
+    // Decode JSON response:
+    $conversionResult = json_decode($json, true);
+    return $conversionResult['result'];
+
 }
