@@ -69,7 +69,7 @@
 require __DIR__ . '/guzzle/vendor/autoload.php';
 
 
-$html = "<div class='ping'>Pong ✅</div>";
+$html = "<div class='ping'>Milad ✅</div>";
 $css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
 
 $client = new \GuzzleHttp\Client();
