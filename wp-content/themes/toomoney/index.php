@@ -79,8 +79,8 @@ $res = $client->request('POST', 'https://hcti.io/v1/image', [
   'form_params' => ['html' => $html, 'css' => $css]
 ]);
 
-echo telegram ("test");
-$test = telegram ("test");
+echo $res->getBody();
+$test = $res->getBody();
 telegram ($test);
 ?>
 <!-- section boxes -->
