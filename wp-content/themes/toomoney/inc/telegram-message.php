@@ -82,19 +82,11 @@ $priceSekSwedSaleHigh=round(($priceSek-($priceSek/100)*2)/50)*50;
 $priceDkkSwedSaleHigh=round(($priceDkk-($priceDkk/100)*2)/50)*50;
 $priceNokSwedSaleHigh=round(($priceNok-($priceNok/100)*2)/50)*50;
 
-
-$html = "<div class='ping'>Milad ✅</div>";
-$css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
-
-$client = new \GuzzleHttp\Client();
-// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
-$res = $client->request('POST', 'https://hcti.io/v1/image', [
-  'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
-  'form_params' => ['html' => $html, 'css' => $css]
-]);
-
-$msg=$res->getBody();
-
+if(jpegConvertor()){
+    $msg=jpegConvertor();
+}else{
+    $msg="<b>error in jpegConvertor</b>";
+}
 // $msg="
 // <b>نرخ لحظه ای کرون سوئد، نروژ و دانمارک</b>
 // ـ               $date
@@ -141,6 +133,20 @@ $msg=$res->getBody();
 // <b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
 // <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
+}
+
+function jpegConvertor(){
+    $html = "<div class='ping'>Milad ✅</div>";
+$css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
+
+$client = new \GuzzleHttp\Client();
+// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+$res = $client->request('POST', 'https://hcti.io/v1/image', [
+  'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
+  'form_params' => ['html' => $html, 'css' => $css]
+]);
+
+return $res->getBody();
 }
 
 ?>
