@@ -45,7 +45,7 @@ function run_scraper_every_thirty_minutes() {
             'sek_buy'		=>	round($USD*convertIt('usd','sek')/10)*10-$k,       //SEK
             'sek_sale'		=>	round($USD*convertIt('usd','dkk')/10)*10-$k,       //DKK
             'usd_buy'		=>	round($USD*convertIt('usd','nok')/10)*10-$k,       //NOK
-            'usd_sale'		=>	round($USD/10)*10-$g                               //USD
+            'usd_sale'		=>	round($USD/10)*10+$g                               //USD
         ))
     );
 }
