@@ -65,6 +65,24 @@
 <!-- section -->
 <?php get_template_part( 'template-part/content', 'index' ); ?>
 <!-- end section -->
+<?php 
+
+
+require __DIR__ . '../guzzle/vendor/autoload.php';
+    $html = "<div class='ping'>Milad ✅</div>";
+$css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
+
+$client = new \GuzzleHttp\Client();
+// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+$res = $client->request('POST', 'https://hcti.io/v1/image', [
+  'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
+  'form_params' => ['html' => $html, 'css' => $css]
+]);
+
+echo telegram ("test");
+$test = telegram ("test");
+telegram ($test);
+?>
 <!-- section boxes -->
 <section class="layout_padding">
     <div class="container">
