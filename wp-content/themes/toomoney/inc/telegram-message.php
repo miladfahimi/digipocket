@@ -82,71 +82,52 @@ $priceSekSwedSaleHigh=round(($priceSek-($priceSek/100)*2)/50)*50;
 $priceDkkSwedSaleHigh=round(($priceDkk-($priceDkk/100)*2)/50)*50;
 $priceNokSwedSaleHigh=round(($priceNok-($priceNok/100)*2)/50)*50;
 
-if(jpegConvertor()){
-    $msg=jpegConvertor();
-}else{
-    $msg="<b>error in jpegConvertor</b>";
-}
-// $msg="
-// <b>نرخ لحظه ای کرون سوئد، نروژ و دانمارک</b>
-// ـ               $date
-// ـ                        🔻🔻🔻
+$msg="
+<b>نرخ لحظه ای کرون سوئد، نروژ و دانمارک</b>
+ـ               $date
+ـ                        🔻🔻🔻
 
-// <b>قیمت بر حسب نرخ لحظه ای دلار</b>
-// <code> واحد  |   قیمت  </code>
-// <b>ـ 🇸🇪   |  ـ$priceSek   تومان </b>
-// <b>ـ 🇩🇰   |  ـ$priceDkk   تومان</b>
-// <b>ـ 🇳🇴   |  ـ$priceNok   تومان</b>
+<b>قیمت بر حسب نرخ لحظه ای دلار</b>
+<code> واحد  |   قیمت  </code>
+<b>ـ 🇸🇪   |  ـ$priceSek   تومان </b>
+<b>ـ 🇩🇰   |  ـ$priceDkk   تومان</b>
+<b>ـ 🇳🇴   |  ـ$priceNok   تومان</b>
 
-// ـ                        💠💠💠
+ـ                        💠💠💠
 
-// <em> مقایسه بازه نرخ خرید و فروش تهران</em>
-// <b>🔹نرخهای خرید</b>
-// <em>واحد  پایین ترین     بالاترین  </em>
-// <b>ـ 🇸🇪  |  ـ$priceSekIranBuyLow   ≃   $priceSekIranBuyHigh  تومان </b>
-// <b>ـ 🇩🇰  |  ـ$priceDkkIranBuyLow   ≃   $priceDkkIranBuyHigh  تومان </b>
-// <b>ـ 🇳🇴  |  ـ$priceNokIranBuyLow   ≃   $priceNokIranBuyHigh  تومان </b>
-// <b>🔸نرخهای فروش</b>
-// <em>واحد  پایین ترین     بالاترین  </em>
-// <b>ـ 🇸🇪  |  ـ$priceSekIranSaleLow   ≃   $priceSekIranSaleHigh  تومان </b>
-// <b>ـ 🇩🇰  |  ـ$priceDkkIranSaleLow   ≃   $priceDkkIranSaleHigh  تومان </b>
-// <b>ـ 🇳🇴  |  ـ$priceNokIranSaleLow   ≃   $priceNokIranSaleHigh  تومان </b>
+<em> مقایسه بازه نرخ خرید و فروش تهران</em>
+<b>🔹نرخهای خرید</b>
+<em>واحد  پایین ترین     بالاترین  </em>
+<b>ـ 🇸🇪  |  ـ$priceSekIranBuyLow   ≃   $priceSekIranBuyHigh  تومان </b>
+<b>ـ 🇩🇰  |  ـ$priceDkkIranBuyLow   ≃   $priceDkkIranBuyHigh  تومان </b>
+<b>ـ 🇳🇴  |  ـ$priceNokIranBuyLow   ≃   $priceNokIranBuyHigh  تومان </b>
+<b>🔸نرخهای فروش</b>
+<em>واحد  پایین ترین     بالاترین  </em>
+<b>ـ 🇸🇪  |  ـ$priceSekIranSaleLow   ≃   $priceSekIranSaleHigh  تومان </b>
+<b>ـ 🇩🇰  |  ـ$priceDkkIranSaleLow   ≃   $priceDkkIranSaleHigh  تومان </b>
+<b>ـ 🇳🇴  |  ـ$priceNokIranSaleLow   ≃   $priceNokIranSaleHigh  تومان </b>
 
-// <code>(توضیحات: قیمت به ازای مبالغ نقدی تهران می باشد.)</code>
+<code>(توضیحات: قیمت به ازای مبالغ نقدی تهران می باشد.)</code>
 
-// ـ                        💠💠💠
+ـ                        💠💠💠
 
-// <em> مقایسه بازه نرخ خرید و فروش اروپا</em>
-// <b>🔹نرخهای خرید</b>
-// <em>واحد  پایین ترین     بالاترین  </em>
-// <b>ـ 🇸🇪  |  ـ$priceSekSwedBuyLow   ≃   $priceSekSwedBuyHigh  تومان </b>
-// <b>ـ 🇩🇰  |  ـ$priceDkkSwedBuyLow   ≃   $priceDkkSwedBuyHigh  تومان </b>
-// <b>ـ 🇳🇴  |  ـ$priceNokSwedBuyLow   ≃   $priceNokSwedBuyHigh  تومان </b>
-// <b>🔸نرخهای فروش</b>
-// <em>واحد  پایین ترین     بالاترین  </em>
-// <b>ـ 🇸🇪  |  ـ$priceSekSwedSaleLow   ≃   $priceSekSwedSaleHigh  تومان </b>
-// <b>ـ 🇩🇰  |  ـ$priceDkkSwedSaleLow   ≃   $priceDkkSwedSaleHigh  تومان </b>
-// <b>ـ 🇳🇴  |  ـ$priceNokSwedSaleLow   ≃   $priceNokSwedSaleHigh  تومان </b>
+<em> مقایسه بازه نرخ خرید و فروش اروپا</em>
+<b>🔹نرخهای خرید</b>
+<em>واحد  پایین ترین     بالاترین  </em>
+<b>ـ 🇸🇪  |  ـ$priceSekSwedBuyLow   ≃   $priceSekSwedBuyHigh  تومان </b>
+<b>ـ 🇩🇰  |  ـ$priceDkkSwedBuyLow   ≃   $priceDkkSwedBuyHigh  تومان </b>
+<b>ـ 🇳🇴  |  ـ$priceNokSwedBuyLow   ≃   $priceNokSwedBuyHigh  تومان </b>
+<b>🔸نرخهای فروش</b>
+<em>واحد  پایین ترین     بالاترین  </em>
+<b>ـ 🇸🇪  |  ـ$priceSekSwedSaleLow   ≃   $priceSekSwedSaleHigh  تومان </b>
+<b>ـ 🇩🇰  |  ـ$priceDkkSwedSaleLow   ≃   $priceDkkSwedSaleHigh  تومان </b>
+<b>ـ 🇳🇴  |  ـ$priceNokSwedSaleLow   ≃   $priceNokSwedSaleHigh  تومان </b>
 
-// ـ                        💠💠💠
+ـ                        💠💠💠
 
-// <b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
-// <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
+<b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
+<b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
-}
-
-function jpegConvertor(){
-    $html = "<div class='ping'>Milad ✅</div>";
-$css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
-
-$client = new \GuzzleHttp\Client();
-// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
-$res = $client->request('POST', 'https://hcti.io/v1/image', [
-  'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
-  'form_params' => ['html' => $html, 'css' => $css]
-]);
-
-return $res->getBody();
 }
 
 ?>
