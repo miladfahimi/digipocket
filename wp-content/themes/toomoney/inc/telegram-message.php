@@ -1,5 +1,5 @@
 <?php
-function check_every_30min_if_new_value() {
+function send_telegram_msg_every_thirty_minutes() {
 $checkNew = array();
     $indexCheckNew = new WP_Query(array(
         'post_type' => 'index',
