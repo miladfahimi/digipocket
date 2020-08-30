@@ -68,9 +68,33 @@
 <?php 
 
 
-require __DIR__ . '../guzzle/vendor/autoload.php';
-    $html = "<div class='ping'>Milad ✅</div>";
-$css = ".ping { padding: 20px; font-family: 'sans-serif'; }";
+function convertorJpeg(){
+$html = '<div class="p-4 text-center mt-4" style="width: 500px">
+  <span class="tweet-text mb-4">
+    This is Little Bear. He tolerates baths because he knows how phenomenal his
+    floof will appear afterwards. 13/10
+  </span>
+  <div class="mt-2 p-4">
+    <img src="https://pbs.twimg.com/profile_images/1267972589722296320/XBr04M6J_400x400.jpg" class="rounded-circle shadow border mt-4" width="100px">
+  </div>
+  <h4 class="mt-2">
+    WeRateDogs
+  </h4>
+  <span class="text-muted">@dog_rates</span>
+</div>
+
+<!-- Include external CSS, JavaScript or Fonts! -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700" rel="stylesheet">';
+$css = ".tweet-text {
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+  font-weight: bolder;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  padding: 4px;
+}";
 
 $client = new \GuzzleHttp\Client();
 // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
@@ -79,9 +103,15 @@ $res = $client->request('POST', 'https://hcti.io/v1/image', [
   'form_params' => ['html' => $html, 'css' => $css]
 ]);
 
-echo $res->getBody();
-$test = $res->getBody();
-telegram ($test);
+//echo $res->getBody();
+//$test=$res->getBody();
+
+return $res->getBody()." ";
+}
+
+
+telegram(convertorJpeg());
+echo convertorJpeg();
 ?>
 <!-- section boxes -->
 <section class="layout_padding">

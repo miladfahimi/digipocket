@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/guzzle/vendor/autoload.php';
 require get_theme_file_path('/inc/like-route.php');
 require get_theme_file_path('/inc/cron.php');
 require get_theme_file_path('/inc/telegram.php');
