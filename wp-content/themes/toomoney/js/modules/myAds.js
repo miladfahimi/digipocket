@@ -10,10 +10,10 @@ class MyAds {
         $(".adsSave").on("click", this.saveItem.bind(this));
         $(".ansNew").on("click", this.newItem.bind(this));
         $(".adsLink").on("click", this.test.bind(this));
+        $(".adsLink").on("touchstart", this.test.bind(this));
     }
 
     test(e) {
-        e.preventDefault();
         window.open("https://wa.me/46739824229", "_system");
     }
     deleteItem(e) {

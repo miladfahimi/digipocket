@@ -23,7 +23,7 @@
                                     <span class="update_change_minus"><a style="color:#4ca1f1; float:left">
                                             <?php echo get_avatar(get_the_author_email(),12)?>
                                         </a></span>
-                                    <?php the_author()?>
+                                    <a href="https://t.me/mldfhm"><?php the_author()?></a>
                                     <span class="update_change_minus"><a style="color:#4ca1f1; float:right"><i
                                                 class="fa fa-telegram" aria-hidden="true"></i></a></span>
                                 </div>
