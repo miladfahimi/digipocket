@@ -20,6 +20,7 @@ function telegram($msg) {
         return $result;
 }
 //https://api.telegram.org/bot1170495414:AAHvch_votOTBJR7opCeKA0tDD1y7TC_lq0/getUpdates
+//https://api.telegram.org/bot1170495414:AAHvch_votOTBJR7opCeKA0tDD1y7TC_lq0/deleteMessages
 // Set your Bot ID and Chat ID.
 $telegrambot='1170495414:AAHvch_votOTBJR7opCeKA0tDD1y7TC_lq0';
-$telegramchatid='@toomoney_channel';
+$telegramchatid='@toomoney_index';

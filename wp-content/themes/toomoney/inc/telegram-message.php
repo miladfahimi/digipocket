@@ -128,8 +128,57 @@ $msg="
 <b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
+     
+//telegram(convertorJpeg());
 }
 
-//telegram ("test");
+
+
+
+
+
+function convertorJpeg(){
+    $html = '<div class="p-4 text-center mt-4" style="width: 500px">
+      <span class="tweet-text mb-4">
+        This is Little Bear. He tolerates baths because he knows how phenomenal his
+        floof will appear afterwards. 13/10
+      </span>
+      <div class="mt-2 p-4">
+        <img src="https://pbs.twimg.com/profile_images/1267972589722296320/XBr04M6J_400x400.jpg" class="rounded-circle shadow border mt-4" width="100px">
+      </div>
+      <h4 class="mt-2">
+        WeRateDogs
+      </h4>
+      <span class="text-muted">@dog_rates</span>
+    </div>
+    
+    <!-- Include external CSS, JavaScript or Fonts! -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700" rel="stylesheet">';
+    $css = ".tweet-text {
+      background-color: #fff2ac;
+      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+      font-weight: bolder;
+      font-size: 32px;
+      font-family: 'Roboto', sans-serif;
+      padding: 4px;
+    }";
+    
+    $client = new \GuzzleHttp\Client();
+    // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+    $res = $client->request('POST', 'https://hcti.io/v1/image', [
+      'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
+      'form_params' => ['html' => $html, 'css' => $css]
+    ]);
+    
+    //echo $res->getBody();
+    //$test=$res->getBody();
+    
+    return $res->getBody()." ";
+    }
+    
+
+
 
 ?>
