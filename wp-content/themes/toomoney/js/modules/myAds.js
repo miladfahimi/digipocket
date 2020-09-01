@@ -14,6 +14,7 @@ class MyAds {
     }
 
     test(e) {
+        e.preventDefault();
         window.open("https://wa.me/46739824229", "_system");
     }
     deleteItem(e) {
