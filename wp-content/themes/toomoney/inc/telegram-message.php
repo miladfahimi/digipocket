@@ -141,67 +141,79 @@ function convertorJpeg(){
     $date= date("F j, Y");
     $time=date("G:i");
     
-        $html = '<div class="cont"
-        style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url("https://toomoney.se/wp-content/themes/toomoney/images/slider_img1.png")" >
-<ul class="rows">
-    <li class="toomoney-logo"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/logos/logo_2.png" ) ?>"
-alt="">
-</li>
-<li class="columns">
-    <div class="cells-date">
-        تاریخ: '.$date .' ساعت: '. $time .'</div>
-</li>
-<li class="columns">
-    <div class="cells-full">
-        نرخ لحظه ای ارز و کرایپوکارنسی ها
-    </div>
-</li>
-<li class="columns">
-    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/sweden.jpg"
-            alt=""><span>2630</span>
-        <p>
-            تومان</p>
+        $html = `<div class="cont"
+        style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url('https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png')">
+        <ul class="rows">
+            <li class="toomoney-logo"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" alt="">
+            </li>
+            <li class="columns">
+                <div class="cells-date">
+                    تاریخ: $time ساعت: $date</div>
+            </li>
+            <li class="columns">
+                <div class="cells-full">
+                    نرخ لحظه ای ارز و کرایپوکارنسی ها
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"
+                        alt=""><span>2630</span>
+                    <p>
+                        تومان</p>
+    
+                </div>
+                <div class="cells">
+                    <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>
+                        دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"
+                        alt=""><span>2450</span>
+                    <p>
+                        تومان</p>
+                </div>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/etherium.png" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>
+                        دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"
+                        alt=""><span>3620</span>
+                    <p>
+                        تومان</p>
+                </div>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/ripple.png" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>
+                        دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells-full-sub">
+                    قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
+            </li>
+        </ul>
+    </div>`;
 
-    </div>
-    <div class="cells">
-        <img src="https://toomoney.se/wp-content/themes/toomoney/images/BTC.png" alt=""><span
-            style="font-size:17px">11397</span>
-        <p>
-            دلار</p>
-    </div>
-</li>
-<li class="columns">
-    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/norwegin.jpg"
-            alt=""><span>2450</span>
-        <p>
-            تومان</p>
-    </div>
-    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/Etherium.png" alt=""><span
-            style="font-size:17px">11397</span>
-        <p>
-            دلار</p>
-    </div>
-</li>
-<li class="columns">
-    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/denmark.jpg"
-            alt=""><span>3620</span>
-        <p>
-            تومان</p>
-    </div>
-    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/ripple.png" alt=""><span
-            style="font-size:17px">11397</span>
-        <p>
-            دلار</p>
-    </div>
-</li>
-<li class="columns">
-    <div class="cells-full-sub">
-        قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
-</li>
-</ul>
-</div>';
-
-$css = ".cont {
+$css = `@font-face {
+font-family: "vazir";
+src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot");
+src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot#iefix") format("embedded-opentype"),
+url("fonts/Vazir-FD-WOL.woff") format("woff"),
+url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.woff2") format("woff2"),
+url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.ttf") format("truetype"),
+url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.svg#CartoGothicStdBook") format("svg");
+font-weight: normal;
+font-style: normal;
+}
+.cont {
+direction: rtl;
+font-family:"vazir";
 margin: 100px auto;
 width: 300px;
 height: 300px;
@@ -213,6 +225,7 @@ background-position: right;
 display: flex;
 flex-direction: column;
 align-items: center;
+list-style-type:none;
 padding: 20px;
 }
 .columns {
@@ -278,7 +291,7 @@ width: 100px;
 .toomoney-logo img {
 height: 100%;
 width: 100%;
-}";
+}`;
 
 $client = new \GuzzleHttp\Client();
 // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
