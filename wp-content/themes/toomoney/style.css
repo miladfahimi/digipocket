@@ -9,6 +9,7 @@ Version: 1.0.0
 @import "./css/variables.css";
 @import "./css/login_form.css";
 @import "./css/boxes.css";
+@import "./css/image-template.css";
 
 @font-face {
     font-family: "vazir";

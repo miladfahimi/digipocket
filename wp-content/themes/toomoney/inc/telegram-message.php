@@ -129,7 +129,7 @@ $msg="
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
      
-//telegram(convertorJpeg());
+telegram(convertorJpeg());
 }
 
 
@@ -138,46 +138,161 @@ $msg="
 
 
 function convertorJpeg(){
-    $html = '<div class="p-4 text-center mt-4" style="width: 500px">
-      <span class="tweet-text mb-4">
-        This is Little Bear. He tolerates baths because he knows how phenomenal his
-        floof will appear afterwards. 13/10
-      </span>
-      <div class="mt-2 p-4">
-        <img src="https://pbs.twimg.com/profile_images/1267972589722296320/XBr04M6J_400x400.jpg" class="rounded-circle shadow border mt-4" width="100px">
-      </div>
-      <h4 class="mt-2">
-        WeRateDogs
-      </h4>
-      <span class="text-muted">@dog_rates</span>
+    $date= date("F j, Y");
+    $time=date("G:i");
+    
+        $html = '<div class="cont"
+        style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url("https://toomoney.se/wp-content/themes/toomoney/images/slider_img1.png")" >
+<ul class="rows">
+    <li class="toomoney-logo"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/logos/logo_2.png" ) ?>"
+alt="">
+</li>
+<li class="columns">
+    <div class="cells-date">
+        تاریخ: '.$date .' ساعت: '. $time .'</div>
+</li>
+<li class="columns">
+    <div class="cells-full">
+        نرخ لحظه ای ارز و کرایپوکارنسی ها
     </div>
-    
-    <!-- Include external CSS, JavaScript or Fonts! -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700" rel="stylesheet">';
-    $css = ".tweet-text {
-      background-color: #fff2ac;
-      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
-      font-weight: bolder;
-      font-size: 32px;
-      font-family: 'Roboto', sans-serif;
-      padding: 4px;
-    }";
-    
-    $client = new \GuzzleHttp\Client();
-    // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
-    $res = $client->request('POST', 'https://hcti.io/v1/image', [
-      'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
-      'form_params' => ['html' => $html, 'css' => $css]
-    ]);
-    
-    //echo $res->getBody();
-    //$test=$res->getBody();
-    
-    return $res->getBody()." ";
-    }
-    
+</li>
+<li class="columns">
+    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/sweden.jpg"
+            alt=""><span>2630</span>
+        <p>
+            تومان</p>
+
+    </div>
+    <div class="cells">
+        <img src="https://toomoney.se/wp-content/themes/toomoney/images/BTC.png" alt=""><span
+            style="font-size:17px">11397</span>
+        <p>
+            دلار</p>
+    </div>
+</li>
+<li class="columns">
+    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/norwegin.jpg"
+            alt=""><span>2450</span>
+        <p>
+            تومان</p>
+    </div>
+    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/Etherium.png" alt=""><span
+            style="font-size:17px">11397</span>
+        <p>
+            دلار</p>
+    </div>
+</li>
+<li class="columns">
+    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/denmark.jpg"
+            alt=""><span>3620</span>
+        <p>
+            تومان</p>
+    </div>
+    <div class="cells"> <img src="https://toomoney.se/wp-content/themes/toomoney/images/ripple.png" alt=""><span
+            style="font-size:17px">11397</span>
+        <p>
+            دلار</p>
+    </div>
+</li>
+<li class="columns">
+    <div class="cells-full-sub">
+        قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
+</li>
+</ul>
+</div>';
+
+$css = ".cont {
+margin: 100px auto;
+width: 300px;
+height: 300px;
+color: #e9d16f;
+background-size: cover;
+background-position: right;
+}
+.rows {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+.columns {
+display: flex;
+justify-content: center;
+}
+.cells {
+display: flex;
+height: 40px;
+width: 120px;
+margin: 5px;
+text-align: center;
+border: 1px solid #e9d16f;
+border-radius: 5px;
+}
+.cells-full {
+display: flex;
+justify-content: center;
+height: 20px;
+width: 250px;
+margin: 5px;
+padding: 3px;
+text-align: center;
+font-size: 10px;
+background-color: #e9d16f;
+color: #1b334d;
+border-radius: 5px;
+}
+.cells-date {
+font-size: 10px;
+}
+.cells-full-sub {
+height: 20px;
+width: 250px;
+margin: 5px;
+padding: 3px;
+text-align: center;
+font-size: 8px;
+color: #e9d16f;
+}
+.cells img {
+flex: 35% 0 1;
+height: 100%;
+width: 35%;
+object-fit: cover;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+.cells span {
+font-size: 20px;
+padding: 5px 8px;
+color: #ffe78f;
+padding-left: 0;
+}
+.cells p {
+font-size: 5px;
+color: #e9d16f;
+}
+.toomoney-logo {
+height: 50px;
+width: 100px;
+}
+.toomoney-logo img {
+height: 100%;
+width: 100%;
+}";
+
+$client = new \GuzzleHttp\Client();
+// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+$res = $client->request('POST', 'https://hcti.io/v1/image', [
+'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
+'form_params' => ['html' => $html, 'css' => $css]
+]);
+
+//echo $res->getBody();
+//$test=$res->getBody();
+
+return $res->getBody()." ";
+}
+
 
 
 
