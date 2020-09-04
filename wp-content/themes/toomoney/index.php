@@ -66,7 +66,6 @@
 <?php get_template_part( 'template-part/content', 'index' ); ?>
 <!-- end section -->
 <?php 
-
 ?>
 <!-- section boxes -->
 <section class="layout_padding">

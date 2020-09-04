@@ -130,7 +130,7 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
+saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,get_the_date('Fj-Y-G:i')));
 }
 
 
@@ -303,9 +303,13 @@ $key="url";
 return json_decode($res->getBody())->$key;
 }
 
-function saveTheImage($url){
-$img = '../query-images/latest.png';
-file_put_contents($img, file_get_contents($url));
+function saveTheImage($url,$date){
+$img=get_theme_file_uri('inc/query-images/'.$date.'.png');
+$dir = __DIR__ . "/query-images"; // Full Path
+$name = $date.'.png';
+is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
+copy($url, $dir . DIRECTORY_SEPARATOR . $name);
+telegram($img);
 }
 
 ?>
