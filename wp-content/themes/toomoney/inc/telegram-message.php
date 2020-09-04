@@ -207,84 +207,86 @@ font-weight: normal;
 font-style: normal;
 }
 .cont {
-direction: rtl;
-font-family:"vazir";
-width: 300px;
-height: 300px;
-color: #e9d16f;
-background-size: cover;
-background-position: right;
+    position: relative;
+    overflow: hidden;
+    direction: rtl;
+    font-family: "vazir";
+    width: 300px;
+    height: 300px;
+    color: #e9d16f;
+    background-size: cover;
+    background-position: right;
 }
 .rows {
-display: flex;
-flex-direction: column;
-align-items: center;
-list-style-type:none;
-padding: 10px;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
 }
 .columns {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .cells {
-display: flex;
-height: 40px;
-width: 120px;
-margin: 5px;
-text-align: center;
-border: 1px solid #e9d16f;
-border-radius: 5px;
+    display: flex;
+    height: 40px;
+    width: 120px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #e9d16f;
+    border-radius: 5px;
 }
 .cells-full {
-display: flex;
-justify-content: center;
-height: 20px;
-width: 250px;
-margin: 5px;
-padding: 3px;
-text-align: center;
-font-size: 10px;
-background-color: #e9d16f;
-color: #1b334d;
-border-radius: 5px;
+    justify-content: center;
+    height: 20px;
+    width: 250px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 10px;
+    background-color: #e9d16f;
+    color: #1b334d;
+    border-radius: 5px;
 }
 .cells-date {
-font-size: 10px;
+    font-size: 8px;
 }
 .cells-full-sub {
-height: 20px;
-width: 250px;
-margin: 5px;
-padding: 3px;
-text-align: center;
-font-size: 8px;
-color: #e9d16f;
+    height: 20px;
+    width: 250px;
+    margin: 5px;
+    text-align: center;
+    font-size: 8px;
+    color: #e9d16f;
 }
 .cells img {
-flex: 35% 0 1;
-height: 100%;
-width: 35%;
-object-fit: cover;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
+    flex: 35% 0 1;
+    height: 100%;
+    width: 35%;
+    object-fit: cover;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 .cells span {
-font-size: 20px;
-padding: 5px 8px;
-color: #ffe78f;
-padding-left: 0;
+    font-size: 20px;
+    padding: 5px 8px;
+    color: #ffe78f;
+    padding-left: 0;
 }
 .cells p {
-font-size: 5px;
-color: #e9d16f;
+    font-size: 5px;
+    color: #e9d16f;
 }
 .toomoney-logo {
-height: 50px;
-width: 100px;
+    position: absolute;
+    top: 5px;
+    height: 50px;
+    width: 100px;
 }
 .toomoney-logo img {
-height: 100%;
-width: 100%;
+    height: 100%;
+    width: 100%;
 }';
 
 $client = new \GuzzleHttp\Client();
