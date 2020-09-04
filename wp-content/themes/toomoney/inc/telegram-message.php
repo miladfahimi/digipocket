@@ -130,7 +130,7 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,get_the_date('Fj-Y-G:i')));
+saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('Fj-Y-G:i'));
 }
 
 
