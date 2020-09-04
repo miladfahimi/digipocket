@@ -209,7 +209,6 @@ font-style: normal;
 .cont {
 direction: rtl;
 font-family:"vazir";
-margin: 100px auto;
 width: 300px;
 height: 300px;
 color: #e9d16f;
@@ -221,7 +220,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 list-style-type:none;
-padding: 20px;
+padding: 10px;
 }
 .columns {
 display: flex;
