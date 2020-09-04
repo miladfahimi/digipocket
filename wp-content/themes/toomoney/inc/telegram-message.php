@@ -129,7 +129,8 @@ $msg="
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
      
-telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
+//telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
+saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
 }
 
 
@@ -302,7 +303,9 @@ $key="url";
 return json_decode($res->getBody())->$key;
 }
 
-
-
+function saveTheImage($url){
+$img = '../query-images/latest.png';
+file_put_contents($img, file_get_contents($url));
+}
 
 ?>
