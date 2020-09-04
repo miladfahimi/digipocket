@@ -298,8 +298,8 @@ $res = $client->request('POST', 'https://hcti.io/v1/image', [
 
 //echo $res->getBody();
 //$test=$res->getBody();
-
-return $res->getBody()." ";
+$key="url";
+return json_decode($res->getBody())->$key;
 }
 
 
