@@ -150,7 +150,7 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
             </li>
             <li class="columns">
                 <div class="cells-full">
-                    نرخ لحظه ای ارز و کرایپوکارنسی ها
+                    نرخ لحظه ای ارز، طلا و بیت کوین
                 </div>
             </li>
             <li class="columns">
