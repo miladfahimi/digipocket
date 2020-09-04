@@ -51,7 +51,7 @@ function sendMessage() {
           if ( $indexQuery->have_posts() ) {
             while ( $indexQuery->have_posts() ) {
                 $indexQuery->the_post();
-                $priceSek=get_field('sek_buy');
+                =get_field('sek_buy');
                 $priceDkk=get_field('sek_sale');
                 $priceNok=get_field('usd_buy');
                 $date=get_the_date('F j, Y G:i');
@@ -129,7 +129,7 @@ $msg="
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
      
-telegram(convertorJpeg());
+telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,));
 }
 
 
@@ -137,9 +137,7 @@ telegram(convertorJpeg());
 
 
 
-function convertorJpeg(){
-    $date= date("F j, Y");
-    $time=date("G:i");
+function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
     
         $html = '<div class="cont"
         style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
@@ -148,7 +146,7 @@ function convertorJpeg(){
             </li>
             <li class="columns">
                 <div class="cells-date">
-                    تاریخ: '.$time.' ساعت: '.$date.'</div>
+                    '.$date.'</div>
             </li>
             <li class="columns">
                 <div class="cells-full">
@@ -156,7 +154,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>$priceSek</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>'.$priceSek.'</span>
                     <p>
                         تومان</p>
     
@@ -169,7 +167,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"><span>$priceNok</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"><span>'.$priceNok.'</span>
                     <p>
                         تومان</p>
                 </div>
@@ -180,7 +178,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"><span>$priceDkk</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"><span>'.$priceDkk.'</span>
                     <p>
                         تومان</p>
                 </div>
