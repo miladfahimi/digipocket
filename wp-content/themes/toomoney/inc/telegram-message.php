@@ -129,7 +129,7 @@ $msg="
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
      
-telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,));
+telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
 }
 
 
