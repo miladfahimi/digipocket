@@ -51,7 +51,7 @@ function sendMessage() {
           if ( $indexQuery->have_posts() ) {
             while ( $indexQuery->have_posts() ) {
                 $indexQuery->the_post();
-                =get_field('sek_buy');
+                $priceSek=get_field('sek_buy');
                 $priceDkk=get_field('sek_sale');
                 $priceNok=get_field('usd_buy');
                 $date=get_the_date('F j, Y G:i');
