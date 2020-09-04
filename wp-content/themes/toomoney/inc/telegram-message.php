@@ -156,7 +156,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>2630</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>$priceSek</span>
                     <p>
                         تومان</p>
     
@@ -169,7 +169,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"><span>2450</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"><span>$priceNok</span>
                     <p>
                         تومان</p>
                 </div>
@@ -180,7 +180,7 @@ function convertorJpeg(){
                 </div>
             </li>
             <li class="columns">
-                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"><span>3620</span>
+                <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"><span>$priceDkk</span>
                     <p>
                         تومان</p>
                 </div>
