@@ -1461,7 +1461,8 @@ ul.social-links li a {
 @keyframes show-new {
     0% {
         opacity: 0;
-        transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
+        transform: translate(-50%, -50%) translateY(-2rem) scale(0.8)
+            rotateX(-20deg);
     }
     100% {
         transform: translate(-50%, -50%);
@@ -1473,7 +1474,8 @@ ul.social-links li a {
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg);
+        transform: translate(-50%, -50%) translateY(-5rem) scale(0.5)
+            rotateX(-75deg);
     }
 }
 .timer_middel {

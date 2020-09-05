@@ -1,0 +1,23 @@
+.part-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.part-row {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: rgb(228, 227, 227);
+}
+.part-row:hover {
+    background-color: rgb(189, 189, 189);
+}
+.part-number {
+    flex: 50px 0 0;
+    padding: 15px;
+    text-align: center;
+}
+.part-title {
+    padding: 15px;
+}
