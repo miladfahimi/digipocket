@@ -81,8 +81,8 @@
                         $req = new WP_Query($args);
                         if ( $req->have_posts() ) {
                             while ( $req->have_posts() ) {
-                                $do_not_duplicate = [];
-                                array_push($do_not_duplicate,$post->ID); 
+                                // $do_not_duplicate = [];
+                                // array_push($do_not_duplicate,$post->ID); 
                                 $req->the_post(); 
                         ?>
                     <div class="box_img_cntr">
@@ -124,11 +124,11 @@ foreach((get_the_category()) as $category) {
                         if ( $req->have_posts() ) {
                             while ( $req->have_posts()) {
                                 $req->the_post(); 
-                                if (in_array($post->ID, $do_not_duplicate)) {
-                                     continue;
-                                }else{
-                                    array_push($do_not_duplicate,$post->ID);
-                                }
+                                // if (in_array($post->ID, $do_not_duplicate)) {
+                                //      continue;
+                                // }else{
+                                //     array_push($do_not_duplicate,$post->ID);
+                                // }
                         ?>
                 <div class="boxes" style="background-image:url(<?php echo get_the_post_thumbnail_url('','slider')?>);background-repeat:
                     no-repeat;
