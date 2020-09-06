@@ -66,9 +66,9 @@
                         </div>
                         <div class="full testimonial_simple_say margin_bottom_30_all" style="margin-top:0;">
                             <div class="qoute_testimonial"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
-                            <p class="margin_bottom_0"><i>Adipisicing elit lorem ipsum dolor sit amet, consectetur, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
-                            <p class="large_2 theme_color">John Barber</p>
+                            <p class="margin_bottom_0"><i>قیمت چیزی است که شما پرداخت می کنید و ارزش چیزی است که به دست
+                                    می آورید.</i></p>
+                            <p class="m-text m-t-l theme_color">وارن بافت</p>
                         </div>
                     </div>
                     <?php 

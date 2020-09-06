@@ -51,12 +51,12 @@
 </div>
 <?php } ?>
 <div class="post_commt_form">
-    <h4>POST YOUR COMMENT</h4>
+    <h4>دیدگاه خود را وارد نمایید ...</h4>
     <div class="form_section">
         <form class="form_contant" action="index.html">
             <fieldset>
                 <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <textarea class="field_custom" placeholder="Comment"></textarea>
+                    <textarea class="field_custom" placeholder="متن دیدگاه"></textarea>
                 </div>
                 <div class="center"><button class="btn btn__green u-margin-t-small" href="#">SUBMIT NOW</button></div>
             </fieldset>

@@ -384,6 +384,10 @@ p.large_2 {
     font-size: 18px;
     color: #898989;
 }
+p.m-text {
+    font-size: 12px !important;
+    color: #b1b1b1;
+}
 button,
 input,
 select,

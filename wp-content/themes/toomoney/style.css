@@ -11,6 +11,7 @@ Version: 1.0.0
 @import "./css/boxes.css";
 @import "./css/image-template.css";
 @import "./css/part-table.css";
+@import "./css/utilities.css";
 
 @font-face {
     font-family: "vazir";
