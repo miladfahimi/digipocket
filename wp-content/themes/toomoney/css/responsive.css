@@ -234,7 +234,11 @@
         width: 120px;
     }
 }
-
+@media (max-width: 500px) {
+    .carousel-inner {
+        height: 200px;
+    }
+}
 @media (min-width: 541px) and (max-width: 767px) {
     /** container **/
     .container {
