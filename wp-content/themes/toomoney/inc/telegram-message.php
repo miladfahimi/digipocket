@@ -305,12 +305,12 @@ return json_decode($res->getBody())->$key;
 
 function saveTheImage($url,$date){
 
-    $img=get_theme_file_uri('inc/query-images/latest.png');
     //wp_delete_file($img);
     $dir = __DIR__ . "/query-images"; // Full Path
     $name = 'latest.png';
     is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
     copy($url, $dir . DIRECTORY_SEPARATOR . $name);
+    $img=get_theme_file_uri('inc/query-images/latest.png');
     telegram($img);
 }
 
