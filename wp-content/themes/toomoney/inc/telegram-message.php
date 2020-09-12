@@ -304,7 +304,7 @@ return json_decode($res->getBody())->$key;
 }
 
 function saveTheImage($url,$date){
-$img=get_theme_file_uri('inc/query-images/'.$date.'.png');
+$img=get_theme_file_uri('inc/query-images/latest.png');
 $dir = __DIR__ . "/query-images"; // Full Path
 $name = $date.'.png';
 is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
