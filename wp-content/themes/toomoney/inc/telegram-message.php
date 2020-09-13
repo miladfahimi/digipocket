@@ -303,14 +303,24 @@ $key="url";
 return json_decode($res->getBody())->$key;
 }
 
-function saveTheImage($url,$date){
-
-    //wp_delete_file($img);
+function saveTheImage($url,$date){ 
     $dir = __DIR__ . "/query-images"; // Full Path
-    $name = 'latest.png';
+    $name = $date.'.png';
     is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
+    
+    //Get a list of all of the file names in the folder.
+    $files = glob($dir . '/*');
+    
+    //Loop through the file list.
+    foreach($files as $file){
+        //Make sure that this is a file and not a directory.
+        if(is_file($file)){
+            //Use the unlink function to delete the file.
+            unlink($file);
+        }
+    }
     copy($url, $dir . DIRECTORY_SEPARATOR . $name);
-    $img=get_theme_file_uri('inc/query-images/latest.png');
+    $img=get_theme_file_uri('inc/query-images/'.$name);
     telegram($img);
 }
 
