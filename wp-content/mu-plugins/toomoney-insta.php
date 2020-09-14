@@ -35,13 +35,13 @@ $args = array(
     'menu_icon'         => 'dashicons-instagram',
     'capability_type'   => 'insta',
     'map_meta_cap'      => true,
-    'supports'          => array( 'custom-fields','thumbnail'),
+    'supports'          => array( 'title', 'editor','custom-fields','thumbnail'),
     'has_archive'       => true,
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,
     'show_in_rest'      => true,
     'query_var'         => true,
-    'taxonomies'          => array( 'category' ),
+    'taxonomies'          => array( 'topics','category' ),
 );
 
 // Call the actual WordPress function
