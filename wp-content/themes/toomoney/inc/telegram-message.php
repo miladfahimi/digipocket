@@ -131,7 +131,7 @@ $msg="
  //addQueryImageToMedia();
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('DD-MM-YYYY-G:i'));
+saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
 addd();
 }
 
