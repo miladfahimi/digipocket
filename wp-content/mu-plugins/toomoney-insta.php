@@ -41,6 +41,7 @@ $args = array(
     'show_in_nav_menus' => true,
     'show_in_rest'      => true,
     'query_var'         => true,
+    'taxonomies'          => array( 'category' ),
 );
 
 // Call the actual WordPress function
