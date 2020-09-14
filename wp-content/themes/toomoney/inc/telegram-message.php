@@ -365,4 +365,5 @@ function addToMedia($image_url){
     require_once( ABSPATH . 'wp-admin/includes/image.php' );
     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
     wp_update_attachment_metadata( $attach_id, $attach_data );
+    set_post_thumbnail( 2111, $attach_id );
 }
