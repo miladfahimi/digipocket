@@ -357,7 +357,7 @@ function addToMedia($image_url){
     $attachment = array(
       'post_mime_type' => $wp_filetype['type'],
       'post_title' => sanitize_file_name( $filename ),
-      'post_content' => '',
+      'post_content' => 'index_query',
       'post_status' => 'inherit'
     );
     
