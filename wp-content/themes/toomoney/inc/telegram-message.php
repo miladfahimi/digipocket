@@ -128,13 +128,12 @@ $msg="
 <b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
+ //addQueryImageToMedia();
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('Fj-Y-G:i'));
+saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('DD-MM-YYYY-G:i'));
+addd();
 }
-
-
-
 
 
 
@@ -322,6 +321,48 @@ function saveTheImage($url,$date){
     copy($url, $dir . DIRECTORY_SEPARATOR . $name);
     $img=get_theme_file_uri('inc/query-images/'.$name);
     telegram($img);
+    addToMedia($img);
 }
 
-?>
+function addQueryImageToMedia(){
+    wp_insert_post(
+        array(
+            'post_type'		    =>	'insta',
+            'post_title'		=>	'query image',
+            'post_author'       =>'1',
+            'post_status'		=>	'publish',
+        )
+    );
+}
+function addToMedia($image_url){
+    //$image_url = 'https://toomoney.se/wp-content/themes/toomoney/inc/query-images/13-09-2020-1700.png'; // Define the image URL here
+
+    $upload_dir = wp_upload_dir();
+    
+    $image_data = file_get_contents( $image_url );
+    
+    $filename = basename( $image_url );
+    
+    if ( wp_mkdir_p( $upload_dir['path'] ) ) {
+      $file = $upload_dir['path'] . '/' . $filename;
+    }
+    else {
+      $file = $upload_dir['basedir'] . '/' . $filename;
+    }
+    
+    file_put_contents( $file, $image_data );
+    
+    $wp_filetype = wp_check_filetype( $filename, null );
+    
+    $attachment = array(
+      'post_mime_type' => $wp_filetype['type'],
+      'post_title' => sanitize_file_name( $filename ),
+      'post_content' => '',
+      'post_status' => 'inherit'
+    );
+    
+    $attach_id = wp_insert_attachment( $attachment, $file );
+    require_once( ABSPATH . 'wp-admin/includes/image.php' );
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+    wp_update_attachment_metadata( $attach_id, $attach_data );
+}

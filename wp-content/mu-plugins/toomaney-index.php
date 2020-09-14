@@ -30,7 +30,7 @@ $labels = array(
 // The arguments for our post type, to be entered as parameter 2 of register_post_type()
 $args = array(
 'labels'            => $labels,
-'description'       => 'Holds our custom ads post specific data',
+'description'       => 'Holds our custom index post specific data',
 'public'            => true,
 'show_ui'           => true,
 'menu_position'     => 5,

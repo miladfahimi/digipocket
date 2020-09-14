@@ -27,18 +27,20 @@ $labels = array(
 
 // The arguments for our post type, to be entered as parameter 2 of register_post_type()
 $args = array(
-'labels'            => $labels,
-'description'       => 'Holds our custom insta post specific data',
-'public'            => true,
-'show_ui'           => true,
-'menu_position'     => 5,
-'menu_icon'         => 'dashicons-tickets',
-'capability_type'   => 'ads',
-'map_meta_cap'      => true,
-'has_archive'       => true,
-'show_in_admin_bar' => true,
-'show_in_nav_menus' => true,
-'query_var'         => true,
+    'labels'            => $labels,
+    'description'       => 'Holds our custom insta post specific data',
+    'public'            => true,
+    'show_ui'           => true,
+    'menu_position'     => 5,
+    'menu_icon'         => 'dashicons-instagram',
+    'capability_type'   => 'insta',
+    'map_meta_cap'      => true,
+    'supports'          => array( 'custom-fields','thumbnail'),
+    'has_archive'       => true,
+    'show_in_admin_bar' => true,
+    'show_in_nav_menus' => true,
+    'show_in_rest'      => true,
+    'query_var'         => true,
 );
 
 // Call the actual WordPress function
