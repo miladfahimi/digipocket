@@ -9,17 +9,16 @@ Version: 1.0.0
 @import "./css/variables.css";
 @import "./css/login_form.css";
 @import "./css/boxes.css";
-@import "./css/image-template.css";
+@import "./css/index-image-template.css";
+@import "./css/post-image-template.css";
 @import "./css/part-table.css";
 @import "./css/utilities.css";
 
 @font-face {
     font-family: "vazir";
     src: url("fonts/Vazir-FD-WOL.eot");
-    src: url("fonts/Vazir-FD-WOL.eot#iefix") format("embedded-opentype"),
-        url("fonts/Vazir-FD-WOL.woff") format("woff"),
-        url("fonts/Vazir-FD-WOL.woff2") format("woff2"),
-        url("fonts/Vazir-FD-WOL.ttf") format("truetype"),
+    src: url("fonts/Vazir-FD-WOL.eot#iefix") format("embedded-opentype"), url("fonts/Vazir-FD-WOL.woff") format("woff"),
+        url("fonts/Vazir-FD-WOL.woff2") format("woff2"), url("fonts/Vazir-FD-WOL.ttf") format("truetype"),
         url("fonts/Vazir-FD-WOL.svg#CartoGothicStdBook") format("svg");
     font-weight: normal;
     font-style: normal;

@@ -1,10 +1,10 @@
-.cont {
+.cont-post {
     position: relative;
     overflow: hidden;
     direction: rtl;
     font-family: "vazir";
     width: 300px;
-    height: 300px;
+    height: 500px;
     color: #e9d16f;
     background-size: cover;
     background-position: right;
@@ -30,16 +30,51 @@
     border: 1px solid #e9d16f;
     border-radius: 5px;
 }
-.cells-full {
+.cells-full-title {
     justify-content: center;
-    height: 20px;
+    height: 30px;
     width: 250px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
     text-align: center;
     font-size: 10px;
     background-color: #e9d16f;
     color: #1b334d;
+    border-radius: 4px;
+}
+.cells-full-title p {
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+}
+.cells-content {
+    justify-content: center;
+    height: 200px;
+    width: 250px;
+    margin-bottom: 5px;
+    padding: 35px;
+    text-align: justify;
+    font-size: 10px;
+    background-color: #e9d16f;
+    color: #1b334d;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.cells-content-img {
+    justify-content: center;
+    height: 120px;
+    width: 250px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 10px;
+    color: #1b334d;
     border-radius: 5px;
+}
+.cells-content-img img {
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
 }
 .cells-date {
     font-size: 8px;
