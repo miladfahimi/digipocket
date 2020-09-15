@@ -56,6 +56,7 @@ function toomoney_title_tag(){
     //ADD YOUR OWN CUSTOMIZED IMAGE SIZE IN THIS WAY, Milad Fahimi
     add_image_size('my_dummy_size', 750, 200, true);
     add_image_size('slider', 1920, 900, true);
+    add_image_size('insta', 300, 300, true);
 }
 
 add_action('after_setup_theme', 'toomoney_title_tag');
