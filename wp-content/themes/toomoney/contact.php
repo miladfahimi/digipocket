@@ -81,7 +81,7 @@ $imagePage = new WP_Query(array(
                     <p>
                         تومان</p>
                 </div>
-                <div class="cells"> <img src="<?php echo get_theme_file_uri('images/Etherium.png') ?>" alt=""><span
+                <div class="cells"> <img src="<?php echo get_theme_file_uri('images/etherium.png') ?>" alt=""><span
                         style="font-size:17px">11397</span>
                     <p>
                         دلار</p>
