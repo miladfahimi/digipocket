@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php /* Template Name: Instagram */ 
+ get_header(); ?>
 
 <?php
     get_template_part('template-part/content','miniheader');
