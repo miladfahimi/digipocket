@@ -9,9 +9,12 @@
 <?php get_template_part( 'template-part/content', 'index' ); ?>
 
 <?php
-    global $post;
-    while(have_posts()) {
-    the_post(); 
+    $instaPost = new WP_Query(
+        array(
+            'post_type' => 'insta',
+        ));
+    while($instaPost->have_posts()) {
+        $instaPost->the_post(); 
 ?>
 
 <!-- section -->
@@ -22,8 +25,7 @@
                 <div class="full">
                     <div class="blog_section margin_bottom_0">
                         <div class="blog_feature_img">
-                            <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url('','insta')?>"
-                                alt="#">
+                            <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url()?>" alt="#">
                         </div>
                         <div class="blog_feature_cantant">
                             <p class="blog_head"><?php the_title(); ?></p>
