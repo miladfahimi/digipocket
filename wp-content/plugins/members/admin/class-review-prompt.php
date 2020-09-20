@@ -35,13 +35,21 @@ class ReviewPrompt {
 
 	public function review_notice() {
 
+		// Only show to admins
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		// Notice has been removed or delayed
 		if ( get_option( 'members_review_prompt_removed' ) || get_transient( 'members_review_prompt_delay' ) ) {
 			return;
 		}
 
 		// Don't bother if haven't been using long enough
-		
+		$transient = get_transient( 'members_30days_flag' );
+		if ( ! empty( $transient ) ) {
+			return;
+		}
 
 		?>
 		<div class="notice notice-info is-dismissible members-review-notice" id="members_review_notice">

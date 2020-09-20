@@ -31,40 +31,41 @@ function run_scraper_every_thirty_minutes() {
     $aed = $e->getAttribute('data-price');
     }
 
-    $k = 180;
-    $g = 50;
+    $k = 0;
+    $g = 180;
+    $aed_usd=0;
+    $usd_sek=0;
+    $usd_dkk=0;
+    $usd_nok=0;
+
+    $ratesCheck = new WP_Query(array(
+        'post_type' => 'rate',
+        'posts_per_page'=>1,
+        'order'=>'DESC',
+        'orderby'=>'ID',
+      ));
+      if ( $ratesCheck->have_posts() ) {
+        while ( $ratesCheck->have_posts() ) {
+            $ratesCheck->the_post();
+            $aed_usd=get_field('aed_usd');
+            $usd_sek=get_field('usd_sek');
+            $usd_dkk=get_field('usd_dkk');
+            $usd_nok=get_field('usd_nok');
+            $date=get_the_date('F j, Y G:i');
+    }}
 
     // Function call with your own text or variable
-    $USD= ((float)str_replace(',', '',$aed)*convertIt('aed','usd'))/10;
+    $USD= ((float)str_replace(',', '',$aed)*$aed_usd)/10;
 
     wp_insert_post(
         array(
             'post_type'         => 'index',
             'post_status'		=>	'publish',
             'meta_input' => array(
-            'sek_buy'		=>	round($USD*convertIt('usd','sek')/10)*10-$k,       //SEK
-            'sek_sale'		=>	round($USD*convertIt('usd','dkk')/10)*10-$k,       //DKK
-            'usd_buy'		=>	round($USD*convertIt('usd','nok')/10)*10-$k,       //NOK
-            'usd_sale'		=>	round($USD/10)*10+$g                               //USD
+            'sek_buy'		=>	round($USD*$usd_sek/10)*10-$k,       //SEK
+            'sek_sale'		=>	round($USD*$usd_dkk/10)*10-$k,       //DKK
+            'usd_buy'		=>	round($USD*$usd_nok/10)*10-$k,       //NOK
+            'usd_sale'		=>	round($USD/10)*10-$k                 //USD
         ))
     );
-}
-
-function convertIt($t,$f){
-    
-    //GET THE LIVE CONVERSION RATES
-    $endpoint = 'convert';
-    $access_key = 'fe4f757533db7ed9d467848cfa6a6e6f';
-
-    $from = $f;
-    $to = $t;
-    $amount = 1;
-
-    // initialize CURL:
-    $json = file_get_contents('https://api.coinlayer.com/api/'.$endpoint.'?access_key='.$access_key.'&from='.$from.'&to='.$to.'&amount='.$amount.'');
-
-    // Decode JSON response:
-    $conversionResult = json_decode($json, true);
-    return $conversionResult['result'];
-
-}
+}  
