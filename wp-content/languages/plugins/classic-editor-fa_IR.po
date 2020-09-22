@@ -1,0 +1,76 @@
+# Translation of Plugins - Classic Editor - Stable (latest release) in Persian
+# This file is distributed under the same license as the Plugins - Classic Editor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-14 11:59:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: fa\n"
+"Project-Id-Version: Plugins - Classic Editor - Stable (latest release)\n"
+
+#: classic-editor.php:822
+msgctxt "Editor Name"
+msgid "Edit (classic editor)"
+msgstr "ویرایش (ویرایشگر قدیمی)"
+
+#: classic-editor.php:815
+msgctxt "Editor Name"
+msgid "Edit (block editor)"
+msgstr "ویرایش (ویرایشگر بلوک)"
+
+#: classic-editor.php:489
+msgid "Change settings"
+msgstr "تغییر تنظیمات"
+
+#: classic-editor.php:476
+msgid "Default editor for all sites"
+msgstr "ویرایشگر پیش‌فرض برای همه سایت‌ها"
+
+#: classic-editor.php:472
+msgid "Editor Settings"
+msgstr "تنظیمات ویرایشگر"
+
+#: classic-editor.php:456
+msgid "Default Editor"
+msgstr "ویرایشگر پیش‌فرض"
+
+#: classic-editor.php:856
+msgctxt "Editor Name"
+msgid "block editor"
+msgstr "ویرایشگر بلوک"
+
+#: classic-editor.php:853
+msgctxt "Editor Name"
+msgid "classic editor"
+msgstr "ویرایشگر کلاسیک"
+
+#: classic-editor.php:492
+msgid "Allow site admins to change settings"
+msgstr "به مدیران سایت اجازه دهید تنظیمات را تغییر دهند"
+
+#: classic-editor.php:638
+msgid "Editor"
+msgstr "ویرایشگر"
+
+#: classic-editor.php:431
+msgid "No"
+msgstr "خیر"
+
+#: classic-editor.php:427
+msgid "Yes"
+msgstr "بله"
+
+#: classic-editor.php:354
+msgid "Allow users to switch editors"
+msgstr "اجازه تغییر ویرایشگر به کاربران"
+
+#: classic-editor.php:353
+msgid "Default editor for all users"
+msgstr "ویرایشگر پیش‌فرض برای همهٔ کاربران"
+
+#: classic-editor.php:700
+msgid "Settings"
+msgstr "تنظیمات"
