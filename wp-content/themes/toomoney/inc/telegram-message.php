@@ -319,10 +319,10 @@ function saveTheImage($folder,$url,$app,$date){
     copy($url, $dir . DIRECTORY_SEPARATOR . $name);
     $img=get_theme_file_uri('inc/'.$folder.'/'.$name);
     telegram($img);
-    addToMedia($img);
+    addToMedia($app,$img);
 }
 
-function addToMedia($image_url){
+function addToMedia($app,$image_url){
     //$image_url = 'https://toomoney.se/wp-content/themes/toomoney/inc/query-images/13-09-2020-1700.png'; // Define the image URL here
 
     $upload_dir = wp_upload_dir();
@@ -357,9 +357,9 @@ function addToMedia($image_url){
     updateInstagramPost($attach_id);
 }
 
-function updateFacebookPost(){
+function updateFacebookPost($attach_id){
     set_post_thumbnail( 2106, $attach_id );
 }
-function updateInstagramPost(){
+function updateInstagramPost($attach_id){
     set_post_thumbnail( 2436, $attach_id );
 }
