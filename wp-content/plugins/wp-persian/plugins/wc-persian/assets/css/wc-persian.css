@@ -1,0 +1,21 @@
+/** Woocommerce **/
+.wcp-jdate-picker{
+    width: 50% !important;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.wcp-sale_price_jdates_fields{
+    padding: 5px 20px 5px 162px!important;
+}
+
+.wcp-sale_price_jdates_fields .short:nth-of-type( 2 ){
+    margin-bottom: 1em;
+}
+
+.wcp-sale_price_jdates_fields .short:nth-of-type( 4 ){
+    clear: both;
+}
+.pdp-default{
+    z-index: 9999 !important;
+}

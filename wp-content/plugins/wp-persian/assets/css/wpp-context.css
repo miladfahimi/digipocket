@@ -1,0 +1,90 @@
+input,textarea{
+	unicode-bidi: embed;
+}
+label.selectit{
+font-family:Tahoma;
+}
+div#titlewrap input#title{
+/*direction:rtl;*/
+}
+/*
+*Editor
+*/
+.wp-editor-area{
+/*	direction:rtl;*/
+}
+/* edit.php */
+td.column-date abbr, td.column-categories a, td.column-author a,
+ td.column-product_cat a, td.column-order_date abbr{
+direction:rtl !important;
+}
+td.column-title strong a{
+direction:rtl;
+}
+.wpp-jalalidate{
+direction:rtl;
+display:inline;
+float:left;
+}
+div#timestampdiv{
+clear:both;
+display:block;
+}
+/*
+* Inline Time Editor
+*/
+.timestamp-wrap.jalali #jja, .timestamp-wrap.jalali #hha, .timestamp-wrap.jalali #mna,
+.timestamp-wrap.jalali #aaa, .timestamp-wrap.jalali #mma{
+	font-size:9pt;
+	height:2em;
+	padding:1px;
+ }
+.timestamp-wrap.jalali #jja, .timestamp-wrap.jalali #hha, .timestamp-wrap.jalali #mna{
+	width:2em;
+}
+.timestamp-wrap.jalali #aaa{
+	width:3.4em;
+}
+.timestamp-wrap.jalali #mma{
+	vertical-align: baseline;
+	width:6.3em;
+}
+/*
+* woocommerce
+*/
+span.woocommerce-Price-currencySymbol{
+	direction:rtl !important;
+	margin-left:3px;
+	margin-right:3px;
+}
+/*
+*edit-comments.php
+*/
+td.column-comment p, td.column-author strong, td.column-response a, td.column-date a{
+	direction:rtl !important;
+}
+/*
+*comment.php?action=editcomment
+*/
+.editcomment #name{
+	direction:rtl !important;
+}
+/*
+*Dashboard
+*/
+#dashboard-widgets div.activity-block a, #dashboard-widgets .draft-title a{
+	direction:rtl !important;
+}
+#dashboard-widgets #the-comment-list blockquote{
+	direction:rtl !important;
+	display: inline-block !important;
+}
+#dashboard-widgets #woocommerce_dashboard_recent_reviews li .meta a{
+	direction:rtl !important;
+}
+/*
+*upload.php
+*/
+.wp-list-table .column-parent a{
+	direction:rtl !important;
+}
