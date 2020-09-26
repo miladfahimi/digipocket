@@ -1,6 +1,6 @@
 <?php
 function convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date){
-$html = '<div class="cont-facebook" style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8))">
+$html = '<div class="cont-facebook" style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
 <ul class="rows-facebook">
     <li class="toomoney_logo_fs">
         <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" >
