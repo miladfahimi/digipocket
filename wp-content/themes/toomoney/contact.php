@@ -121,7 +121,7 @@ $imagePage = new WP_Query(array(
                 </div>
                 <div class="cells-s">
                     <img src="<?php echo get_theme_file_uri('images/BTC.png') ?>" alt="">
-                    <span style="font-size:17px">11397</span>
+                    <span>11397</span>
                     <p>
                         دلار</p>
                 </div>
@@ -131,8 +131,8 @@ $imagePage = new WP_Query(array(
                         alt=""><span>2450</span>
                     <p>تومان</p>
                 </div>
-                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/etherium.png') ?>" alt=""><span
-                        style="font-size:17px">11397</span>
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/etherium.png') ?>"
+                        alt=""><span>11397</span>
                     <p>دلار</p>
                 </div>
             </li>
@@ -141,8 +141,8 @@ $imagePage = new WP_Query(array(
                         alt=""><span>3620</span>
                     <p>تومان</p>
                 </div>
-                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/ripple.png') ?>" alt=""><span
-                        style="font-size:17px">11397</span>
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/ripple.png') ?>"
+                        alt=""><span>11397</span>
                     <p>دلار</p>
                 </div>
             </li>

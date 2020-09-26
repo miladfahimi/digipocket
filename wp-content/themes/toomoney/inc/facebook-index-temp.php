@@ -14,7 +14,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png">
-            <span style="font-size:17px">11397</span>
+            <span>11397</span>
             <p>دلار</p>
         </div>
     </li>
@@ -27,7 +27,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/etherium.png">
-            <span style="font-size:17px">11397</span>
+            <span>11397</span>
             <p>دلار</p>
         </div>
     </li>
@@ -40,7 +40,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/ripple.png">
-            <span style="font-size:17px">11397</span>
+            <span>11397</span>
             <p>دلار</p>
         </div>
     </li>
@@ -123,8 +123,8 @@ $css = '@font-face {
         height: 100%;
         width: 35%;
         object-fit: cover;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
     }
     
     .cells-s span {
@@ -135,6 +135,7 @@ $css = '@font-face {
     }
     .cells-s p {
         font-size: 8px;
+        margin-bottom:4px;
         color: #e9d16f;
     }
     
