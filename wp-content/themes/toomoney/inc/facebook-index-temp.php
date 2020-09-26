@@ -27,7 +27,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/etherium.png">
-            <span>11397</span>
+            <span>24365</span>
             <p>دلار</p>
         </div>
     </li>
@@ -40,7 +40,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/ripple.png">
-            <span>11397</span>
+            <span>15230</span>
             <p>دلار</p>
         </div>
     </li>
