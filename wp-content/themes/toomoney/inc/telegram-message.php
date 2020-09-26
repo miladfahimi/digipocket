@@ -130,8 +130,8 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
-saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
+saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$date),'instagram',get_the_date('d-m-y-G:i:s'));
+saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date),'facebook',get_the_date('d-m-y-G:i:s'));
 }
 
 
@@ -300,9 +300,9 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
     return json_decode($res->getBody())->$key;
 }
 
-function saveTheImage($folder,$url,$date){ 
+function saveTheImage($folder,$url,$app,$date){ 
     $dir = __DIR__ . $folder; // Full Path
-    $name = $date.'.png';
+    $name = $app.$date.'.png';
     is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
     
     //Get a list of all of the file names in the folder.
