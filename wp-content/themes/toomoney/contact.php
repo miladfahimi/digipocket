@@ -105,6 +105,53 @@ $imagePage = new WP_Query(array(
             </li>
         </ul>
     </div>
+    <div class="cont-facebook"
+        style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(<?php echo get_theme_file_uri('images/slider_img1.png') ?>)">
+        <ul class="rows-facebook">
+            <li class="toomoney-logo-facebook"> <img src="<?php echo get_theme_file_uri('images/logos/logo_2.png') ?>"
+                    alt="">
+            </li>
+
+            <li class="columns">
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/sweden.jpg') ?>"
+                        alt=""><span>2630</span>
+                    <p>
+                        تومان</p>
+
+                </div>
+                <div class="cells-s">
+                    <img src="<?php echo get_theme_file_uri('images/BTC.png') ?>" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>
+                        دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/norwegin.jpg') ?>"
+                        alt=""><span>2450</span>
+                    <p>تومان</p>
+                </div>
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/etherium.png') ?>" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/denmark.jpg') ?>"
+                        alt=""><span>3620</span>
+                    <p>تومان</p>
+                </div>
+                <div class="cells-s"> <img src="<?php echo get_theme_file_uri('images/ripple.png') ?>" alt=""><span
+                        style="font-size:17px">11397</span>
+                    <p>دلار</p>
+                </div>
+            </li>
+            <li class="columns">
+                <div class="cells-full-sub">
+                    قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
+            </li>
+        </ul>
+    </div>
 </div>
 <?php
 get_footer();

@@ -128,18 +128,16 @@ $msg="
 <b>ـ💰💰💰💰💰💰💰💰💰💰💰💰💰</b>
 <b>ـ http://833efedb77c8.ngrok.io/logo.png ـ</b>";
  telegram ($msg);
- //addQueryImageToMedia();
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage(convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
-addd();
+saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
+saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date),get_the_date('d-m-y-G:i:s'));
 }
 
 
 
 function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
-    
-        $html = '<div class="cont"
+    $html = '<div class="cont"
         style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
         <ul class="rows">
             <li class="toomoney-logo"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" >
@@ -157,7 +155,7 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
                 <div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>'.$priceSek.'</span>
                     <p>
                         تومان</p>
-    
+
                 </div>
                 <div class="cells">
                     <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png"><span
@@ -195,115 +193,115 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
         </ul>
     </div>';
 
-$css = '@font-face {
-font-family: "vazir";
-src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot");
-src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot#iefix") format("embedded-opentype"),
-url("fonts/Vazir-FD-WOL.woff") format("woff"),
-url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.woff2") format("woff2"),
-url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.ttf") format("truetype"),
-url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.svg#CartoGothicStdBook") format("svg");
-font-weight: normal;
-font-style: normal;
-}
-.cont {
-    position: relative;
-    overflow: hidden;
-    direction: rtl;
-    font-family: "vazir";
-    width: 300px;
-    height: 300px;
-    color: #e9d16f;
-    background-size: cover;
-    background-position: right;
-}
-.rows {
-    display: flex;
-    margin-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    list-style-type: none;
-    padding: 10px;
-}
-.columns {
-    display: flex;
-    justify-content: center;
-}
-.cells {
-    display: flex;
-    height: 40px;
-    width: 120px;
-    margin: 5px;
-    text-align: center;
-    border: 1px solid #e9d16f;
-    border-radius: 5px;
-}
-.cells-full {
-    justify-content: center;
-    height: 20px;
-    width: 250px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-size: 10px;
-    background-color: #e9d16f;
-    color: #1b334d;
-    border-radius: 5px;
-}
-.cells-date {
-    font-size: 8px;
-}
-.cells-full-sub {
-    height: 20px;
-    width: 250px;
-    margin: 5px;
-    text-align: center;
-    font-size: 8px;
-    color: #e9d16f;
-}
-.cells img {
-    flex: 35% 0 1;
-    height: 100%;
-    width: 35%;
-    object-fit: cover;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-.cells span {
-    font-size: 20px;
-    padding: 5px 8px;
-    color: #ffe78f;
-    padding-left: 0;
-}
-.cells p {
-    font-size: 5px;
-    color: #e9d16f;
-}
-.toomoney-logo {
-    position: absolute;
-    top: 5px;
-    height: 50px;
-    width: 100px;
-}
-.toomoney-logo img {
-    height: 100%;
-    width: 100%;
-}';
+    $css = '@font-face {
+        font-family: "vazir";
+        src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot");
+        src: url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.eot#iefix") format("embedded-opentype"),
+        url("fonts/Vazir-FD-WOL.woff") format("woff"),
+        url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.woff2") format("woff2"),
+        url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.ttf") format("truetype"),
+        url("https://digipocket.ir/wp-content/themes/toomoney/fonts/Vazir-FD-WOL.svg#CartoGothicStdBook") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        }
+        .cont {
+            position: relative;
+            overflow: hidden;
+            direction: rtl;
+            font-family: "vazir";
+            width: 300px;
+            height: 300px;
+            color: #e9d16f;
+            background-size: cover;
+            background-position: right;
+        }
+        .rows {
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .columns {
+            display: flex;
+            justify-content: center;
+        }
+        .cells {
+            display: flex;
+            height: 40px;
+            width: 120px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid #e9d16f;
+            border-radius: 5px;
+        }
+        .cells-full {
+            justify-content: center;
+            height: 20px;
+            width: 250px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 10px;
+            background-color: #e9d16f;
+            color: #1b334d;
+            border-radius: 5px;
+        }
+        .cells-date {
+            font-size: 8px;
+        }
+        .cells-full-sub {
+            height: 20px;
+            width: 250px;
+            margin: 5px;
+            text-align: center;
+            font-size: 8px;
+            color: #e9d16f;
+        }
+        .cells img {
+            flex: 35% 0 1;
+            height: 100%;
+            width: 35%;
+            object-fit: cover;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .cells span {
+            font-size: 20px;
+            padding: 5px 8px;
+            color: #ffe78f;
+            padding-left: 0;
+        }
+        .cells p {
+            font-size: 5px;
+            color: #e9d16f;
+        }
+        .toomoney-logo {
+            position: absolute;
+            top: 5px;
+            height: 50px;
+            width: 100px;
+        }
+        .toomoney-logo img {
+            height: 100%;
+            width: 100%;
+        }';
 
-$client = new \GuzzleHttp\Client();
-// Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
-$res = $client->request('POST', 'https://hcti.io/v1/image', [
-'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
-'form_params' => ['html' => $html, 'css' => $css]
-]);
+    $client = new \GuzzleHttp\Client();
+    // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+    $res = $client->request('POST', 'https://hcti.io/v1/image', [
+    'auth' => ['2d7f5af8-4254-41a9-bff5-c76a6cae81f1', '7c46c9c9-5b09-40e0-90fb-487c309d6100'],
+    'form_params' => ['html' => $html, 'css' => $css]
+    ]);
 
-//echo $res->getBody();
-//$test=$res->getBody();
-$key="url";
-return json_decode($res->getBody())->$key;
+    //echo $res->getBody();
+    //$test=$res->getBody();
+    $key="url";
+    return json_decode($res->getBody())->$key;
 }
 
-function saveTheImage($url,$date){ 
-    $dir = __DIR__ . "/query-images"; // Full Path
+function saveTheImage($folder,$url,$date){ 
+    $dir = __DIR__ . $folder; // Full Path
     $name = $date.'.png';
     is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
     
@@ -319,21 +317,11 @@ function saveTheImage($url,$date){
         }
     }
     copy($url, $dir . DIRECTORY_SEPARATOR . $name);
-    $img=get_theme_file_uri('inc/query-images/'.$name);
+    $img=get_theme_file_uri('inc/'.$folder.'/'.$name);
     telegram($img);
     addToMedia($img);
 }
 
-function addQueryImageToMedia(){
-    wp_insert_post(
-        array(
-            'post_type'		    =>	'insta',
-            'post_title'		=>	'query image',
-            'post_author'       =>'1',
-            'post_status'		=>	'publish',
-        )
-    );
-}
 function addToMedia($image_url){
     //$image_url = 'https://toomoney.se/wp-content/themes/toomoney/inc/query-images/13-09-2020-1700.png'; // Define the image URL here
 
@@ -365,5 +353,13 @@ function addToMedia($image_url){
     require_once( ABSPATH . 'wp-admin/includes/image.php' );
     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
     wp_update_attachment_metadata( $attach_id, $attach_data );
+    updateInstagramPost($attach_id);
+    updateInstagramPost($attach_id);
+}
+
+function updateFacebookPost(){
     set_post_thumbnail( 2106, $attach_id );
+}
+function updateInstagramPost(){
+    set_post_thumbnail( 2436, $attach_id );
 }
