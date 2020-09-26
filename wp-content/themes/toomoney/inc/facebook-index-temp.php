@@ -1,45 +1,53 @@
 <?php
 function convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date){
-$html = ' <div class="cont-facebook"
-style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
+$html = ' <div class="cont-facebook" style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
 <ul class="rows-facebook">
-<li class="toomoney-logo"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" >
-</li>
+    <li class="toomoney-logo">
+        <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" >
+    </li>
 
-<li class="columns">
-<div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg"><span>'.$priceSek.'</span>
-<p>
-    تومان</p>
+    <li class="columns">
+        <div class="cells">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg">
+            <span>'.$priceSek.'</span>
+            <p>تومان</p>
+        </div>
+        <div class="cells-s">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png">
+            <span style="font-size:17px">11397</span>
+            <p>دلار</p>
+        </div>
+    </li>
 
-</div>
-<div class="cells-s">
-<img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png"><span
-<p>
-    دلار</p>
-</div>
-</li>
-<li class="columns">
-<div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg"><span>'.$priceNok.'</span>
-<p>تومان</p>
-</div>
-<div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/etherium.png"><span
-style="font-size:17px">11397</span>
-<p>دلار</p>
-</div>
-</li>
-<li class="columns">
-<div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg"><span>'.$priceDkk.'</span>
-<p>تومان</p>
-</div>
-<div class="cells"> <img src="https://digipocket.ir/wp-content/themes/toomoney/images/ripple.png"><span
-style="font-size:17px">11397</span>
-    <p>دلار</p>
-</div>
-</li>
-<li class="columns">
-    <div class="cells-full-sub">
-        قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
-</li>
+    <li class="columns">
+        <div class="cells">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg">
+            <span>'.$priceNok.'</span>
+            <p>تومان</p>
+        </div>
+        <div class="cells">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/etherium.png">
+            <span style="font-size:17px">11397</span>
+            <p>دلار</p>
+        </div>
+    </li>
+
+    <li class="columns">
+        <div class="cells">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg">
+            <span>'.$priceDkk.'</span>
+            <p>تومان</p>
+        </div>
+        <div class="cells">
+            <img src="https://digipocket.ir/wp-content/themes/toomoney/images/ripple.png">
+            <span style="font-size:17px">11397</span>
+            <p>دلار</p>
+        </div>
+    </li>
+
+    <li class="columns">
+        <div class="cells-full-sub">قیمت ها با تغییرات لحظه ای بازار ارز تغییر می کنند. </div>
+    </li>
 </ul>
 </div>';
 
@@ -67,36 +75,18 @@ height: 700px;
 }
 }
 
-.cont-post {
-position: relative;
-overflow: hidden;
-direction: rtl;
-font-family: "vazir";
-width: 300px;
-height: 300px;
-color: #e9d16f;
-background-size: cover;
-background-position: right;
-}
 .cont-facebook {
 position: relative;
 overflow: hidden;
 direction: rtl;
 font-family: "vazir";
 width: 300px;
-height: 130px;
+height: 156px;
 color: #e9d16f;
 background-size: cover;
 background-position: right;
 }
-.rows {
-display: flex;
-margin-top: 50px;
-flex-direction: column;
-align-items: center;
-list-style-type: none;
-padding: 10px;
-}
+
 .rows-facebook {
 display: flex;
 margin-top: 30px;
@@ -109,15 +99,7 @@ padding: 10px;
 display: flex;
 justify-content: center;
 }
-.cells {
-display: flex;
-height: 40px;
-width: 120px;
-margin: 5px;
-text-align: center;
-border: 1px solid #e9d16f;
-border-radius: 5px;
-}
+
 .cells-s {
 display: flex;
 height: 20px;
@@ -127,36 +109,8 @@ text-align: center;
 border: 1px solid #e9d16f;
 border-radius: 3px;
 }
-.cells-full-title {
-justify-content: center;
-height: 30px;
-width: 250px;
-margin-bottom: 10px;
-margin-top: 5px;
-text-align: center;
-font-size: 10px;
-background-color: #e9d16f;
-color: #1b334d;
-border-top-right-radius: 4px;
-border-top-left-radius: 4px;
-}
-.cells-full-title p {
-padding: 5px;
-text-align: center;
-font-size: 10px;
-}
-.cells-content {
-justify-content: center;
-height: 140px;
-width: 250px;
-margin-bottom: 5px;
-padding: 30px 35px;
-text-align: justify;
-font-size: 10px;
-color: #1b334d;
-background-size: cover;
-border-bottom-right-radius: 4px;
-border-bottom-left-radius: 4px;
+
+
 }
 .cells-content-img {
 justify-content: center;
@@ -168,13 +122,7 @@ font-size: 10px;
 color: #1b334d;
 border-radius: 5px;
 }
-.cells-content-img img {
-width: 100%;
-object-fit: cover;
-}
-.cells-date {
-font-size: 8px;
-}
+
 .cells-full-sub {
 height: 20px;
 width: 250px;
@@ -183,14 +131,7 @@ text-align: center;
 font-size: 8px;
 color: #e9d16f;
 }
-.cells img {
-flex: 35% 0 1;
-height: 100%;
-width: 35%;
-object-fit: cover;
-border-top-right-radius: 4px;
-border-bottom-right-radius: 4px;
-}
+
 .cells-s img {
 flex: 35% 0 1;
 height: 100%;
@@ -199,16 +140,7 @@ object-fit: cover;
 border-top-right-radius: 4px;
 border-bottom-right-radius: 4px;
 }
-.cells span {
-font-size: 20px;
-padding: 5px 8px;
-color: #ffe78f;
-padding-left: 0;
-}
-.cells p {
-font-size: 5px;
-color: #e9d16f;
-}
+
 .cells-s span {
 font-size: 14px;
 padding: 0 8px;
@@ -219,16 +151,7 @@ padding-left: 0;
 font-size: 8px;
 color: #e9d16f;
 }
-.toomoney-logo {
-position: absolute;
-top: 5px;
-height: 50px;
-width: 100px;
-}
-.toomoney-logo img {
-height: 100%;
-width: 100%;
-}
+
 .toomoney-logo-facebook {
 position: absolute;
 top: 2px;

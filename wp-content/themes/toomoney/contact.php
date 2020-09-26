@@ -120,8 +120,8 @@ $imagePage = new WP_Query(array(
 
                 </div>
                 <div class="cells-s">
-                    <img src="<?php echo get_theme_file_uri('images/BTC.png') ?>" alt=""><span
-                        style="font-size:17px">11397</span>
+                    <img src="<?php echo get_theme_file_uri('images/BTC.png') ?>" alt="">
+                    <span style="font-size:17px">11397</span>
                     <p>
                         دلار</p>
                 </div>
