@@ -301,7 +301,7 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
 }
 
 function saveTheImage($folder,$url,$app,$date){ 
-    $dir = __DIR__ . $folder; // Full Path
+    $dir = __DIR__ .'/'. $folder; // Full Path
     $name = $app.$date.'.png';
     is_dir($dir) || @mkdir($dir) || die("Can't Create folder");
     
