@@ -5,7 +5,6 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
     <li class="toomoney_logo_fs">
         <img src="https://digipocket.ir/wp-content/themes/toomoney/images/logos/logo_2.png" >
     </li>
-
     <li class="columns">
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/sweden.jpg">
@@ -18,7 +17,6 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
             <p>دلار</p>
         </div>
     </li>
-
     <li class="columns">
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/norwegin.jpg">
@@ -31,7 +29,6 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
             <p>دلار</p>
         </div>
     </li>
-
     <li class="columns">
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/denmark.jpg">
