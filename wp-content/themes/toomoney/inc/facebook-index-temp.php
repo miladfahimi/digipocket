@@ -132,7 +132,8 @@ $css = '@font-face {
     }
     .cells-s p {
         font-size: 8px;
-        margin-bottom:4px;
+        margin:0px;
+        padding:5px;
         color: #e9d16f;
     }
     
