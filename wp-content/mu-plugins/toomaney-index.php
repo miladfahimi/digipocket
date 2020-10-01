@@ -74,6 +74,7 @@ function index_add_post_columns($defaults){
     $defaults['sek_sale'] = __('DKK');
     $defaults['usd_buy'] = __('NOK');
     $defaults['usd_sale'] = __('USD');
+    $defaults['btc'] = __('BTC');
     $defaults['date'] = 'Status';
     }
     return $defaults;
@@ -93,6 +94,8 @@ function index_get_post_column_values($column_name, $postID){
             echo get_post_meta($postID,'usd_buy',TRUE);
         }elseif($column_name === 'usd_sale'){
             echo get_post_meta($postID,'usd_sale',TRUE);
+        }elseif($column_name === 'btc'){
+            echo get_post_meta($postID,'btc',TRUE);
         }elseif($column_name === 'date'){
             echo get_post_meta($postID,'date',TRUE);
         }elseif($column_name === 'author'){

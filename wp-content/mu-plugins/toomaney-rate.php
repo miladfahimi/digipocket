@@ -71,6 +71,7 @@ function rate_add_post_columns($defaults){
     $defaults['usd_sek'] = __('USD to SEK');
     $defaults['usd_dkk'] = __('USD to DKK');
     $defaults['usd_nok'] = __('USD to NOK');
+    $defaults['btc_usd'] = __('BTC to USD');
     $defaults['date'] = 'Status';
     }
     return $defaults;
@@ -88,6 +89,8 @@ function rate_get_post_column_values($column_name, $postID){
             echo get_post_meta($postID,'usd_dkk',TRUE);
         }elseif($column_name === 'usd_nok'){
             echo get_post_meta($postID,'usd_nok',TRUE);
+        }elseif($column_name === 'btc_usd'){
+            echo get_post_meta($postID,'btc_usd',TRUE);
         }elseif($column_name === 'date'){
             echo get_post_meta($postID,'date',TRUE);
         }

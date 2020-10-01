@@ -51,6 +51,7 @@ function run_scraper_every_thirty_minutes() {
             $usd_sek=get_field('usd_sek');
             $usd_dkk=get_field('usd_dkk');
             $usd_nok=get_field('usd_nok');
+            $btc=get_field('btc_usd');
             $date=get_the_date('F j, Y G:i');
     }}
 
@@ -65,7 +66,8 @@ function run_scraper_every_thirty_minutes() {
             'sek_buy'		=>	round($USD*$usd_sek/10)*10-$k,       //SEK
             'sek_sale'		=>	round($USD*$usd_dkk/10)*10-$k,       //DKK
             'usd_buy'		=>	round($USD*$usd_nok/10)*10-$k,       //NOK
-            'usd_sale'		=>	round($USD/10)*10-$k                 //USD
+            'usd_sale'		=>	round($USD/10)*10-$k,                //USD
+            'btc'           =>  round($btc)                          //BTC
         ))
     );
 }  

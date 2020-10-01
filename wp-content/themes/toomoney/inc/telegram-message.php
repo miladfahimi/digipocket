@@ -54,6 +54,7 @@ function sendMessage() {
                 $priceSek=get_field('sek_buy');
                 $priceDkk=get_field('sek_sale');
                 $priceNok=get_field('usd_buy');
+                $priceBtc=get_field('btc');
                 $date=get_the_date('F j, Y G:i');
         }}
           
@@ -92,6 +93,7 @@ $msg="
 <b>ـ 🇸🇪   |  ـ$priceSek   تومان </b>
 <b>ـ 🇩🇰   |  ـ$priceDkk   تومان</b>
 <b>ـ 🇳🇴   |  ـ$priceNok   تومان</b>
+<b>ـ 🇳🇴   |  ـ$priceBtc   دلار</b>
 
 ـ                        💠💠💠
 
@@ -130,13 +132,13 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$date),'instagram',get_the_date('d-m-y-G:i:s'));
-saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$date),'facebook',get_the_date('d-m-y-G:i:s'));
+saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'instagram',get_the_date('d-m-y-G:i:s'));
+saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'facebook',get_the_date('d-m-y-G:i:s'));
 }
 
 
 
-function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
+function convertorJpeg($priceSek,$priceNok,$priceDkk,$priceBtc,$date){
     $html = '<div class="cont"
         style="background-image:linear-gradient(to right top,rgba(27, 51, 77, 0.6),rgba(27, 51, 77, 0.8)),url(https://digipocket.ir/wp-content/themes/toomoney/images/slider_img1.png)">
         <ul class="rows">
@@ -159,7 +161,7 @@ function convertorJpeg($priceSek,$priceNok,$priceDkk,$date){
                 </div>
                 <div class="cells">
                     <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png"><span
-                        style="font-size:17px">11397</span>
+                        style="font-size:17px">'.$priceBtc.'</span>
                     <p>
                         دلار</p>
                 </div>

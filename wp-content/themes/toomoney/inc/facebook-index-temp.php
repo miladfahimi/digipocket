@@ -13,7 +13,7 @@ $html = '<div class="cont-facebook" style="background-image:linear-gradient(to r
         </div>
         <div class="cells-s">
             <img src="https://digipocket.ir/wp-content/themes/toomoney/images/BTC.png">
-            <span>11397</span>
+            <span>'.$priceBtc.'</span>
             <p>دلار</p>
         </div>
     </li>
