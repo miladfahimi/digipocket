@@ -7,6 +7,7 @@ require get_theme_file_path('/inc/telegram-message.php');
 require get_theme_file_path('/inc/scraper.php');
 require get_theme_file_path('/inc/auth.php');
 require get_theme_file_path('/inc/facebook-index-temp.php');
+require get_theme_file_path('/inc/update-rates.php');
 
 
 
