@@ -350,14 +350,14 @@ function addToMedia($app,$image_url){
       'post_mime_type' => $wp_filetype['type'],
       'post_title' => sanitize_file_name( $filename ),
       'post_content' => 'index_query',
-      'post_status' => 'inherit'
+      'post_status' => 'publish'
     );
     
     $attach_id = wp_insert_attachment( $attachment, $file );
     require_once( ABSPATH . 'wp-admin/includes/image.php' );
     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
     wp_update_attachment_metadata( $attach_id, $attach_data );
-    if($app == 'Instagram'){
+    if($app == 'instagram'){
         updateInstagramPost($attach_id);
     }else if($app == 'facebook'){
         updateFacebookPost($attach_id);
