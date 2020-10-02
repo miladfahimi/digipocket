@@ -132,8 +132,8 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
-saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'instagram',get_the_date('d-m-y-G:i:s'));
 saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'facebook',get_the_date('d-m-y-G:i:s'));
+saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'instagram',get_the_date('d-m-y-G:i:s'));
 }
 
 
@@ -363,8 +363,8 @@ function addToMedia($app,$image_url){
 }
 
 function updateFacebookPost($attach_id){
-    set_post_thumbnail( 2436, $attach_id );
+    set_post_thumbnail(2436,$attach_id);
 }
 function updateInstagramPost($attach_id){
-    set_post_thumbnail( 2106, $attach_id );
+    set_post_thumbnail(2106,$attach_id);
 }
