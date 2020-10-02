@@ -355,13 +355,16 @@ function addToMedia($app,$image_url){
     require_once( ABSPATH . 'wp-admin/includes/image.php' );
     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
     wp_update_attachment_metadata( $attach_id, $attach_data );
-    updateInstagramPost($attach_id);
-    updateInstagramPost($attach_id);
+    if($app == 'Instagram'){
+        updateInstagramPost($attach_id);
+    }else{
+        updateFacebookPost($attach_id);
+    }
 }
 
 function updateFacebookPost($attach_id){
-    set_post_thumbnail( 2106, $attach_id );
+    set_post_thumbnail( 2436, $attach_id );
 }
 function updateInstagramPost($attach_id){
-    set_post_thumbnail( 2436, $attach_id );
+    set_post_thumbnail( 2106, $attach_id );
 }
