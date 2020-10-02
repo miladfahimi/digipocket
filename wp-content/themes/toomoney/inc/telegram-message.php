@@ -357,7 +357,7 @@ function addToMedia($app,$image_url){
     wp_update_attachment_metadata( $attach_id, $attach_data );
     if($app == 'Instagram'){
         updateInstagramPost($attach_id);
-    }else{
+    }else if($app == 'facebook'){
         updateFacebookPost($attach_id);
     }
 }
