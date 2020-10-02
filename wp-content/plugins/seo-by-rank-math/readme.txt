@@ -1,11 +1,11 @@
-=== WordPress SEO Plugin - Rank Math ===
+=== Rank Math - SEO Plugin for WordPress ===
 Contributors: rankmath
-Plugin link: https://s.rankmath.com/homepage
+Plugin link: https://rankmath.com/?utm_source=LP&utm_campaign=WP
 Tags: seo, sitemap, google search console, schema, redirection
-Tested up to: 5.5
+Tested up to: 5.5.1
 Requires at least: 5.2
 Requires PHP: 7.0
-Stable tag: 1.0.47.1
+Stable tag: 1.0.48.2
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -97,7 +97,7 @@ Even with significantly more features than other plugins, Rank Math loads amazin
 
 * **Super Fast SEO Plugin** — Even after packing so many features, Rank Math has a negligible load on your server, thus making it one of the fastest SEO plugins for WordPress.
 
-* **Automatic Keyword Suggestions from Google ** — Get keyword suggestions from Google as you start typing letters in the focus keyword field of Rank Math.
+* **Automatic Keyword Suggestions from Google** — Get keyword suggestions from Google as you start typing letters in the focus keyword field of Rank Math.
 
 * **New SEO Analyzer** — Rank Math's built-in SEO analysis will give you SEO recommendations that you'd normally spend hundreds of dollars to get.
 
@@ -108,6 +108,8 @@ Even with significantly more features than other plugins, Rank Math loads amazin
 * **Optimize UNLIMITED Keywords At Once** — You can optimize your post for up to 5 different keywords by default with the Rank Math plugin and can use a filter to optimize for unlimited keywords.
 
 * **Image SEO** - With Rank Math's perfect solution to add ALT & Title tags on the fly, to optimize images, showing inside the content, and that too for FREE, there is no reason to choose any other SEO solution that does not provide all the essential SEO features.
+
+* **[Web Stories SEO](https://rankmath.com/kb/google-web-stories/)** - Make any Story created with the Google's Web Stories plugin SEO-Ready. Automatically adds AMP friendly Schema markup and Meta tags.
 
 * **Translation Plugins Support** — Rank Math works flawlessly with the top translations plugins like WPML, TranslatePress, Weglot, Polylang, etc., making it a perfect companion.
 
@@ -473,13 +475,14 @@ Please drop us an email at support@rankmath.com and we would be more than happy 
 
 == Changelog ==
 
-= 1.0.47.1 [Aug 25, 2020] =
-* Added: Proper credits and attribution wherever they were missing. We are incredibly sorry about missing them in the first place. That should not have happened. Please feel free to reach out to us in case the credits are still missing anywhere in the plugin. We would be more than obliged to add.
-* Improved: Excluded image caption text from the auto-generated SEO descriptions
-* Improved: Added more automation to the Open Graph Image tag(`og:image`) functionality. It can now pick the first external image from the content as well
-* Improved: Fixed PHPCS warnings throughout the plugin
-* Removed: Unused `remove_stopwords` function from the [Redirection](https://rankmath.com/kb/setting-up-redirections/) module
-* Removed: Some unused `error_log()` calls from the plugin
-* Fixed: [SERP preview](https://rankmath.com/kb/general-tab/#the-preview-section) section not showing Hindi characters properly
+= 1.0.48.2 [Oct 01, 2020] =
+* Added: Support for importing `txt` settings file on a Multisite setup
+* Fixed: Event Venue fields were not showing in the right Event Mode
+* Fixed: Missing `mainEntityofPage` property in the default schema added from the Settings
+* Fixed: Added logo URL using `ImageObject` in the Publisher entity
+* Fixed: Ajax-based Dropdown options were working in the settings page
+* Fixed: `lodash` is not defined error on the Settings page
+* Fixed: Broken Redirection loader image
+* Fixed: [Beta updates](https://rankmath.com/kb/version-control/#beta-updates) were not working
 
 Full changelog can be found here - **[Rank Math SEO changelog](https://rankmath.com/changelog/?utm_source=LP&utm_campaign=WP)**
