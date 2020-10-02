@@ -132,7 +132,9 @@ $msg="
  telegram ($msg);
      
 //telegram(convertorJpeg($priceSek,$priceNok,$priceDkk,$date));
+sleep(10);
 saveTheImage('facebook_index',convertToFacebookIndexTemplate($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'facebook',get_the_date('d-m-y-G:i:s'));
+sleep(10);
 saveTheImage('instagram_index',convertorJpeg($priceSek,$priceNok,$priceDkk,$priceBtc,$date),'instagram',get_the_date('d-m-y-G:i:s'));
 }
 
