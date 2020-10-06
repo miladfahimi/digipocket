@@ -93,7 +93,8 @@ $msg="
 <b>ـ 🇸🇪   |  ـ$priceSek   تومان </b>
 <b>ـ 🇩🇰   |  ـ$priceDkk   تومان</b>
 <b>ـ 🇳🇴   |  ـ$priceNok   تومان</b>
-<b>ـ 🇳🇴   |  ـ$priceBtc   دلار</b>
+
+<b>بیت کوین   |  ـ$priceBtc   دلار</b>
 
 ـ                        💠💠💠
 

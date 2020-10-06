@@ -201,6 +201,14 @@
 .boxes h3 {
     font-weight: 700;
 }
+.box01_text_cntr > h1 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -120%);
+    z-index: 5;
+    font-size: 50px;
+}
 .box02_text_cntr p {
     width: 100%;
     text-align: right;

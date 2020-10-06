@@ -222,14 +222,28 @@ foreach((get_the_category()) as $category) {
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes">
+                <div class="boxes"
+                    style="background: linear-gradient(360deg, rgba(27, 51, 77, .8) 60%, rgba(24,51,87,.5) 74%,rgba(24,51,87,.1) 100%),url(<?php echo get_theme_file_uri('images/bitcoin.jpg') ?>); background-size: cover; background-position:right">
                     <div class="box01_text_cntr light-font" style="padding:0">
                         <div class="box02_tag_cntr">
-                            <a class="link_button tag-red" href="#">S&P 500</a>
+                            <a class="link_button tag-red" href="#">Bitcoin</a>
                             <div class="tag_button tag-main-blue"><i class="fa fa-chevron-left"></i></div>
                         </div>
-                        <div id="chart5-container" style="width: 100%; height: 100%; margin: 0 auto">
-                        </div>
+                        <?php 
+                        wp_reset_query(); 
+                        $args = array(
+                            'post_type' => 'rate',
+                            'posts_per_page' => 1,
+                        );
+                        $req = new WP_Query($args);
+                        if ( $req->have_posts() ) {
+                            while ( $req->have_posts() ) {
+                                $req->the_post(); 
+                        ?>
+                        <h1>
+                            $<?php echo round(get_field('btc_usd'),2); ?>
+                        </h1>
+                        <?php }} ?>
                     </div>
                 </div>
             </div>
