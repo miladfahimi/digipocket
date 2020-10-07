@@ -60,8 +60,8 @@
                     <ul class="social_icons">
                         <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <li class="social-icon tw"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class="social-icon gp"><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
