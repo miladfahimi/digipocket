@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 pull-left">
-                    <p class="text-center">&copy; 2020 All Rights Reserved.</p>
+                    <p class="text-center">&copy; کلیه حقوق این وبسایت متعلق به موسسه تومانی میباشد و نقل قول از این وبسایت با ذکر منبع بلامانع میباشد.</p>
                 </div>
             </div>
         </div>
