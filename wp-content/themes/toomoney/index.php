@@ -353,8 +353,8 @@ foreach((get_the_category()) as $category) {
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="heading_main">
-                        <h2><span>بهترینهای امروز</span></h2>
-                        <p>خلاصه ای از مثبت ترینها و منفی ترینهای امروز<br>یاهو فایننس
+                        <h2><span>مبادله ای سریع، آسان و امن</span></h2>
+                        <p>  شما در هر کجای اسکاندیناوی باشید میتوانید به سادگی با ما در تماس باشید و وجوه ریالی خود را با ما مبادله نمایید.
                         </p>
                     </div>
                 </div>
