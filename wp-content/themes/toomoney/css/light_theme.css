@@ -2109,7 +2109,9 @@ table.table tbody tr td {
     left: -45px;
 }
 .cryto_feature.right_text ul li {
+/*
     left: 45px;
+*/
 }
 .cryto_feature ul li:nth-child(2) {
     position: relative;
