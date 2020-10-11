@@ -2206,13 +2206,13 @@ table.table tbody tr td {
     margin: 0;
 }
 .testmonial_slider .carousel-control i {
-    background: #e9d16f;
+    background: #1b334d;
     width: 50px;
     height: 50px;
     border-radius: 100%;
     line-height: 50px;
     text-align: center;
-    color: #1b334d;
+    color: #e9d16f;
 }
 .left_testmonial_qout {
     font-size: 30px;

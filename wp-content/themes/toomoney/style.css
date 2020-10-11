@@ -63,3 +63,10 @@ p {
 .cryto_feature li div.txt{
     margin-top: 15px;
 }
+.carousel-control.left,
+.carousel-control.right{
+    background-image: none;
+}
+.inner_rate_box img{
+    width: 100%;
+}
