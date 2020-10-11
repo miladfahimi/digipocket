@@ -2134,7 +2134,7 @@ table.table tbody tr td {
     color: #fff;
 }
 .cryto_feature ul li > div:nth-child(1) {
-    margin-right: 20px;
+    margin-left: 20px;
 }
 .earth_digital_bg {
     background-image: url("../images/bg3_new.png");

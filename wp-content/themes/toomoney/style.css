@@ -65,7 +65,7 @@ p {
 }
 .carousel-control.left,
 .carousel-control.right{
-    background-image: none;
+    background-image: none !important;
 }
 .inner_rate_box img{
     width: 100%;
