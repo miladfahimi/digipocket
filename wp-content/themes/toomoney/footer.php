@@ -24,10 +24,10 @@
                     <h2>همراه ما باشید</h2>
                 </div>
                 <ul class="social_icons">
-                    <li class="social-icon fb"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <li class="social-icon fb"><a href="http://facebook.com/toomoney" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     </li>
-                    <li class="social-icon gp"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-icon tw"><a href="https://t.me/toomoney_channel" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                    <li class="social-icon gp"><a href="https://instagram.com/toomoney_stock" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li class="social-icon tw"><a href="https://t.me/toomoney_index" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>

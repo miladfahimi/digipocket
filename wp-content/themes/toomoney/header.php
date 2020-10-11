@@ -39,12 +39,12 @@
         ));
         ?>
         <ul class="social">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="http://facebook.com/toomoney" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://instagram.com/toomoney_stock" target="_blank"><i class="fa fa-instagram"></i></a></li>
 <!--
             <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
 -->
-            <li><a href="https://t.me/toomoney_channel" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+            <li><a href="https://t.me/toomoney_index" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
             <li><a class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
         </ul>
         <!-- end right header section -->
