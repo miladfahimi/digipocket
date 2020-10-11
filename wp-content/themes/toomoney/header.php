@@ -15,7 +15,7 @@
     </div>
     <!-- end loader -->
     <header class="header">
-        <a href="" class="logo"><img class="img-responsive"
+        <a href="<?php echo site_url() ?>" class="logo"><img class="img-responsive"
                 src="<?php echo get_theme_file_uri('images/logos/logo_2.png') ?>" alt="logo" /></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
