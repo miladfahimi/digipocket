@@ -217,6 +217,7 @@ get_header();
 
 <!-- section -->
 
+<!--
 <section class="layout_padding light_bg2 gream_color" style="margin-top: 35px">
     <div class="container">
         <div class="row">
@@ -235,6 +236,7 @@ get_header();
         ?>
     </div>
 </section>
+-->
 
 <!-- end section -->
 <?php get_footer(); ?>
