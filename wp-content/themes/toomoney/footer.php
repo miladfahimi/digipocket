@@ -9,7 +9,7 @@
                     <p class="footer_desc">تومانی پلتفرمی مبتنی بر بازار سرمایه و ارز میباشد و جهت نقل و انتقال سریع ارز کشورهای حوزه اسکاندیناوری فعالیت میکند، جهت رشد آگاهی عمومی در خصوص موارد مالی و بازارهای سرمایه مطالب مفید را دست اول و حرفه ای منتشر میکند.</p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="main-heading left_text">
+                    <div class="main-heading">
                         <h2>دسترسی سریع</h2>
                     </div>
                     <?php
@@ -49,6 +49,9 @@
                             </fieldset>
                         </form>
                     </div>-->
+<div class="main-heading">
+                        <h2>همراه ما باشید</h2>
+                    </div>                    
                     <ul class="social_icons">
                         <li class="social-icon fb"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
