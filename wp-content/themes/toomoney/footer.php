@@ -2,16 +2,15 @@
     <footer id="footer" class="footer_main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="footer_logo">
                         <img src="<?php echo get_theme_file_uri('images/logos/logo_2.png') ?>" alt="#" />
                     </div>
-                    <p class="footer_desc">Investments and employment Blockchain Technologies. Optimize your business
-                        blockchain technology and Smart Contracts.</p>
+                    <p class="footer_desc">تومانی پلتفرمی مبتنی بر بازار سرمایه و ارز میباشد و جهت نقل و انتقال سریع ارز کشورهای حوزه اسکاندیناوری فعالیت میکند، جهت رشد آگاهی عمومی در خصوص موارد مالی و بازارهای سرمایه مطالب مفید را دست اول و حرفه ای منتشر میکند.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="main-heading left_text">
-                        <h2>Quick links</h2>
+                        <h2>دسترسی سریع</h2>
                     </div>
                     <?php
                     $footer_menu_setting = array(
@@ -32,16 +31,9 @@
                         wp_nav_menu($footer_menu_setting);
                     ?>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-heading left_text">
-                        <h2>Contact us</h2>
-                    </div>
-                    <p>123 Second Street Fifth Avenue,<br>Manhattan, New York<br><span style="font-size:18px;"><a
-                                href="tel:+00412584896587">+00 41 258 489 6587</a></span><br><a
-                            href="emailto:info@demo.com">info@demo.com</a></p>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-heading left_text">
+               
+                <div class="col-md-4 col-sm-6 col-xs-12">
+              <!--      <div class="main-heading left_text">
                         <h2>Newsletter Signup</h2>
                     </div>
                     <p style="font-size: 17px;line-height: 24px;margin: 0;letter-spacing: 0px;">Get latest updates,
@@ -56,12 +48,12 @@
                                 </div>
                             </fieldset>
                         </form>
-                    </div>
+                    </div>-->
                     <ul class="social_icons">
-                        <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <li class="social-icon fb"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li class="social-icon tw"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li class="social-icon gp"><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                        <li class="social-icon gp"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class="social-icon tw"><a href="https://t.me/toomoney_channel" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -72,7 +64,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 pull-left">
-                    <p class="text-center">Leo.Crypto Html5 Theme by WordPressShowcase. 2018 All Rights Reserved.</p>
+                    <p class="text-center">&copy; 2020 All Rights Reserved.</p>
                 </div>
             </div>
         </div>
