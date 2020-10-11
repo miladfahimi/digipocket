@@ -2,14 +2,8 @@
 <footer id="footer" class="footer_main">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="footer_logo">
-                    <img src="<?php echo get_theme_file_uri('images/logos/logo_2.png') ?>" alt="#" />
-                </div>
-                <p class="footer_desc">تومانی پلتفرمی مبتنی بر بازار سرمایه و ارز میباشد و جهت نقل و انتقال سریع ارز کشورهای حوزه اسکاندیناوری فعالیت میکند، جهت رشد آگاهی عمومی در خصوص موارد مالی و بازارهای سرمایه مطالب مفید را دست اول و حرفه ای منتشر میکند.</p>
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
+           
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <!--      <div class="main-heading left_text">
                         <h2>Newsletter Signup</h2>
                     </div>
@@ -38,7 +32,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="main-heading">
                     <h2>دسترسی سریع</h2>
                 </div>
@@ -61,6 +55,13 @@
                         wp_nav_menu($footer_menu_setting);
                     ?>
             </div>
+             <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="footer_logo">
+                    <img src="<?php echo get_theme_file_uri('images/logos/logo_2.png') ?>" alt="#" />
+                </div>
+                <p class="footer_desc">تومانی پلتفرمی مبتنی بر بازار سرمایه و ارز میباشد و جهت نقل و انتقال سریع ارز کشورهای حوزه اسکاندیناوری فعالیت میکند، جهت رشد آگاهی عمومی در خصوص موارد مالی و بازارهای سرمایه مطالب مفید را دست اول و حرفه ای منتشر میکند.</p>
+            </div>
+
         </div>
     </div>
 </footer>
