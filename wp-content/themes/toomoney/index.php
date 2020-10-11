@@ -488,7 +488,7 @@ foreach((get_the_category()) as $category) {
 <!-- end section -->
 
 <!-- section -->
-<section class="layout_padding light_bg">
+<section class="layout_padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -520,7 +520,7 @@ foreach((get_the_category()) as $category) {
                                             </div>
                                             <p><span class="left_testmonial_qout"><i
                                                         class="fa fa-quote-left"></i></span> هر روز برای اینکه سعی کنید داناتر از روز قبل بیدار شوید مقداری برای اینکار هزینه کنید.
-                                                <br> Spend each day trying to be a little wiser than you were when you woke up
+                                                <br> <br> Spend each day trying to be a little wiser than you were when you woke up
 
 
                                                 <span class="right_testmonial_qout"><i
@@ -543,7 +543,7 @@ foreach((get_the_category()) as $category) {
 
                                             <p><span class="left_testmonial_qout"><i
                                                         class="fa fa-quote-left"></i></span> تنها چیزی که برای یک عمر سرمایه‌گذاری موفق نیاز دارید تعدادی برگ برنده است تا مثبت‌های آن سرمایه‌گذاری‌های موفق، منفی‌های سرمایه‌گذاری ناموفق را پوشش دهد.
-                                                <br> All you need for a lifetime of successful investing is a few big winners, and the pluses from those will overwhelm the minuses from the stocks that don’t work out.
+                                                <br> <br> All you need for a lifetime of successful investing is a few big winners, and the pluses from those will overwhelm the minuses from the stocks that don’t work out
 
 
                                                 <span class="right_testmonial_qout"><i
@@ -566,7 +566,7 @@ foreach((get_the_category()) as $category) {
 
                                             <p><span class="left_testmonial_qout"><i
                                                         class="fa fa-quote-left"></i></span> اینکه درست می‌گفتید یا اشتباه می‌کردید مهم نیست، این مهم است که وقتی حق با شما بود چقدر پول درآوردید و وقتی اشتباه می‌کردید چقدر ضرر کردید.
-                                                <br> It’s not whether you’re right or wrong that’s important, but how much money you make when you’re right and how much you lose when you’re wrong.
+                                                <br> <br> It’s not whether you’re right or wrong that’s important, but how much money you make when you’re right and how much you lose when you’re wrong
 
                                                 <span class="right_testmonial_qout"><i
                                                         class="fa fa-quote-right"></i></span></p>
@@ -595,7 +595,7 @@ foreach((get_the_category()) as $category) {
     </div>
 </section>
 <!-- end section -->
-<!-- section -->
+<!-- section
 <section class="layout_padding dark_bg time_section" style="background-image: url('<?php echo get_theme_file_uri('images/degital_img.png')?>');background-size: cover;">
     <div class="container">
         <div class="row">
@@ -622,9 +622,9 @@ foreach((get_the_category()) as $category) {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- end section -->
-<!-- section -->
+<!-- section 
 <section class="layout_padding">
     <div class="container">
         <div class="row">
@@ -652,6 +652,6 @@ foreach((get_the_category()) as $category) {
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- end section -->
 <?php get_footer(); ?>
