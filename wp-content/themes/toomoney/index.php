@@ -365,8 +365,8 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div id="chart1-container" style="min-width: 245px; height: 216px; margin: 0 auto">
-                                <img src="<?php echo get_theme_file_uri('images/100-danish-kroner.jpg')?>" />
+                            <div id="chart1-container">
+                                <img src="<?php echo get_theme_file_uri('images/100-danish-kroner.jpg')?>" class="attachment-medium size-medium wp-post-image" />
                             </div>
                         </div>
                     </div>
@@ -376,10 +376,9 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div id="chart2-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
-                            <img src="<?php echo get_theme_file_uri('images/100-swedish-kronor.jpg')?>" />
-
-
+                            <div id="chart2-container">
+                                <img src="<?php echo get_theme_file_uri('images/100-swedish-kronor.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -388,10 +387,9 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div id="chart3-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
-                            <img src="<?php echo get_theme_file_uri('images/100-norwegian-kroner.jpg')?>" />
-
-
+                            <div id="chart3-container">
+                                <img src="<?php echo get_theme_file_uri('images/100-norwegian-kroner.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -400,8 +398,9 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div id="chart4-container" style="min-width: 245px; height: 216px; margin: 0 auto"></div>
-                            <img src="<?php echo get_theme_file_uri('images/100-american-dollars.jpg')?>" />
+                            <div id="chart4-container">
+                                <img src="<?php echo get_theme_file_uri('images/100-american-dollars.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                            </div>
 
 
                         </div>
@@ -432,19 +431,19 @@ foreach((get_the_category()) as $category) {
                         <ul>
                             <li>
                                 <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f2.png')?>" alt="#" /></div>
-                                <div>
+                                <div class="txt">
                                     <h3>نقد شوندگی بالا</h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f3.png')?>" alt="#" /></div>
-                                <div>
+                                <div class="txt">
                                     <h3>مدیریت ریسک</h3>
                                 </div>
                             </li>
                             <li>
                                 <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f4.png')?>" alt="#" /></div>
-                                <div>
+                                <div class="txt">
                                     <h3>سرمایه گذاری شفاف</h3>
                                 </div>
                             </li>
@@ -462,19 +461,19 @@ foreach((get_the_category()) as $category) {
                     <div class="cryto_feature right_text">
                         <ul>
                             <li>
-                                <div>
+                                <div class="txt">
                                     <h3> انتخاب بهترین ها</h3>
                                 </div>
                                 <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f5.png')?>" alt="#" /></div>
                             </li>
                             <li>
-                                <div>
+                                <div class="txt">
                                     <h3>24/7 پشتبانی آنلاین</h3>
                                 </div>
                                 <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f6.png')?>" alt="#" /></div>
                             </li>
                             <li>
-                                <div>
+                                <div class="txt">
                                     <h3>مشاوره رایگان</h3>
                                 </div>
                                 <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f1.png')?>" alt="#" /></div>
