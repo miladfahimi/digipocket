@@ -9,10 +9,10 @@ get_header();
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="inner_page_info">
-                        <h3>آموزش</h3>
+                        <h3>اخبار اقتصادی</h3>
                         <ul>
                             <li><a href="<?php echo site_url() ?>">صفحه اصلی</a></li>
-                            <li><i class="fa fa-angle-right"></i></li>
+                            <li><i class="fa fa-angle-left"></i></li>
                             <li><a href="#">>اخبار روز اقتصادی از مراجع معتبر به زبان فارسی</a></li>
                         </ul>
                     </div>

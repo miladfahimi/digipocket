@@ -12,7 +12,7 @@ get_header();
                         <h3>آموزش</h3>
                         <ul>
                             <li><a href="<?php echo site_url() ?>">صفحه اصلی</a></li>
-                            <li><i class="fa fa-angle-right"></i></li>
+                            <li><i class="fa fa-angle-left"></i></li>
                             <li><a href="#">>آموزش مطالب ساده و پیشرفته بازار بورس</a></li>
                         </ul>
                     </div>
