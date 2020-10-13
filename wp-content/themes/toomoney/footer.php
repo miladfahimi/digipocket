@@ -40,8 +40,8 @@
                     $footer_menu_setting = array(
                         'theme_location' => 'footerMenuLocationOne',
                         'menu_class' => 'footer-menu',
-                        'before' => '<i class="fa fa-angle-right"></i>',
-                        'link_before' => '<i class="fa fa-angle-right"></i>'
+                        'before' => '<i class="fa fa-angle-left"></i>',
+                        'link_before' => '<i class="fa fa-angle-left"></i>'
                     );
                         wp_nav_menu($footer_menu_setting);
                     ?>
@@ -49,8 +49,8 @@
                     $footer_menu_setting = array(
                         'theme_location' => 'footerMenuLocationTwo',
                         'menu_class' => 'footer-menu',
-                        'before' => '<i class="fa fa-angle-right"></i>',
-                        'link_before' => '<i class="fa fa-angle-right"></i>'
+                        'before' => '<i class="fa fa-angle-left"></i>',
+                        'link_before' => '<i class="fa fa-angle-left"></i>'
                     );
                         wp_nav_menu($footer_menu_setting);
                     ?>
