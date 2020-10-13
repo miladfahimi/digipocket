@@ -9,12 +9,12 @@ get_header();
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="inner_page_info">
-                        <h3>آموزشی<h3>
-                                <ul>
-                                    <li><a href="صح">صخحه اصلی</a></li>
-                                    <li><i class="fa fa-angle-right"></i></li>
-                                    <li><a href="#">آموزش مطالب ساده ور پیشرفته بازار بورس</a></li>
-                                </ul>
+                        <h3>آموزش</h3>
+                        <ul>
+                            <li><a href="<?php echo site_url() ?>">صفحه اصلی</a></li>
+                            <li><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">>آموزش مطالب ساده و پیشرفته بازار بورس</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

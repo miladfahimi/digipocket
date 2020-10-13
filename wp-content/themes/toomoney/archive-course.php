@@ -9,9 +9,9 @@ get_header();
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="inner_page_info">
-                        <h3>آموزش<h3>
+                        <h3>آموزش</h3>
                                 <ul>
-                                    <li><a>Home</a></li>
+                                    <li><a href="<?php echo site_url() ?>">صفحه اصلی</a></li>
                                     <li><i class="fa fa-angle-right"></i></li>
                                     <li><a href="#">دوره های آموزشی ساده و پیشرفته بازار سهام</a></li>
                                 </ul>
@@ -95,26 +95,7 @@ get_header();
 </section>
 <!-- end section -->
 
-<!-- section -->
 
-<section class="layout_padding light_bg2 gream_color" style="margin-top: 35px">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="full">
-                    <div class="heading_main">
-                        <h2><span>Our Brands</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-            get_template_part('template-part/logos','resource');
-        ?>
-    </div>
-</section>
 
 <!-- end section -->
 <?php get_footer(); ?>

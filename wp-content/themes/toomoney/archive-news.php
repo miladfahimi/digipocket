@@ -9,12 +9,12 @@ get_header();
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="inner_page_info">
-                        <h3>اخبار اقتصادی<h3>
-                                <ul>
-                                    <li><a href="صح">صخحه اصلی</a></li>
-                                    <li><i class="fa fa-angle-right"></i></li>
-                                    <li><a href="#">اخبار روز اقتصادی از مراجع معتبر به زبان فارسی</a></li>
-                                </ul>
+                        <h3>آموزش</h3>
+                        <ul>
+                            <li><a href="<?php echo site_url() ?>">صفحه اصلی</a></li>
+                            <li><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">>اخبار روز اقتصادی از مراجع معتبر به زبان فارسی</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -37,23 +37,30 @@ get_header();
                         ?>
                     <div class="blog_section">
                         <div class="blog_feature_img">
-                            <img class="img-responsive"
-                                src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
+                            <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url('','my_dummy_size')?>" alt="#">
                         </div>
                         <div class="blog_feature_cantant light_silver_2">
-                            <p class="blog_head"><?php the_title(); ?></p>
+                            <p class="blog_head">
+                                <?php the_title(); ?>
+                            </p>
                             <div class="post_info">
                                 <ul>
-                                    <li><i class="fa fa-user" aria-hidden="true"></i> <?php the_author();?></li>
+                                    <li><i class="fa fa-user" aria-hidden="true"></i>
+                                        <?php the_author();?>
+                                    </li>
                                     <li><i class="fa fa-comment" aria-hidden="true"></i>
-                                        <?php echo count(get_comments());?></li>
-                                    <li><?php the_category();?></li>
+                                        <?php echo count(get_comments());?>
+                                    </li>
+                                    <li>
+                                        <?php the_category();?>
+                                    </li>
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i>
                                         <?php echo get_the_date();?>
                                     </li>
                                 </ul>
                             </div>
-                            <p><?php the_excerpt(); ?>
+                            <p>
+                                <?php the_excerpt(); ?>
                             </p>
                             <div class="bottom_info">
                                 <div class="pull-left"><a class="read_more" href="<?php the_permalink(); ?>">READ MORE
@@ -79,17 +86,17 @@ get_header();
                     <?php
                         }
                     ?>
-                    <div class="center">
-                        <ul class="pagination style_1">
-                            <?php 
+                        <div class="center">
+                            <ul class="pagination style_1">
+                                <?php 
                         echo paginate_links();
                         ?>
-                            <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="blog_page3.html">2</a></li>
-                            <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+                                <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="blog_page3.html">2</a></li>
+                                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left">
@@ -119,10 +126,13 @@ get_header();
                                         $q->the_post(); 
                                 ?>
                                 <li>
-                                    <p class="post_head left_text"><a
-                                            href="<?php the_permalink(); ?>"><?php the_title()?></a></p>
-                                    <p class="post_date left_text"><i class="fa fa-calendar"
-                                            aria-hidden="true"></i><?php echo get_the_date(),' ', get_the_time();?>
+                                    <p class="post_head left_text">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_title()?>
+                                        </a>
+                                    </p>
+                                    <p class="post_date left_text"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <?php echo get_the_date(),' ', get_the_time();?>
                                     </p>
                                 </li>
                                 <?php
@@ -133,7 +143,7 @@ get_header();
                             </ul>
                         </div>
                     </div>
-                    <div class="side_bar_blog">
+                    <!--<div class="side_bar_blog">
                         <h4>CATEGORIES</h4>
                         <div class="categary">
                             <ul>
@@ -144,8 +154,8 @@ get_header();
                                 <li><a href="#"><i class="fa fa-caret-right"></i> Post</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="side_bar_blog">
+                    </div>-->
+                   <!-- <div class="side_bar_blog">
                         <h4>TAG</h4>
                         <div class="tags">
                             <ul>
@@ -156,8 +166,8 @@ get_header();
                                 <li><a href="#">HTML5</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="side_bar_blog">
+                    </div>-->
+                   <!-- <div class="side_bar_blog">
                         <h4>CATEGORIES</h4>
                         <div class="categary">
                             <ul>
@@ -168,7 +178,7 @@ get_header();
                                 <li><a href="#"><i class="fa fa-caret-right"></i> December (12)</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -176,26 +186,5 @@ get_header();
 </section>
 <!-- end section -->
 
-<!-- section -->
 
-<section class="layout_padding light_bg2 gream_color" style="margin-top: 35px">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="full">
-                    <div class="heading_main">
-                        <h2><span>Our Brands</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-            get_template_part('template-part/logos');
-        ?>
-    </div>
-</section>
-
-<!-- end section -->
 <?php get_footer(); ?>
