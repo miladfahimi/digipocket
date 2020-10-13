@@ -81,10 +81,10 @@ get_header();
                             <?php 
                         echo paginate_links();
                         ?>
-                            <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                          <!--  <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                             <li class="active"><a href="#">1</a></li>
                             <li><a href="blog_page3.html">2</a></li>
-                            <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>-->
                         </ul>
                     </div>
                 </div>

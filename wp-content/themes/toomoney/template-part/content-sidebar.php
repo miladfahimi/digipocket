@@ -12,13 +12,10 @@
             </div>
         </div>
         <div class="side_bar_blog">
-            <h4>درباره مرجع</h4>
-            <p class="right_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. sed do
-                eiusmod
-                tempor.</p>
-            <p class="right_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h4>درباره تومانی</h4>
+            <p class="right_text">تومانی پلتفرمی مبتنی بر بازار سرمایه و ارز میباشد و جهت نقل و انتقال سریع ارز کشورهای حوزه اسکاندیناوری فعالیت میکند، جهت رشد آگاهی عمومی در خصوص موارد مالی و بازارهای سرمایه مطالب مفید را دست اول و حرفه ای منتشر میکند.
+
+</p>
         </div>
         <div class="side_bar_blog">
             <h4>آخرین مطالب</h4>
@@ -48,7 +45,7 @@
             </div>
         </div>
 
-        <div class="side_bar_blog">
+        <!--<div class="side_bar_blog">
             <h4>طبقه بندی</h4>
             <div class="categary">
                 <ul>
@@ -59,8 +56,8 @@
                     <li><a href="#"><i class="fa fa-caret-right"></i> Post</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="side_bar_blog">
+        </div>-->
+        <!--<div class="side_bar_blog">
             <h4>برچسب</h4>
             <div class="tags">
                 <ul>
@@ -71,8 +68,8 @@
                     <li><a href="#">HTML5</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="side_bar_blog">
+        </div>-->
+<!--        <div class="side_bar_blog">
             <h4>آرشیو</h4>
             <div class="categary">
                 <ul>
@@ -83,6 +80,6 @@
                     <li><a href="#"><i class="fa fa-caret-right"></i> December (12)</a></li>
                 </ul>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>

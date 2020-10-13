@@ -63,10 +63,10 @@ get_header();
                                     <?php the_excerpt(); ?>
                                 </p>
                                 <div class="bottom_info">
-                                    <div class="pull-left"><a class="read_more" href="<?php the_permalink(); ?>">READ MORE
+                                    <div class="pull-left"><a class="read_more" href="<?php the_permalink(); ?>">ادامه مطلب
                                         <i class="fa fa-angle-right"></i></a></div>
                                     <div class="pull-right">
-                                        <div class="shr">Share: </div>
+                                        <div class="shr">اشتراک گذاری: </div>
                                         <div class="social_icon">
                                             <ul>
                                                 <li class="fb"><a href="#"><i class="fa fa-facebook"
@@ -102,7 +102,7 @@ get_header();
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left">
                 <div class="side_bar">
                     <div class="side_bar_blog">
-                        <h4>SEARCH</h4>
+                        <h4>چست و جو</h4>
                         <div class="side_bar_search">
                             <div class="input-group stylish-input-group">
                                 <input class="form-control" placeholder="" type="text">
@@ -113,7 +113,7 @@ get_header();
                         </div>
                     </div>
                     <div class="side_bar_blog">
-                        <h4>RECENT POST</h4>
+                        <h4>آخرین مطالب</h4>
                         <div class="recent_post">
                             <ul>
                                 <?php 
