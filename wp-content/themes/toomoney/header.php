@@ -39,9 +39,11 @@
         ));
         ?>
         <ul class="social">
-            <li><a href="https://facebook.com/toomoney" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.facebook.com/Toomoney-109410597485693" target="_blank"><i
+                        class="fa fa-facebook"></i></a></li>
             <li><a href="https://instagram.com/toomoney_stock" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://t.me/toomoney_index" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+            <li><a href="https://t.me/toomoney_index" target="_blank"><i class="fa fa-telegram"
+                        aria-hidden="true"></i></a></li>
             <li><a class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
         </ul>
         <!-- end right header section -->
