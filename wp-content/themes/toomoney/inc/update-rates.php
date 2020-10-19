@@ -10,7 +10,8 @@ function update_currency_rate() {
             'usd_sek'		=>	convertIt('usd','sek'),       //SEK
             'usd_dkk'		=>	convertIt('usd','dkk'),       //DKK
             'usd_nok'		=>	convertIt('usd','nok'),       //NOK
-            'btc_usd'       =>  getBtcRate()                  //BTC
+            'btc_usd'       =>  getBtcRate(),                 //BTC
+            // 'Gold_usd'      =>  getGoldRate(),                //GOLD
         ))
     );
 }
@@ -19,6 +20,11 @@ function getBtcRate(){
     $conversionResult = json_decode($json, true);
     return $conversionResult['result'];
 }
+// function getGoldRate(){
+//     $json=file_get_contents('https://api.coinlayer.com/convert?access_key=fe4f757533db7ed9d467848cfa6a6e6f&from=XAU&to=usd&amount=1');
+//     $conversionResult = json_decode($json, true);
+//     return $conversionResult['result'];
+// }
 function convertIt($t,$f){
     
     //GET THE LIVE CONVERSION RATES

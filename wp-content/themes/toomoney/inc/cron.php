@@ -19,6 +19,14 @@ function twice_a_day_rates( $schedules ) {
     );
     return $schedules;
 }
+add_filter( 'cron_schedules', 'every_quarter_rates' );
+function every_quarter_rates( $schedules ) {
+    $schedules['every_15_min'] = array(
+            'interval'  => 900,
+            'display'   => __( 'Every 15 min', 'textdomain' )
+    );
+    return $schedules;
+}
 add_filter( 'cron_schedules', 'every_one_minute' );
 function every_one_minute( $schedules ) {
     $schedules['every_one_minute'] = array(
@@ -32,6 +40,9 @@ function every_one_minute( $schedules ) {
 if ( ! wp_next_scheduled( 'telegram_broadcasting' ) ) {
     wp_schedule_event( time(), 'every_30_minutes', 'telegram_broadcasting' );
 }
+if ( ! wp_next_scheduled( 'every_quarter_rates' ) ) {
+    wp_schedule_event( time(), 'every_15_min', 'every_quarter_rates' );
+}
 
 
 // Hook into that action that'll fire every thirty minutes
@@ -41,5 +52,5 @@ add_action( 'telegram_broadcasting', 'send_telegram_msg_every_thirty_minutes' );
 add_action( 'morning_telegram_broadcasting', 'send_message_once_at_morning' );
 
 
-add_action( 'twice_a_day_rates', 'update_currency_rate' );
+add_action( 'every_quarter_rates', 'update_currency_rate' );
 //add_action( 'every_one_minute', 'update_currency_rate' );
