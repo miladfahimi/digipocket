@@ -56,7 +56,7 @@ function run_scraper_every_thirty_minutes() {
     }}
 
     // Function call with your own text or variable
-    $USD= ((float)str_replace(',', '',$aed)*$aed_usd)/10;
+    $USD= ((float)str_replace(',', '',$aed)*$aed_usd)/10-500;
 
     wp_insert_post(
         array(

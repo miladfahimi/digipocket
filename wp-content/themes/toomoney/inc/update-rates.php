@@ -16,7 +16,8 @@ function update_currency_rate() {
     );
 }
 function getBtcRate(){
-    $json=file_get_contents('https://api.coinlayer.com/convert?access_key=fe4f757533db7ed9d467848cfa6a6e6f&from=BTC&to=usd&amount=1');
+    $json=file_get_contents('https://data.fixer.io/api/convert?access_key=08a49f056fa219b51066bbdc5445a9ed&from=BTC&to=usd&amount=1');
+                             
     $conversionResult = json_decode($json, true);
     return $conversionResult['result'];
 }
@@ -29,14 +30,14 @@ function convertIt($t,$f){
     
     //GET THE LIVE CONVERSION RATES
     $endpoint = 'convert';
-    $access_key = 'fe4f757533db7ed9d467848cfa6a6e6f';
+    $access_key = '08a49f056fa219b51066bbdc5445a9ed';
 
     $from = $f;
     $to = $t;
     $amount = 1;
 
     // initialize CURL:
-    $json = file_get_contents('https://api.coinlayer.com/api/'.$endpoint.'?access_key='.$access_key.'&from='.$from.'&to='.$to.'&amount='.$amount.'');
+    $json = file_get_contents('https://data.fixer.io/api/'.$endpoint.'?access_key='.$access_key.'&from='.$from.'&to='.$to.'&amount='.$amount.'');
 
     // Decode JSON response:
     $conversionResult = json_decode($json, true);
