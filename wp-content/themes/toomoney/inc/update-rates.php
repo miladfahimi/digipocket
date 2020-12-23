@@ -27,54 +27,27 @@ function getBtcRate(){
 //     return $conversionResult['result'];
 // }
 function convertIt($t,$f){
+    $client = new http\Client;
+    $request = new http\Client\Request;
     
-    //GET THE LIVE CONVERSION RATES
-    $endpoint = 'convert';
-    $access_key = '08a49f056fa219b51066bbdc5445a9ed';
-
-    $from = $f;
-    $to = $t;
-    $amount = 1;
-
-    // initialize CURL:
-    $json = file_get_contents('https://data.fixer.io/api/'.$endpoint.'?access_key='.$access_key.'&from='.$from.'&to='.$to.'&amount='.$amount.'');
-
-    // Decode JSON response:
-    $conversionResult = json_decode($json, true);
-    return $conversionResult['result'];
-
-}
-function convertItRapid($t,$f){
-    $curl = curl_init();
-
-    curl_setopt_array($curl, [
-        CURLOPT_URL => 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from='.$f.'&to='.$t.'&amount=1',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => [
-            "x-rapidapi-host: currency-converter5.p.rapidapi.com",
-            "x-rapidapi-key: e74de94fb8mshcae9464ff489360p11f98ajsn50cecdc27b6a"
-        ],
+    $request->setRequestUrl('https://currency-converter5.p.rapidapi.com/currency/convert');
+    $request->setRequestMethod('GET');
+    $request->setQuery(new http\QueryString([
+        'format' => 'json',
+        'from' => 'AUD',
+        'to' => 'CAD',
+        'amount' => '1'
+    ]));
+    
+    $request->setHeaders([
+        'x-rapidapi-key' => 'e74de94fb8mshcae9464ff489360p11f98ajsn50cecdc27b6a',
+        'x-rapidapi-host' => 'currency-converter5.p.rapidapi.com'
     ]);
-
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
-
-    curl_close($curl);
-
-    if ($err) {
-        echo "cURL Error #:" . $err;
-        $result = $err;
-    } else {
-        $json = json_decode($response,true);
-        $result = (float)$json->rates[0]->$t->rate;
-    }
-    //$json = json_decode($response,true);
-    $result = $response->rates[0]->$t->rate+0;
+    
+    $client->enqueue($request)->send();
+    $response = $client->getResponse();
+    
+    $json = $response->getBody();
+    $result = $json->rates[0]->CAD->rate+0;
     return $result;
 }
