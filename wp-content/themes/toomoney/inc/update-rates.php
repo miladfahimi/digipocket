@@ -72,7 +72,7 @@ function convertItRapid($t,$f){
         $result = $err;
     } else {
         $json = json_decode($response,true);
-        $result = (int)$json->rates[0]->$t->rate;
+        $result = (float)$json->rates[0]->$t->rate;
     }
     return $result;
 }
