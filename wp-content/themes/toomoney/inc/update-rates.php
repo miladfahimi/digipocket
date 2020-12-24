@@ -9,7 +9,7 @@ function update_currency_rate() {
             'aed_usd'		=>	convertIt('aed','usd'),       //USD
             'usd_sek'		=>	convertIt('usd','sek'),       //SEK
             'usd_dkk'		=>	convertIt('usd','dkk'),       //DKK
-            'usd_nok'		=>	convertItByCurrencyApi('usd','nok'),       //NOK
+            'usd_nok'		=>	convertIt('usd','nok'),       //NOK
             'btc_usd'       =>  getBtcRate(),                 //BTC
             // 'Gold_usd'      =>  getGoldRate(),                //GOLD
         ))
