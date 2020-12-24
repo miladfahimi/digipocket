@@ -52,5 +52,5 @@ function convertItByCurrencyApi($f,$t){
 
     // Decode JSON response:
     $conversionResult = json_decode($json, true);
-    return $conversionResult['rates']->strtoupper($t);
+    return $conversionResult->rates->strtoupper($t);
 }
