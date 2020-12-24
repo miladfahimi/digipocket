@@ -74,7 +74,7 @@ function convertItRapid($t,$f){
         $json = json_decode($response,true);
         $result = (float)$json->rates[0]->$t->rate;
     }
-    //$json = json_decode($response,true);
-    $result = $response->rates[0]->$t->rate+0;
+    $json = json_decode($response,true);
+    $result = $json->rates[0]->$t->rate+0;
     return $result;
 }
