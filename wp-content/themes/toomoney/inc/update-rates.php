@@ -9,7 +9,7 @@ function update_currency_rate() {
             'aed_usd'		=>	convertIt('aed','usd'),       //USD
             'usd_sek'		=>	convertIt('usd','sek'),       //SEK
             'usd_dkk'		=>	convertIt('usd','dkk'),       //DKK
-            'usd_nok'		=>	convertItRapid('USD','NOK'),       //NOK
+            'usd_nok'		=>	convertIt('usd','nok'),       //NOK
             'btc_usd'       =>  getBtcRate(),                 //BTC
             // 'Gold_usd'      =>  getGoldRate(),                //GOLD
         ))
@@ -43,36 +43,4 @@ function convertIt($t,$f){
     $conversionResult = json_decode($json, true);
     return $conversionResult['result'];
 
-}
-function convertItRapid($t,$f){
-    $curl = curl_init();
-
-    curl_setopt_array($curl, [
-        CURLOPT_URL => 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from='.$f.'&to='.$t.'&amount=1',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => [
-            "x-rapidapi-host: currency-converter5.p.rapidapi.com",
-            "x-rapidapi-key: e74de94fb8mshcae9464ff489360p11f98ajsn50cecdc27b6a"
-        ],
-    ]);
-
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
-
-    curl_close($curl);
-
-    if ($err) {
-        echo "cURL Error #:" . $err;
-        $result = $err;
-    } else {
-        $json = json_decode($response,true);
-        $result = (int)$json->rates[0]->$t->rate;
-    }
-    return $result;
 }
