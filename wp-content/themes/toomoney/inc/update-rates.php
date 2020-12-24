@@ -48,7 +48,7 @@ function convertItByCurrencyApi($f,$t){
     $key = 'VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L';
     
     // initialize CURL:
-    $json = file_get_contents('https://currencyapi.net/api/v1/rates?key='. $key .'&base='. strtoupper($f));
+    $json = file_get_contents('https://currencyapi.net/api/v1/rates?key=VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L&base=USD');
     //https://currencyapi.net/api/v1/rates?key=VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L&base=USD
 
     // Decode JSON response:
