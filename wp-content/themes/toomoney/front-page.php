@@ -3,7 +3,8 @@
 <!-- full slider parallax section -->
 <section id="full_slider" class="full_slider_inner padding_0">
     <div class="main_slider">
-        <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
+        <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line"
+            data-ride="carousel" data-pause="hover" data-interval="5000">
             <!-- Wrapper For Slides -->
             <div class="carousel-inner" role="listbox">
                 <!-- first Slide -->
@@ -27,7 +28,8 @@
                         <div class="row">
                             <!-- Slide Text Layer -->
                             <div class="slide-text slide_style_left white_fonts">
-                                <h2 data-animation="animated"><span style="color: #e9d16f;"><?php echo get_field('header_1')?></span><br>
+                                <h2 data-animation="animated"><span
+                                        style="color: #e9d16f;"><?php echo get_field('header_1')?></span><br>
                                     <?php echo get_field('header_2')?><br>
                                     <?php echo get_field('header_3')?>
                                 </h2>
@@ -96,11 +98,11 @@
 foreach((get_the_category()) as $category) { 
     ?>
 
-                                <a class="link_button tag-red" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
-                                <?php
+                            <a class="link_button tag-red" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <?php
                         } 
                         ?>
-                                    <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
+                            <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
 
                         <h4>
@@ -146,9 +148,10 @@ foreach((get_the_category()) as $category) {
                             <?php
                             foreach((get_the_category()) as $category) { 
                             ?>
-                                <a class="link_button tag-main-yellow" href="#"><?php  echo $category->cat_name . ' ';  ?></a>
-                                <?php } ?>
-                                <a class="tag_button tag-green" href="<?php  the_permalink();  ?>">اینجا</a>
+                            <a class="link_button tag-main-yellow"
+                                href="#"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <?php } ?>
+                            <a class="tag_button tag-green" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
                         <h3>
                             <?php echo wp_trim_words( get_the_title(), 8 ); ?>
@@ -246,7 +249,8 @@ foreach((get_the_category()) as $category) {
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="boxes" style="background: linear-gradient(360deg, rgba(27, 51, 77, .8) 60%, rgba(24,51,87,.5) 74%,rgba(24,51,87,.1) 100%),url(<?php echo get_theme_file_uri('images/bitcoin.jpg') ?>); background-size: cover; background-position:right">
+                <div class="boxes"
+                    style="background: linear-gradient(360deg, rgba(27, 51, 77, .8) 60%, rgba(24,51,87,.5) 74%,rgba(24,51,87,.1) 100%),url(<?php echo get_theme_file_uri('images/bitcoin.jpg') ?>); background-size: cover; background-position:right">
                     <div class="box01_text_cntr light-font" style="padding:0">
                         <div class="box02_tag_cntr">
                             <a class="link_button tag-red" href="#">Bitcoin</a>
@@ -286,8 +290,10 @@ foreach((get_the_category()) as $category) {
                         ?>
                     <div class="box02_img_cntr">
                         <div class="box02_tag_cntr">
-                            <a class="link_button tag-red" href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
-                            <div class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>"><i class="fa fa-chevron-left"></i></div>
+                            <a class="link_button tag-red"
+                                href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <div class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>"><i
+                                    class="fa fa-chevron-left"></i></div>
                         </div>
                         <img src="<?php echo get_theme_file_uri('images/bg_earth_inner.png') ?>" alt="">
                     </div>
@@ -323,7 +329,8 @@ foreach((get_the_category()) as $category) {
                         ?>
                     <div class="box01_text_cntr light-font">
                         <div class="tag_container">
-                            <a class="link_button tag-orange" href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
+                            <a class="link_button tag-orange"
+                                href="<?php  the_permalink();  ?>"><?php  echo $category->cat_name . ' ';  ?></a>
                             <a class="tag_button tag-main-blue" href="<?php  the_permalink();  ?>">اینجا</a>
                         </div>
                         <h3>
@@ -354,19 +361,21 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="heading_main">
                         <h2><span>مبادله ای سریع، آسان و ایمن</span></h2>
-                        <p>  شما در هر کجای اسکاندیناوی باشید میتوانید به سادگی با ما در تماس باشید و وجوه ریالی خود را با ما مبادله نمایید.
+                        <p> شما در هر کجای اسکاندیناوی باشید میتوانید به سادگی با ما در تماس باشید و وجوه ریالی خود را
+                            با ما مبادله نمایید.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <!-- <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
                             <div id="chart1-container">
-                                <img src="<?php echo get_theme_file_uri('images/100-danish-kroner.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                                <img src="<?php echo get_theme_file_uri('images/100-danish-kroner.jpg')?>"
+                                    class="attachment-medium size-medium wp-post-image" />
                             </div>
                         </div>
                     </div>
@@ -377,36 +386,77 @@ foreach((get_the_category()) as $category) {
                     <div class="rate_box">
                         <div class="inner_rate_box">
                             <div id="chart2-container">
-                                <img src="<?php echo get_theme_file_uri('images/100-swedish-kronor.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                                <img src="<?php echo get_theme_file_uri('images/100-swedish-kronor.jpg')?>"
+                                    class="attachment-medium size-medium wp-post-image" />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            </div> -->
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
-                            <div id="chart3-container">
-                                <img src="<?php echo get_theme_file_uri('images/100-norwegian-kroner.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                            <div id="chart3-container" style="height:400px">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div id="tradingview_dc74b"></div>
+                                    <div class="tradingview-widget-copyright"><a
+                                            href="https://www.tradingview.com/symbols/BTCUSD/?exchange=COINBASE"
+                                            rel="noopener" target="_blank"><span class="blue-text">CRYPTO</span></a> by
+                                        Toomoney</div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                    <script type="text/javascript">
+                                    new TradingView.MediumWidget({
+                                        "symbols": [
+                                            [
+                                                "BITCOIN",
+                                                "COINBASE:BTCUSD|1D"
+                                            ],
+                                            [
+                                                "RIPPLE",
+                                                "CURRENCYCOM:XRPUSD|1D"
+                                            ],
+                                            [
+                                                "ETHERIUM",
+                                                "COINBASE:ETHUSD|1D"
+                                            ]
+                                        ],
+                                        "chartOnly": true,
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "locale": "en",
+                                        "colorTheme": "dark",
+                                        "gridLineColor": "#2A2E39",
+                                        "trendLineColor": "#1976D2",
+                                        "fontColor": "#787B86",
+                                        "underLineColor": "rgba(55, 166, 239, 0.15)",
+                                        "isTransparent": false,
+                                        "autosize": true,
+                                        "container_id": "tradingview_dc74b"
+                                    });
+                                    </script>
+                                </div>
+                                <!-- TradingView Widget END -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <!-- <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="full">
                     <div class="rate_box">
                         <div class="inner_rate_box">
                             <div id="chart4-container">
-                                <img src="<?php echo get_theme_file_uri('images/100-american-dollars.jpg')?>" class="attachment-medium size-medium wp-post-image" />
+                                <img src="<?php echo get_theme_file_uri('images/100-american-dollars.jpg')?>"
+                                    class="attachment-medium size-medium wp-post-image" />
                             </div>
 
 
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -419,7 +469,9 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="heading_main">
                         <h2><span>مزیت‌های سرمایه‌گذاری در پلتفرم تومانی</span></h2>
-                        <p>سرمایه‌گذاری در بازارهای مختلف – بورس، طلا – راه‌حل مهمی برای حفظ ارزش سرمایه در شرایط تورمی اقتصاد است. سامانه مدیریت سرمایه تومانی، تمام فرصت‌های سرمایه‌گذاری را در اختبار شما قرار میدهد تا شما متناسب با بودجه خودتان سرمایه‌گذاری کنید.</p>
+                        <p>سرمایه‌گذاری در بازارهای مختلف – بورس، طلا – راه‌حل مهمی برای حفظ ارزش سرمایه در شرایط تورمی
+                            اقتصاد است. سامانه مدیریت سرمایه تومانی، تمام فرصت‌های سرمایه‌گذاری را در اختبار شما قرار
+                            میدهد تا شما متناسب با بودجه خودتان سرمایه‌گذاری کنید.</p>
                     </div>
                 </div>
             </div>
@@ -430,19 +482,22 @@ foreach((get_the_category()) as $category) {
                     <div class="cryto_feature">
                         <ul>
                             <li>
-                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f2.png')?>" alt="#" /></div>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f2.png')?>"
+                                        alt="#" /></div>
                                 <div class="txt">
                                     <h3>نقد شوندگی بالا</h3>
                                 </div>
                             </li>
                             <li>
-                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f3.png')?>" alt="#" /></div>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f3.png')?>"
+                                        alt="#" /></div>
                                 <div class="txt">
                                     <h3>مدیریت ریسک</h3>
                                 </div>
                             </li>
                             <li>
-                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f4.png')?>" alt="#" /></div>
+                                <div class="pull-left"><img src="<?php echo get_theme_file_uri('images/f4.png')?>"
+                                        alt="#" /></div>
                                 <div class="txt">
                                     <h3>سرمایه گذاری شفاف</h3>
                                 </div>
@@ -464,19 +519,22 @@ foreach((get_the_category()) as $category) {
                                 <div class="txt">
                                     <h3> انتخاب بهترین ها</h3>
                                 </div>
-                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f5.png')?>" alt="#" /></div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f5.png')?>"
+                                        alt="#" /></div>
                             </li>
                             <li>
                                 <div class="txt">
                                     <h3>24/7 پشتبانی آنلاین</h3>
                                 </div>
-                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f6.png')?>" alt="#" /></div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f6.png')?>"
+                                        alt="#" /></div>
                             </li>
                             <li>
                                 <div class="txt">
                                     <h3>مشاوره رایگان</h3>
                                 </div>
-                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f1.png')?>" alt="#" /></div>
+                                <div class="pull-right"><img src="<?php echo get_theme_file_uri('images/f1.png')?>"
+                                        alt="#" /></div>
                             </li>
                         </ul>
                     </div>
@@ -495,7 +553,8 @@ foreach((get_the_category()) as $category) {
                 <div class="full">
                     <div class="heading_main">
                         <h2><span>جملات آموزنده از افراد سرشناس درباره سرمایه گذاری</span></h2>
-                        <p>سرمایه‌گذاری گاهی اوقات می‌تواند بسیار پیچیده باشد ولی با خواندن جملات بزرگان سرمایه‌گذاری و افراد سرشناس، می‌توانیم دیدگاه آنها نسبت به سرمایه‌گذاری را در کمترین زمان متوجه شویم.
+                        <p>سرمایه‌گذاری گاهی اوقات می‌تواند بسیار پیچیده باشد ولی با خواندن جملات بزرگان سرمایه‌گذاری و
+                            افراد سرشناس، می‌توانیم دیدگاه آنها نسبت به سرمایه‌گذاری را در کمترین زمان متوجه شویم.
                         </p>
                     </div>
                 </div>
@@ -519,12 +578,15 @@ foreach((get_the_category()) as $category) {
 -->
                                             </div>
                                             <p><span class="left_testmonial_qout"><i
-                                                        class="fa fa-quote-left"></i></span> هر روز برای اینکه سعی کنید داناتر از روز قبل بیدار شوید مقداری برای اینکار هزینه کنید.
-                                                <br> <br> Spend each day trying to be a little wiser than you were when you woke up
+                                                        class="fa fa-quote-left"></i></span> هر روز برای اینکه سعی کنید
+                                                داناتر از روز قبل بیدار شوید مقداری برای اینکار هزینه کنید.
+                                                <br> <br> Spend each day trying to be a little wiser than you were when
+                                                you woke up
 
 
                                                 <span class="right_testmonial_qout"><i
-                                                        class="fa fa-quote-right"></i></span></p>
+                                                        class="fa fa-quote-right"></i></span>
+                                            </p>
                                             <div class="center">
                                                 <p class="client_name">چارلی مانگر</p>
                                             </div>
@@ -542,12 +604,17 @@ foreach((get_the_category()) as $category) {
                                         <div class="col-sm-10 col-sm-offset-1">
 
                                             <p><span class="left_testmonial_qout"><i
-                                                        class="fa fa-quote-left"></i></span> تنها چیزی که برای یک عمر سرمایه‌گذاری موفق نیاز دارید تعدادی برگ برنده است تا مثبت‌های آن سرمایه‌گذاری‌های موفق، منفی‌های سرمایه‌گذاری ناموفق را پوشش دهد.
-                                                <br> <br> All you need for a lifetime of successful investing is a few big winners, and the pluses from those will overwhelm the minuses from the stocks that don’t work out
+                                                        class="fa fa-quote-left"></i></span> تنها چیزی که برای یک عمر
+                                                سرمایه‌گذاری موفق نیاز دارید تعدادی برگ برنده است تا مثبت‌های آن
+                                                سرمایه‌گذاری‌های موفق، منفی‌های سرمایه‌گذاری ناموفق را پوشش دهد.
+                                                <br> <br> All you need for a lifetime of successful investing is a few
+                                                big winners, and the pluses from those will overwhelm the minuses from
+                                                the stocks that don’t work out
 
 
                                                 <span class="right_testmonial_qout"><i
-                                                        class="fa fa-quote-right"></i></span></p>
+                                                        class="fa fa-quote-right"></i></span>
+                                            </p>
                                             <div class="center">
                                                 <p class="client_name">پیتر لینچ</p>
                                             </div>
@@ -565,11 +632,16 @@ foreach((get_the_category()) as $category) {
                                         <div class="col-sm-10 col-sm-offset-1">
 
                                             <p><span class="left_testmonial_qout"><i
-                                                        class="fa fa-quote-left"></i></span> اینکه درست می‌گفتید یا اشتباه می‌کردید مهم نیست، این مهم است که وقتی حق با شما بود چقدر پول درآوردید و وقتی اشتباه می‌کردید چقدر ضرر کردید.
-                                                <br> <br> It’s not whether you’re right or wrong that’s important, but how much money you make when you’re right and how much you lose when you’re wrong
+                                                        class="fa fa-quote-left"></i></span> اینکه درست می‌گفتید یا
+                                                اشتباه می‌کردید مهم نیست، این مهم است که وقتی حق با شما بود چقدر پول
+                                                درآوردید و وقتی اشتباه می‌کردید چقدر ضرر کردید.
+                                                <br> <br> It’s not whether you’re right or wrong that’s important, but
+                                                how much money you make when you’re right and how much you lose when
+                                                you’re wrong
 
                                                 <span class="right_testmonial_qout"><i
-                                                        class="fa fa-quote-right"></i></span></p>
+                                                        class="fa fa-quote-right"></i></span>
+                                            </p>
                                             <div class="center">
                                                 <p class="client_name">جورج سورس</p>
                                             </div>
