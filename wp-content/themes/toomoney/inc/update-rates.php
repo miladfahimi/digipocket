@@ -9,7 +9,7 @@ function update_currency_rate() {
             'aed_usd'		=>	convertIt('aed','usd'),       //USD
             'usd_sek'		=>	convertIt('usd','sek'),       //SEK
             'usd_dkk'		=>	convertIt('usd','dkk'),       //DKK
-            'usd_nok'		=>	convertIt('usd','nok'),       //NOK
+            'usd_nok'		=>	convertItByCurrencyApi('usd','nok'),       //NOK
             'btc_usd'       =>  getBtcRate(),                 //BTC
             // 'Gold_usd'      =>  getGoldRate(),                //GOLD
         ))
@@ -43,4 +43,14 @@ function convertIt($t,$f){
     $conversionResult = json_decode($json, true);
     return $conversionResult['result'];
 
+}
+function convertItByCurrencyApi($f,$t){
+    $key = 'VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L';
+    
+    // initialize CURL:
+    $json = file_get_contents('https://currencyapi.net/api/v1/rates?key='. $key .'&base='. strtoupper($f));
+
+    // Decode JSON response:
+    $conversionResult = json_decode($json, true);
+    return $conversionResult['rates']->strtoupper($t);
 }
