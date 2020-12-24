@@ -6,11 +6,11 @@ function update_currency_rate() {
             'post_type'         => 'rate',
             'post_status'		=>	'publish',
             'meta_input' => array(
-            'aed_usd'		=>	convertIt('aed','usd'),       //USD
-            'usd_sek'		=>	convertIt('usd','sek'),       //SEK
-            'usd_dkk'		=>	convertIt('usd','dkk'),       //DKK
-            'usd_nok'		=>	convertIt('usd','nok'),       //NOK
-            'btc_usd'       =>  getBtcRate(),                 //BTC
+            'aed_usd'		=>	getYahooCurrency('aed','usd'),       //USD
+            'usd_sek'		=>	getYahooCurrency('usd','sek'),       //SEK
+            'usd_dkk'		=>	getYahooCurrency('usd','dkk'),                 //DKK
+            'usd_nok'		=>	getYahooCurrency('usd','nok'),       //NOK
+            'btc_usd'       =>  getYahooCrypto('btc','usd')        //BTC
             // 'Gold_usd'      =>  getGoldRate(),                //GOLD
         ))
     );
@@ -26,6 +26,8 @@ function getBtcRate(){
 //     $conversionResult = json_decode($json, true);
 //     return $conversionResult['result'];
 // }
+
+//FIXER API
 function convertIt($t,$f){
     
     //GET THE LIVE CONVERSION RATES
@@ -44,14 +46,31 @@ function convertIt($t,$f){
     return $conversionResult['result'];
 
 }
-function convertItByCurrencyApi($f,$t){
+
+//CURRENCY API
+function convertItByCurrencyApi($t,$f){
     $key = 'VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L';
     
     // initialize CURL:
-    $json = file_get_contents('https://currencyapi.net/api/v1/rates?key=VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L&base=USD');
+    $json = file_get_contents('https://currencyapi.net/api/v1/rates?key=VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L&base='.strtoupper($f));
     //https://currencyapi.net/api/v1/rates?key=VeuCryIuwgaKnnhBHIvqw4nxFEW38VkdNg5L&base=USD
 
     // Decode JSON response:
     $conversionResult = json_decode($json, true);
-    return $conversionResult->rates[0]->strtoupper($t);
+    return $conversionResult['rates'][strtoupper($t)];
+}
+
+function getYahooCurrency($t,$f){
+    $html = file_get_html('https://finance.yahoo.com/quote/'. strtoupper($f) . strtoupper($t) .'=X');
+    foreach($html->find('div[class="D(ib) Mend(20px)"]') as $div)
+    foreach($div->find('span[data-reactid="32"]') as $e)
+    $result = $e->innertext;
+    return $result;
+}
+function getYahooCrypto($t,$f){
+    $html = file_get_html('https://finance.yahoo.com/quote/BTC-USD');
+    foreach($html->find('div[class="D(ib) Mend(20px)"]') as $div)
+    foreach($div->find('span[data-reactid="32"]') as $e)
+    $result = (float)str_replace(',', '',$e->innertext);
+    return $result;
 }
